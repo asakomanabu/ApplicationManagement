@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="ApplicationAssignOrder">9a0900d92f373010545d56f62799b6fd</macroponent>
+        <name>SetAssignedBudget4</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({api, event, helpers, imports}) {
+    api.setState('assignedBudget4', api.state.unitPrice * api.state.assignedTime4);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-19 07:18:19</sys_created_on>
+        <sys_id>d5ab6ec52fa00110545d56f62799b69a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>SetAssignedBudget4</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_client_script_d5ab6ec52fa00110545d56f62799b69a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-19 07:20:09</sys_updated_on>
+    </sys_ux_client_script>
+</record_update>
