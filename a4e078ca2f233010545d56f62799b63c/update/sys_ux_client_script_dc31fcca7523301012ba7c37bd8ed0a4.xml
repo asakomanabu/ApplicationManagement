@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="Search Page">1031fcca46233010d8a90b64b0b384a5</macroponent>
+        <name>handle_pagination</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[function handler({ api, event, helpers }) {
+	const props = api.context.props;
+	const fields = {
+		searchContextConfigId: props.searchContextConfigId,
+		searchTerm: props.searchTerm
+	};
+	const token = event.payload.paginationToken;
+	const params = {
+		searchFilters: props.searchFilters,
+		facetFilters: props.facetFilters,
+		disableSpellCheck: props.disableSpellCheck,
+		paginationToken: token
+	};
+	global.window.scrollTo(0, 0);
+	helpers.navigate.to('search', fields, params);
+}]]></script>
+        <script_api_version>1.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2021-11-02 07:54:36</sys_created_on>
+        <sys_id>dc31fcca7523301012ba7c37bd8ed0a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>handle_pagination</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_client_script_dc31fcca7523301012ba7c37bd8ed0a4</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-11-02 07:54:36</sys_updated_on>
+    </sys_ux_client_script>
+</record_update>

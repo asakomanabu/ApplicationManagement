@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="Search Page">1031fcca46233010d8a90b64b0b384a5</macroponent>
+        <name>Search result clicked</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[function handler({
+    api,
+    event,
+    imports
+}) {
+    const ACTION_NAME = event.payload.action.actionDispatch;
+    var route = 'landing';
+    if (ACTION_NAME == 'NAVIGATION_CATALOG_KB_ARTICLE' || ACTION_NAME == 'GENIUS_NAVIGATION_CATALOG_KB_ARTICLE') {
+        route = "article";
+        const fields = {
+            "sysId": event.payload.action.actionPayload.sysId
+        };
+        api.emit('NAV_ITEM_SELECTED', {
+            route,
+            fields
+        });
+    } else if (ACTION_NAME == 'NAVIGATION' && event.payload.action.actionPayload.url !== "") {
+        api.emit('NAV_ITEM_SELECTED', {
+            external: {
+                "url": event.payload.action.actionPayload.url
+            }
+        });
+    } else if (ACTION_NAME == 'NAVIGATION') {
+        var table = event.payload.action.actionPayload.table;
+        if (table == "kb_knowledge") {
+            route = "article";
+        } else if (table == "sc_cat_item" && event.payload.action.actionPayload.url == "") {
+            route = "catalog";
+        }
+        const fields = {
+            "sysId": event.payload.action.actionPayload.sysId
+        };
+        api.emit('NAV_ITEM_SELECTED', {
+            route,
+            fields
+        });
+    } else if (ACTION_NAME == 'GENIUS_NAVIGATION_CATALOG_EXTERNAL') {
+        api.emit('NAV_ITEM_SELECTED', {
+            external: {
+                "url": event.payload.action.actionPayload.url
+            }
+        });
+    } else return;
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2021-11-02 07:54:33</sys_created_on>
+        <sys_id>5c31fcca2d233010503f7118e114bea6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Search result clicked</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_client_script_5c31fcca2d233010503f7118e114bea6</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-11-02 07:54:33</sys_updated_on>
+    </sys_ux_client_script>
+</record_update>

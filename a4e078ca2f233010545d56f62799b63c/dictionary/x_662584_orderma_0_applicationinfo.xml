@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="ApplicationInfo" max_length="40" name="x_662584_orderma_0_applicationinfo" sizeclass="4" type="collection">
+        <element label="ApplicationNo" max_length="10" name="applicationno" type="string"/>
+        <element label="Applied" max_length="40" name="applied" type="glide_date"/>
+        <element label="Approved" max_length="40" name="approved" type="glide_date"/>
+        <element label="Approver" max_length="40" name="approver" type="string"/>
+        <element label="Comment" max_length="1000" name="comment" type="string"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element choice="3" label="isApproved" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Not Yet Requested" sequence="10" value="not_yet_requested"/>
+                <element inactive_on_update="false" label="Requested" sequence="20" value="requested"/>
+                <element inactive_on_update="false" label="Pending Approval" sequence="30" value="pending_approval"/>
+                <element inactive_on_update="false" label="Approved" sequence="40" value="approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="50" value="rejected"/>
+            </choice>
+        </element>
+        <element label="TargetDate" max_length="40" name="targetdate" type="string"/>
+        <element label="UpTime" max_length="20" name="uptime" type="decimal"/>
+        <element label="WorkingDate" max_length="40" name="workingdate" type="integer"/>
+    </element>
+</database>

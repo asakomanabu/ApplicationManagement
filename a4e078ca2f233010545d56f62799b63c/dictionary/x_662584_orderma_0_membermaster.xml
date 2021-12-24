@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="MemberMaster" max_length="40" name="x_662584_orderma_0_membermaster" sizeclass="3" type="collection">
+        <element label="Email" max_length="60" name="email" type="string"/>
+        <element label="Grade" max_length="32" name="grade" reference="x_662584_orderma_0_grademaster" type="reference"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="WorkingDayMaster" max_length="40" name="x_662584_orderma_0_workingdaymaster" sizeclass="9" type="collection">
+        <element label="TargetDate" max_length="40" name="targetdate" type="string"/>
+        <element label="WorkDay" max_length="40" name="workday" type="integer"/>
+    </element>
+</database>
