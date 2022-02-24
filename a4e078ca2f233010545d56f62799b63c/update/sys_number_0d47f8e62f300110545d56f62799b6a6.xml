@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_662584_orderma_0_applicationinfo">x_662584_orderma_0_applicationinfo</category>
+        <maximum_digits>5</maximum_digits>
+        <number>0</number>
+        <prefix>APP</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 00:56:26</sys_created_on>
+        <sys_id>0d47f8e62f300110545d56f62799b6a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>APP</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_number_0d47f8e62f300110545d56f62799b6a6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 00:56:26</sys_updated_on>
+    </sys_number>
+</record_update>

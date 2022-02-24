@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types/>
+        <category>page</category>
+        <component_dependencies/>
+        <composition>[ {
+  "elementId" : "label_value_stacked_1",
+  "elementLabel" : "Label value stacked 1",
+  "propertyValues" : {
+    "items" : {
+      "type" : "LIST_CONTAINER",
+      "container" : [ {
+        "type" : "MAP_CONTAINER",
+        "container" : {
+          "label" : {
+            "type" : "TRANSLATION_LITERAL",
+            "value" : {
+              "message" : "State",
+              "comment" : ""
+            }
+          },
+          "value" : {
+            "type" : "MAP_CONTAINER",
+            "container" : {
+              "type" : {
+                "type" : "JSON_LITERAL",
+                "value" : "string"
+              },
+              "value" : {
+                "type" : "TRANSLATION_LITERAL",
+                "value" : {
+                  "message" : "Closed",
+                  "comment" : ""
+                }
+              },
+              "previous" : {
+                "type" : "JSON_LITERAL",
+                "value" : "Opened"
+              }
+            }
+          }
+        }
+      }, {
+        "type" : "MAP_CONTAINER",
+        "container" : {
+          "label" : {
+            "type" : "TRANSLATION_LITERAL",
+            "value" : {
+              "message" : "Impact",
+              "comment" : ""
+            }
+          },
+          "value" : {
+            "type" : "MAP_CONTAINER",
+            "container" : {
+              "type" : {
+                "type" : "JSON_LITERAL",
+                "value" : "string"
+              },
+              "value" : {
+                "type" : "TRANSLATION_LITERAL",
+                "value" : {
+                  "message" : "1 - High",
+                  "comment" : ""
+                }
+              }
+            }
+          }
+        }
+      }, {
+        "type" : "MAP_CONTAINER",
+        "container" : {
+          "label" : {
+            "type" : "TRANSLATION_LITERAL",
+            "value" : {
+              "message" : "Category",
+              "comment" : ""
+            }
+          },
+          "value" : {
+            "type" : "MAP_CONTAINER",
+            "container" : {
+              "type" : {
+                "type" : "JSON_LITERAL",
+                "value" : "string"
+              },
+              "value" : {
+                "type" : "TRANSLATION_LITERAL",
+                "value" : {
+                  "message" : "Software",
+                  "comment" : ""
+                }
+              }
+            }
+          }
+        }
+      }, {
+        "type" : "MAP_CONTAINER",
+        "container" : {
+          "label" : {
+            "type" : "TRANSLATION_LITERAL",
+            "value" : {
+              "message" : "Assignment group",
+              "comment" : ""
+            }
+          },
+          "value" : {
+            "type" : "LIST_CONTAINER",
+            "container" : [ {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "type" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "string"
+                },
+                "value" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "message" : "Software",
+                    "comment" : ""
+                  }
+                }
+              }
+            }, {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "type" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "text-link"
+                },
+                "label" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "message" : "Hardware",
+                    "comment" : ""
+                  }
+                },
+                "href" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "#"
+                },
+                "underlined" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : true
+                }
+              }
+            }, {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "type" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "string"
+                },
+                "value" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "message" : "Telephony",
+                    "comment" : ""
+                  }
+                }
+              }
+            }, {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "type" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "highlighted-value"
+                },
+                "label" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "message" : "Routers",
+                    "comment" : ""
+                  }
+                }
+              }
+            }, {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "type" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "string"
+                },
+                "value" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "message" : "Monitors",
+                    "comment" : ""
+                  }
+                }
+              }
+            } ]
+          }
+        }
+      }, {
+        "type" : "MAP_CONTAINER",
+        "container" : {
+          "label" : {
+            "type" : "TRANSLATION_LITERAL",
+            "value" : {
+              "message" : "Assigned to",
+              "comment" : ""
+            }
+          },
+          "value" : {
+            "type" : "MAP_CONTAINER",
+            "container" : {
+              "type" : {
+                "type" : "JSON_LITERAL",
+                "value" : "string"
+              },
+              "value" : {
+                "type" : "TRANSLATION_LITERAL",
+                "value" : {
+                  "message" : "Fred Luddy",
+                  "comment" : ""
+                }
+              }
+            }
+          }
+        }
+      } ]
+    },
+    "align" : {
+      "type" : "JSON_LITERAL",
+      "value" : "vertical"
+    },
+    "size" : {
+      "type" : "JSON_LITERAL",
+      "value" : "md"
+    },
+    "truncated" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "wrapped" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "itemMinWidth" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "delimiter" : {
+      "type" : "JSON_LITERAL",
+      "value" : ","
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : "Main",
+  "definition" : {
+    "id" : "cfdc0486addc8811fd5249eae681d12d",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null,
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : { }
+} ]</composition>
+        <da_relay_models/>
+        <data>[ ]</data>
+        <dispatched_events/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <handled_events/>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings>{ }</internal_event_mappings>
+        <layout>{
+  "default" : {
+    "children" : null,
+    "items" : [{"slotName":"Main","rules":{"flex":"1"},"styles":{"display":"flex","flex-direction":"column"}}],
+    "root" : null,
+    "rules" : {"flex-flow":"row nowrap","align-items":"stretch","min-height":"400px","height":"100%"},
+    "styles" : null,
+    "templateId" : "28bde4cd53431010e6bcddeeff7b12cc",
+    "type" : "flex"
+  }
+}</layout>
+        <macroponent_dependencies/>
+        <name>tmp_sub</name>
+        <props>[ ]</props>
+        <required_translations>[ {
+  "message" : "1 - High",
+  "comment" : ""
+}, {
+  "message" : "Assigned to",
+  "comment" : ""
+}, {
+  "message" : "Assignment group",
+  "comment" : ""
+}, {
+  "message" : "Category",
+  "comment" : ""
+}, {
+  "message" : "Closed",
+  "comment" : ""
+}, {
+  "message" : "Fred Luddy",
+  "comment" : ""
+}, {
+  "message" : "Hardware",
+  "comment" : ""
+}, {
+  "message" : "Impact",
+  "comment" : ""
+}, {
+  "message" : "Monitors",
+  "comment" : ""
+}, {
+  "message" : "Routers",
+  "comment" : ""
+}, {
+  "message" : "Software",
+  "comment" : ""
+}, {
+  "message" : "State",
+  "comment" : ""
+}, {
+  "message" : "Telephony",
+  "comment" : ""
+} ]</required_translations>
+        <root_component/>
+        <root_component_config>{ }</root_component_config>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_properties>[ ]</state_properties>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-17 07:38:05</sys_created_on>
+        <sys_id>7d46c8a22f450110545d56f62799b65f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>tmp_sub</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_macroponent_7d46c8a22f450110545d56f62799b65f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-17 07:39:07</sys_updated_on>
+    </sys_ux_macroponent>
+</record_update>
