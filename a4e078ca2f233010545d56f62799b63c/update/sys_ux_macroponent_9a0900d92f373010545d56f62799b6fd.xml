@@ -146,6 +146,32 @@
       "operation" : null,
       "targetId" : "ckxcwfhtaaaaafiiddiiiiggnvaacocggs",
       "type" : "CLIENT_SCRIPT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : {
+        "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+        "operationName" : "REFRESH",
+        "parentResourceId" : "working_detail",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : { }
+        }
+      },
+      "targetId" : "ckyggyonraaaaaxeeddjjiiggggwezojro",
+      "type" : "DATABROKER_OP"
+    }, {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "fdfd62892fa00110545d56f62799b660"
+      },
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "ckyggypaaddiiaaaaxffddjjiiggbbieeffqviig",
+      "type" : "CLIENT_SCRIPT"
     } ]
   } ],
   "slot" : "Main",
@@ -277,6 +303,32 @@
       "event" : null,
       "operation" : null,
       "targetId" : "ckxcyrndcaaaaozddiiiiggdahbbiymj",
+      "type" : "CLIENT_SCRIPT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : {
+        "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+        "operationName" : "REFRESH",
+        "parentResourceId" : "working_detail",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : { }
+        }
+      },
+      "targetId" : "ckyggyphffjaaaaxggddjjiiggbbbtddmshhii",
+      "type" : "DATABROKER_OP"
+    }, {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "fdfd62892fa00110545d56f62799b660"
+      },
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "ckyggypqglaaaaxhhddjjiiggihhtmcggjn",
       "type" : "CLIENT_SCRIPT"
     } ]
   } ],
@@ -410,6 +462,306 @@
   "isNonDestructive" : false,
   "styles" : { }
 }, {
+  "elementId" : "list_2",
+  "elementLabel" : "List 2",
+  "propertyValues" : {
+    "menuSelection" : {
+      "type" : "JSON_LITERAL",
+      "value" : "Select menu to connect..."
+    },
+    "table" : {
+      "type" : "JSON_LITERAL",
+      "value" : "x_662584_orderma_0_workingdetail"
+    },
+    "listTitle" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "message" : "WorkingDetail",
+        "comment" : ""
+      }
+    },
+    "selectedListId" : {
+      "type" : "JSON_LITERAL",
+      "value" : "Select..."
+    },
+    "query" : {
+      "type" : "CLIENT_TRANSFORM",
+      "transform" : {
+        "operands" : {
+          "type" : "LIST_CONTAINER",
+          "container" : [ {
+            "type" : "JSON_LITERAL",
+            "value" : "name="
+          }, {
+            "type" : "STATE_BINDING",
+            "binding" : {
+              "address" : [ "selectedMember" ]
+            }
+          }, {
+            "type" : "JSON_LITERAL",
+            "value" : "^targetdate="
+          }, {
+            "type" : "STATE_BINDING",
+            "binding" : {
+              "address" : [ "targetDate" ]
+            }
+          }, {
+            "type" : "JSON_LITERAL",
+            "value" : ""
+          } ]
+        },
+        "operator" : "CONCAT"
+      }
+    },
+    "view" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "columns" : {
+      "type" : "JSON_LITERAL",
+      "value" : "assignorder.orderno,assignorder.budget,assignuptime,assignbudget"
+    },
+    "groupByField" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "maxColumns" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "limit" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "actionConfigId" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "hideDeclarativeActions" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "highlightedValueConfigId" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "hideHighlightedValues" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideHeader" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "headerSize" : {
+      "type" : "JSON_LITERAL",
+      "value" : "lg"
+    },
+    "headingLevel" : {
+      "type" : "JSON_LITERAL",
+      "value" : 1
+    },
+    "hideTitle" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideTitleRowCount" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideRefreshButton" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideLastRefreshedText" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideMenuButton" : {
+      "type" : "JSON_LITERAL",
+      "value" : true
+    },
+    "hideListSharing" : {
+      "type" : "JSON_LITERAL",
+      "value" : true
+    },
+    "hideFilterPanel" : {
+      "type" : "JSON_LITERAL",
+      "value" : true
+    },
+    "listMenuOpen" : {
+      "type" : "JSON_LITERAL",
+      "value" : true
+    },
+    "hideQuickEdit" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideRowSelector" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideColumnGrouping" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideColumnResizing" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideColumnFiltering" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideColumnSorting" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideDragDrop" : {
+      "type" : "JSON_LITERAL",
+      "value" : true
+    },
+    "hideCellFilter" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideInlineEditing" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "wordWrap" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "maxCharLimit" : {
+      "type" : "JSON_LITERAL",
+      "value" : 4000
+    },
+    "isRefList" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideEmptyStateImage" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hidePagination" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hidePages" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideRange" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideRowCount" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideFirstPage" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideLastPage" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "hideLimitSelector" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "tiny" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "error" : {
+      "type" : "JSON_LITERAL",
+      "value" : { }
+    },
+    "selectedRecords" : {
+      "type" : "JSON_LITERAL",
+      "value" : [ ]
+    },
+    "refreshRequested" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "page" : {
+      "type" : "JSON_LITERAL",
+      "value" : 1
+    },
+    "recordSelectedTable" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "recordSelectedSysId" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "recordSelectedQuery" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "recordSelectedView" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "daClientActionContract" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    }
+  },
+  "eventMappings" : [ {
+    "eventMappingId" : "ckyggtsfdyaaaacmddjjiiggojjlhhccqpk",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_record_list_con.NOW_RECORD_LIST_CONNECTED#CREATE_NEW_RECORD",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_record_list_con.NOW_RECORD_LIST_CONNECTED#CREATE_NEW_RECORD",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "x_662584_orderma_0.MODAL_SELECTED_RELAY_9a0900d92f373010545d56f62799b6fd",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "modalId" : "[component-id$='assign_order']",
+            "showModal" : true,
+            "displayOptions" : null,
+            "bare" : true,
+            "preserveState" : null
+          }
+        },
+        "sysId" : "6f5f1abb2f300110545d56f62799b6f5"
+      },
+      "operation" : null,
+      "targetId" : "ckyggtsfdyaaaacnddjjiiggikuljeeiw",
+      "type" : "EVENT"
+    } ]
+  } ],
+  "slot" : "Main",
+  "definition" : {
+    "id" : "66ee7d86e81f696c9f9be19d8424cc0d",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null,
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : { }
+}, {
   "elementId" : "container_1",
   "elementLabel" : "Container 1",
   "propertyValues" : { },
@@ -421,6 +773,315 @@
   },
   "overrides" : {
     "composition" : [ {
+      "elementId" : "input_14",
+      "elementLabel" : "Input 14",
+      "propertyValues" : {
+        "type" : {
+          "type" : "JSON_LITERAL",
+          "value" : "text"
+        },
+        "label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "合計(割り当て予算)",
+            "comment" : ""
+          }
+        },
+        "placeholder" : {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "sumAssignedBudget" ]
+          }
+        },
+        "name" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "value" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "readonly" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "required" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "hideRequiredIndicator" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "optional" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "min" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "max" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "minlength" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "maxlength" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "multiple" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "pattern" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "autofocus" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "disabled" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "invalid" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "helperContent" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "messages" : {
+          "type" : "LIST_CONTAINER",
+          "container" : [ ]
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : "Main",
+      "definition" : {
+        "id" : "bb0f92e8d7eff1590624bfe69d316f23",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
+    }, {
+      "elementId" : "input_15",
+      "elementLabel" : "Input 15",
+      "propertyValues" : {
+        "type" : {
+          "type" : "JSON_LITERAL",
+          "value" : "text"
+        },
+        "label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "合計(割り当て時間)",
+            "comment" : ""
+          }
+        },
+        "placeholder" : {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "sumAssignedTime" ]
+          }
+        },
+        "name" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "value" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "readonly" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "required" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "hideRequiredIndicator" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "optional" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "min" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "max" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "minlength" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "maxlength" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "multiple" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "pattern" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "autofocus" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "disabled" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "invalid" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "helperContent" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "messages" : {
+          "type" : "LIST_CONTAINER",
+          "container" : [ ]
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : "Main",
+      "definition" : {
+        "id" : "bb0f92e8d7eff1590624bfe69d316f23",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
+    }, {
+      "elementId" : "input_16",
+      "elementLabel" : "Input 16",
+      "propertyValues" : {
+        "type" : {
+          "type" : "JSON_LITERAL",
+          "value" : "text"
+        },
+        "label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "申請時間 (88%)",
+            "comment" : ""
+          }
+        },
+        "placeholder" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "name" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "value" : {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "sumAssignedTime_88per" ]
+          }
+        },
+        "readonly" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "required" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "hideRequiredIndicator" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "optional" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "min" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "max" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "minlength" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "maxlength" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "multiple" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "pattern" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "autofocus" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "disabled" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "invalid" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "helperContent" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "messages" : {
+          "type" : "LIST_CONTAINER",
+          "container" : [ ]
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : "Main",
+      "definition" : {
+        "id" : "bb0f92e8d7eff1590624bfe69d316f23",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
+    }, {
       "elementId" : "list_1",
       "elementLabel" : "List 1",
       "propertyValues" : {
@@ -646,7 +1307,7 @@
         }
       },
       "eventMappings" : [ ],
-      "slot" : "Column 1",
+      "slot" : "Main",
       "definition" : {
         "id" : "66ee7d86e81f696c9f9be19d8424cc0d",
         "type" : "MACROPONENT"
@@ -658,2212 +1319,15 @@
       },
       "isNonDestructive" : false,
       "styles" : { }
-    }, {
-      "elementId" : "container_2",
-      "elementLabel" : "Container 2",
-      "propertyValues" : { },
-      "eventMappings" : [ ],
-      "slot" : "Column 2",
-      "definition" : {
-        "id" : "d356d14b6e293a3020a244b63d278d8f",
-        "type" : "MACROPONENT"
-      },
-      "overrides" : {
-        "composition" : [ {
-          "elementId" : "input_1",
-          "elementLabel" : "Input 1",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "message" : "今月割り当て予算",
-                "comment" : ""
-              }
-            },
-            "placeholder" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "assignedBudget1" ]
-              }
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : true
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Column 1",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_2",
-          "elementLabel" : "Input 2",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "JSON_LITERAL",
-              "value" : ""
-            },
-            "placeholder" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "assignedBudget2" ]
-              }
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : true
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Column 1",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_3",
-          "elementLabel" : "Input 3",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "JSON_LITERAL",
-              "value" : ""
-            },
-            "placeholder" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "assignedBudget3" ]
-              }
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : true
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Column 1",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_4",
-          "elementLabel" : "Input 4",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "JSON_LITERAL",
-              "value" : ""
-            },
-            "placeholder" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "assignedBudget4" ]
-              }
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : true
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Column 1",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_5",
-          "elementLabel" : "Input 5",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "JSON_LITERAL",
-              "value" : ""
-            },
-            "placeholder" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "assignedBudget5" ]
-              }
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : true
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Column 1",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_6",
-          "elementLabel" : "Input 6",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "JSON_LITERAL",
-              "value" : ""
-            },
-            "placeholder" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "assignedBudget6" ]
-              }
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : true
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Column 1",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_url_1",
-          "elementLabel" : "Input URL 1",
-          "propertyValues" : {
-            "label" : {
-              "type" : "JSON_LITERAL",
-              "value" : ""
-            },
-            "placeholder" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "assignedBudget7" ]
-              }
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : true
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Column 1",
-          "definition" : {
-            "id" : "b14f0ac8bb74ad073bee48ebdc206756",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_14",
-          "elementLabel" : "Input 14",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "message" : "合計",
-                "comment" : ""
-              }
-            },
-            "placeholder" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "sumAssignedBudget" ]
-              }
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : true
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Column 1",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_7",
-          "elementLabel" : "Input 7",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "message" : "今月割り当て時間",
-                "comment" : ""
-              }
-            },
-            "placeholder" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ {
-            "eventMappingId" : "ckxcwtpddtaaaagcddiiiiggccxaggjjjoj",
-            "isConfiguration" : false,
-            "offRowStorageId" : null,
-            "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
-            "sourceEventCorrelationId" : null,
-            "sourceEventDefinition" : {
-              "apiName" : "sn_input.NOW_INPUT#VALUE_SET",
-              "id" : null,
-              "type" : "UXEVENT"
-            },
-            "sourceEventSysId" : null,
-            "targets" : [ {
-              "broker" : null,
-              "clientScript" : null,
-              "declarativeAction" : null,
-              "event" : {
-                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                "payload" : {
-                  "type" : "MAP_CONTAINER",
-                  "container" : {
-                    "propName" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : "assignedTime1"
-                    },
-                    "value" : {
-                      "type" : "EVENT_PAYLOAD_BINDING",
-                      "binding" : {
-                        "address" : [ "value" ]
-                      }
-                    }
-                  }
-                },
-                "sysId" : "32408b42ff7a10109046e490703bf176"
-              },
-              "operation" : null,
-              "targetId" : "ckxcwtpddtaaaagdddiiiiggpnfddmfucc",
-              "type" : "EVENT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "65eaa6452fa00110545d56f62799b66d"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxbbkjjbaaaagxddiiiiggowcckwcuz",
-              "type" : "CLIENT_SCRIPT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "fdfd62892fa00110545d56f62799b660"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxpuzuaaaakdddiiiiggyhhbiimtiiz",
-              "type" : "CLIENT_SCRIPT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "3a0eaa492fa00110545d56f62799b6cf"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxqcsxaaaakeddiiiiggupclmijjcc",
-              "type" : "CLIENT_SCRIPT"
-            } ]
-          } ],
-          "slot" : "Column 2",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_8",
-          "elementLabel" : "Input 8",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "JSON_LITERAL",
-              "value" : ""
-            },
-            "placeholder" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ {
-            "eventMappingId" : "ckxcwuejaaaaageddiiiigghnjkrjxee",
-            "isConfiguration" : false,
-            "offRowStorageId" : null,
-            "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
-            "sourceEventCorrelationId" : null,
-            "sourceEventDefinition" : {
-              "apiName" : "sn_input.NOW_INPUT#VALUE_SET",
-              "id" : null,
-              "type" : "UXEVENT"
-            },
-            "sourceEventSysId" : null,
-            "targets" : [ {
-              "broker" : null,
-              "clientScript" : null,
-              "declarativeAction" : null,
-              "event" : {
-                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                "payload" : {
-                  "type" : "MAP_CONTAINER",
-                  "container" : {
-                    "propName" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : "assignedTime2"
-                    },
-                    "value" : {
-                      "type" : "EVENT_PAYLOAD_BINDING",
-                      "binding" : {
-                        "address" : [ "value" ]
-                      }
-                    }
-                  }
-                },
-                "sysId" : "32408b42ff7a10109046e490703bf176"
-              },
-              "operation" : null,
-              "targetId" : "ckxcwuejaaaaagfddiiiiggqpeeccowaajj",
-              "type" : "EVENT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "ed8b22452fa00110545d56f62799b6d9"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxhheeexaaaahkddiiiiggdckgddbce",
-              "type" : "CLIENT_SCRIPT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "fdfd62892fa00110545d56f62799b660"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxqlbpaaaakfddiiiiggcobbiddaaffj",
-              "type" : "CLIENT_SCRIPT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "3a0eaa492fa00110545d56f62799b6cf"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxqrnoaaaakgddiiiiggxiihhfiaxa",
-              "type" : "CLIENT_SCRIPT"
-            } ]
-          } ],
-          "slot" : "Column 2",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_9",
-          "elementLabel" : "Input 9",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "JSON_LITERAL",
-              "value" : ""
-            },
-            "placeholder" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ {
-            "eventMappingId" : "ckxcwuzleeaaaaggddiiiiggsaaovccffxg",
-            "isConfiguration" : false,
-            "offRowStorageId" : null,
-            "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
-            "sourceEventCorrelationId" : null,
-            "sourceEventDefinition" : {
-              "apiName" : "sn_input.NOW_INPUT#VALUE_SET",
-              "id" : null,
-              "type" : "UXEVENT"
-            },
-            "sourceEventSysId" : null,
-            "targets" : [ {
-              "broker" : null,
-              "clientScript" : null,
-              "declarativeAction" : null,
-              "event" : {
-                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                "payload" : {
-                  "type" : "MAP_CONTAINER",
-                  "container" : {
-                    "propName" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : "assignedTime3"
-                    },
-                    "value" : {
-                      "type" : "EVENT_PAYLOAD_BINDING",
-                      "binding" : {
-                        "address" : [ "value" ]
-                      }
-                    }
-                  }
-                },
-                "sysId" : "32408b42ff7a10109046e490703bf176"
-              },
-              "operation" : null,
-              "targetId" : "ckxcwuzleeaaaaghddiiiiggbydjeuja",
-              "type" : "EVENT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "6cabe2c52fa00110545d56f62799b6e0"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxhhkvvaaaahlddiiiiggjjcffeenuaaf",
-              "type" : "CLIENT_SCRIPT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "fdfd62892fa00110545d56f62799b660"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxqzbwaaaakhddiiiiggrjjpduaffw",
-              "type" : "CLIENT_SCRIPT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "3a0eaa492fa00110545d56f62799b6cf"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxreempaaaakiddiiiiggxiiiikcwwv",
-              "type" : "CLIENT_SCRIPT"
-            } ]
-          } ],
-          "slot" : "Column 2",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_10",
-          "elementLabel" : "Input 10",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "JSON_LITERAL",
-              "value" : ""
-            },
-            "placeholder" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ {
-            "eventMappingId" : "ckxcwvpeefaaaagiddiiiigguhhffbbpsnp",
-            "isConfiguration" : false,
-            "offRowStorageId" : null,
-            "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
-            "sourceEventCorrelationId" : null,
-            "sourceEventDefinition" : {
-              "apiName" : "sn_input.NOW_INPUT#VALUE_SET",
-              "id" : null,
-              "type" : "UXEVENT"
-            },
-            "sourceEventSysId" : null,
-            "targets" : [ {
-              "broker" : null,
-              "clientScript" : null,
-              "declarativeAction" : null,
-              "event" : {
-                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                "payload" : {
-                  "type" : "MAP_CONTAINER",
-                  "container" : {
-                    "propName" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : "assignedTime4"
-                    },
-                    "value" : {
-                      "type" : "EVENT_PAYLOAD_BINDING",
-                      "binding" : {
-                        "address" : [ "value" ]
-                      }
-                    }
-                  }
-                },
-                "sysId" : "32408b42ff7a10109046e490703bf176"
-              },
-              "operation" : null,
-              "targetId" : "ckxcwvpeefaaaagjddiiiiggrzocokwcc",
-              "type" : "EVENT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "d5ab6ec52fa00110545d56f62799b69a"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxhhutmaaaahmddiiiiggbbjjbbjjaaozq",
-              "type" : "CLIENT_SCRIPT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "fdfd62892fa00110545d56f62799b660"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxrcbeeaaaakjddiiiiggjviibxxrjj",
-              "type" : "CLIENT_SCRIPT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "3a0eaa492fa00110545d56f62799b6cf"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxrhxggaaaakkddiiiiggikvwahffy",
-              "type" : "CLIENT_SCRIPT"
-            } ]
-          } ],
-          "slot" : "Column 2",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_11",
-          "elementLabel" : "Input 11",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "JSON_LITERAL",
-              "value" : ""
-            },
-            "placeholder" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ {
-            "eventMappingId" : "ckxcwwhhoffaaaagkddiiiiggeflsccggao",
-            "isConfiguration" : false,
-            "offRowStorageId" : null,
-            "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
-            "sourceEventCorrelationId" : null,
-            "sourceEventDefinition" : {
-              "apiName" : "sn_input.NOW_INPUT#VALUE_SET",
-              "id" : null,
-              "type" : "UXEVENT"
-            },
-            "sourceEventSysId" : null,
-            "targets" : [ {
-              "broker" : null,
-              "clientScript" : null,
-              "declarativeAction" : null,
-              "event" : {
-                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                "payload" : {
-                  "type" : "MAP_CONTAINER",
-                  "container" : {
-                    "propName" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : "assignedTime5"
-                    },
-                    "value" : {
-                      "type" : "EVENT_PAYLOAD_BINDING",
-                      "binding" : {
-                        "address" : [ "value" ]
-                      }
-                    }
-                  }
-                },
-                "sysId" : "32408b42ff7a10109046e490703bf176"
-              },
-              "operation" : null,
-              "targetId" : "ckxcwwhhoffaaaaglddiiiiggcchgggrhhqee",
-              "type" : "EVENT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "4aaba2452fa00110545d56f62799b6be"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxiibbteaaaahnddiiiigguddkhpjjvh",
-              "type" : "CLIENT_SCRIPT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "fdfd62892fa00110545d56f62799b660"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxrpccxaaaaklddiiiiggapbbzgyccg",
-              "type" : "CLIENT_SCRIPT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "3a0eaa492fa00110545d56f62799b6cf"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxrtfyaaaakmddiiiiggeelddeeivfbb",
-              "type" : "CLIENT_SCRIPT"
-            } ]
-          } ],
-          "slot" : "Column 2",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_12",
-          "elementLabel" : "Input 12",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "JSON_LITERAL",
-              "value" : ""
-            },
-            "placeholder" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ {
-            "eventMappingId" : "ckxcwwojffaaaagmddiiiiggreeztbbeewj",
-            "isConfiguration" : false,
-            "offRowStorageId" : null,
-            "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
-            "sourceEventCorrelationId" : null,
-            "sourceEventDefinition" : {
-              "apiName" : "sn_input.NOW_INPUT#VALUE_SET",
-              "id" : null,
-              "type" : "UXEVENT"
-            },
-            "sourceEventSysId" : null,
-            "targets" : [ {
-              "broker" : null,
-              "clientScript" : null,
-              "declarativeAction" : null,
-              "event" : {
-                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                "payload" : {
-                  "type" : "MAP_CONTAINER",
-                  "container" : {
-                    "propName" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : "assignedTime6"
-                    },
-                    "value" : {
-                      "type" : "EVENT_PAYLOAD_BINDING",
-                      "binding" : {
-                        "address" : [ "value" ]
-                      }
-                    }
-                  }
-                },
-                "sysId" : "32408b42ff7a10109046e490703bf176"
-              },
-              "operation" : null,
-              "targetId" : "ckxcwwojffaaaagnddiiiiggygmuhhrzw",
-              "type" : "EVENT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "a6aba6452fa00110545d56f62799b6b0"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxiiiivaaaaahoddiiiigggofjjiijjpcc",
-              "type" : "CLIENT_SCRIPT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "fdfd62892fa00110545d56f62799b660"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxsaaxbbaaaaknddiiiiggoylhhyiirv",
-              "type" : "CLIENT_SCRIPT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "3a0eaa492fa00110545d56f62799b6cf"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxsffcczaaaakoddiiiiggbbjiaaseevj",
-              "type" : "CLIENT_SCRIPT"
-            } ]
-          } ],
-          "slot" : "Column 2",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_13",
-          "elementLabel" : "Input 13",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "JSON_LITERAL",
-              "value" : ""
-            },
-            "placeholder" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ {
-            "eventMappingId" : "ckxcwxfflhaaaagoddiiiigghhwncytju",
-            "isConfiguration" : false,
-            "offRowStorageId" : null,
-            "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
-            "sourceEventCorrelationId" : null,
-            "sourceEventDefinition" : {
-              "apiName" : "sn_input.NOW_INPUT#VALUE_SET",
-              "id" : null,
-              "type" : "UXEVENT"
-            },
-            "sourceEventSysId" : null,
-            "targets" : [ {
-              "broker" : null,
-              "clientScript" : null,
-              "declarativeAction" : null,
-              "event" : {
-                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                "payload" : {
-                  "type" : "MAP_CONTAINER",
-                  "container" : {
-                    "propName" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : "assignedTime7"
-                    },
-                    "value" : {
-                      "type" : "EVENT_PAYLOAD_BINDING",
-                      "binding" : {
-                        "address" : [ "value" ]
-                      }
-                    }
-                  }
-                },
-                "sysId" : "32408b42ff7a10109046e490703bf176"
-              },
-              "operation" : null,
-              "targetId" : "ckxcwxfflhaaaagpddiiiigghccwimilm",
-              "type" : "EVENT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "8fab22092fa00110545d56f62799b666"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxiigtmaaaahpddiiiiggeejeffilyx",
-              "type" : "CLIENT_SCRIPT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "fdfd62892fa00110545d56f62799b660"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxscqddaaaakpddiiiiggubfoibbiik",
-              "type" : "CLIENT_SCRIPT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "3a0eaa492fa00110545d56f62799b6cf"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckxcxsgxbbaaaakqddiiiiggfbhlbbmzs",
-              "type" : "CLIENT_SCRIPT"
-            } ]
-          } ],
-          "slot" : "Column 2",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_15",
-          "elementLabel" : "Input 15",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "message" : "合計",
-                "comment" : ""
-              }
-            },
-            "placeholder" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "sumAssignedTime" ]
-              }
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : true
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Column 2",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "input_16",
-          "elementLabel" : "Input 16",
-          "propertyValues" : {
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "text"
-            },
-            "label" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "message" : "申請時間 (88%)",
-                "comment" : ""
-              }
-            },
-            "placeholder" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "name" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "value" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "sumAssignedTime_88per" ]
-              }
-            },
-            "readonly" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "required" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "hideRequiredIndicator" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "optional" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "min" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "max" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "minlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "maxlength" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiple" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "pattern" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "autofocus" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : true
-            },
-            "invalid" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "helperContent" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Column 2",
-          "definition" : {
-            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        } ],
-        "layout" : {
-          "default" : {
-            "children" : null,
-            "items" : [{"slotName":"Column 1","rules":{"flex":"1","margin-right":"1rem"},"styles":{"display":"flex","flex-direction":"column"}},{"slotName":"Column 2","rules":{"flex":"1"},"styles":{"display":"flex","flex-direction":"column"}}],
-            "root" : null,
-            "rules" : {"flex-flow":"row nowrap","align-items":"stretch","height":"100%"},
-            "styles" : null,
-            "templateId" : "a653f1cd53c31010e6bcddeeff7b128c",
-            "type" : "flex"
-          },
-          "version" : "2.0.0"
-        }
-      },
-      "isHidden" : {
-        "type" : "JSON_LITERAL",
-        "value" : ""
-      },
-      "isNonDestructive" : false,
-      "styles" : {
-        "width" : "100%"
-      }
     } ],
     "layout" : {
       "default" : {
         "children" : null,
-        "items" : [{"slotName":"Column 1","rules":{"flex":"1","margin-right":"1rem"},"styles":{"display":"flex","flex-direction":"column"}},{"slotName":"Column 2","rules":{"flex":"1"},"styles":{"display":"flex","flex-direction":"column"}}],
+        "items" : [{"slotName":"Main","rules":{"flex":"1"},"styles":{"display":"flex","flex-direction":"column"}}],
         "root" : null,
         "rules" : {"flex-flow":"row nowrap","align-items":"stretch","height":"100%"},
         "styles" : null,
-        "templateId" : "a653f1cd53c31010e6bcddeeff7b128c",
+        "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
         "type" : "flex"
       },
       "version" : "2.0.0"
@@ -3051,6 +1515,1183 @@
         "styles" : null,
         "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
         "type" : "flex"
+      }
+    }
+  },
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : {
+    "width" : "100%"
+  }
+}, {
+  "elementId" : "modal_viewport_1",
+  "elementLabel" : "Modal viewport 1",
+  "propertyValues" : {
+    "size" : {
+      "type" : "JSON_LITERAL",
+      "value" : "md"
+    },
+    "disableDismiss" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "contents" : {
+      "type" : "JSON_LITERAL",
+      "value" : {
+        "route" : "",
+        "fields" : { }
+      }
+    },
+    "displayOptions" : {
+      "type" : "JSON_LITERAL",
+      "value" : { }
+    },
+    "bare" : {
+      "type" : "JSON_LITERAL",
+      "value" : true
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : null,
+  "definition" : {
+    "id" : "61c315e9ccb8970546c30f3e2da41a32",
+    "type" : "MACROPONENT_VIEWPORT"
+  },
+  "overrides" : null,
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : { }
+}, {
+  "elementId" : "confirm_1",
+  "elementLabel" : "Confirm 1",
+  "propertyValues" : {
+    "headerLabel" : {
+      "type" : "JSON_LITERAL",
+      "value" : "Modal header"
+    },
+    "content" : {
+      "type" : "JSON_LITERAL",
+      "value" : "Modal body copy goes here"
+    },
+    "primaryButtonLabel" : {
+      "type" : "JSON_LITERAL",
+      "value" : "Yes"
+    },
+    "secondaryButtonLabel" : {
+      "type" : "JSON_LITERAL",
+      "value" : "Cancel"
+    },
+    "size" : {
+      "type" : "JSON_LITERAL",
+      "value" : "md"
+    },
+    "preventDefaultPrimaryAction" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "preventDefaultSecondaryAction" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "defer" : {
+      "type" : "JSON_LITERAL",
+      "value" : true
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : null,
+  "definition" : {
+    "id" : "13ecfe155b630010b913cbd59b81c7d6",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null,
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : { }
+}, {
+  "elementId" : "assign_order",
+  "elementLabel" : "AssignOrder",
+  "propertyValues" : {
+    "size" : {
+      "type" : "JSON_LITERAL",
+      "value" : "md"
+    },
+    "bare" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "disableDismiss" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "defer" : {
+      "type" : "JSON_LITERAL",
+      "value" : true
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : null,
+  "definition" : {
+    "id" : "9c2e3b0978b3250ef3081204f151026a",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : {
+    "composition" : [ {
+      "elementId" : "stylized_text_1",
+      "elementLabel" : "Stylized text 1",
+      "propertyValues" : {
+        "text" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "AssignOrder",
+            "comment" : ""
+          }
+        },
+        "tag" : {
+          "type" : "JSON_LITERAL",
+          "value" : "h3"
+        },
+        "css" : {
+          "type" : "JSON_LITERAL",
+          "value" : "* { }"
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : "modal-title",
+      "definition" : {
+        "id" : "4335ba6dca80378f7ba7a67cd6667bec",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
+    }, {
+      "elementId" : "select_3",
+      "elementLabel" : "Select 3",
+      "propertyValues" : {
+        "label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "オーダー番号",
+            "comment" : ""
+          }
+        },
+        "items" : {
+          "type" : "CLIENT_TRANSFORM_SCRIPT",
+          "script" : {
+            "apiVersion" : "1.0.0",
+            "inlineScript" : "/**\n  * @param {params} params\n  * @param {api} params.api\n  * @param {any} params.imports\n  */\nfunction evaluateProperty({api}) {\n  var selects = [];\n  for (const order of api.data.order_master.results) { \n    selects.push({\n      id:order.orderno.value,\n      label:order.orderno.value\n    });\n  }\n\treturn selects;\n}"
+          }
+        },
+        "optional" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "required" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "hideRequiredIndicator" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "disabled" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "helperContent" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "search" : {
+          "type" : "JSON_LITERAL",
+          "value" : "none"
+        },
+        "invalid" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "autofocus" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "selectedItem" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "messages" : {
+          "type" : "LIST_CONTAINER",
+          "container" : [ ]
+        },
+        "itemsListConstrain" : {
+          "type" : "JSON_LITERAL",
+          "value" : { }
+        },
+        "activeRoute" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "0" : "j",
+            "routeType" : ""
+          }
+        }
+      },
+      "eventMappings" : [ {
+        "eventMappingId" : "ckyggtltjjgaaaabaddjjiiggccwciiddbbwi",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "sn_select.NOW_SELECT#SELECTED_ITEM_SET",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "sn_select.NOW_SELECT#SELECTED_ITEM_SET",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+            "payload" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "propName" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "selectedOrder"
+                },
+                "value" : {
+                  "type" : "EVENT_PAYLOAD_BINDING",
+                  "binding" : {
+                    "address" : [ "value" ]
+                  }
+                }
+              }
+            },
+            "sysId" : "32408b42ff7a10109046e490703bf176"
+          },
+          "operation" : null,
+          "targetId" : "ckyggtltjjgaaaabbddjjiiggaabeeddfopz",
+          "type" : "EVENT"
+        }, {
+          "broker" : null,
+          "clientScript" : {
+            "sysId" : "527522332f700110545d56f62799b642"
+          },
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : null,
+          "targetId" : "ckyggvggzzccaaaahpddjjiiggmueviiiinr",
+          "type" : "CLIENT_SCRIPT"
+        }, {
+          "broker" : null,
+          "clientScript" : {
+            "sysId" : "0ee32e7f2f300110545d56f62799b638"
+          },
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : null,
+          "targetId" : "ckyggwdwdeaaaakjjddjjiiggnnavgffbt",
+          "type" : "CLIENT_SCRIPT"
+        }, {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : null,
+            "payload" : {
+              "type" : "JSON_LITERAL",
+              "value" : { }
+            },
+            "sysId" : null
+          },
+          "operation" : null,
+          "targetId" : "ckyggwdzpaaaaakbddjjiiggiaavqtfjjn",
+          "type" : "EVENT"
+        }, {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : null,
+            "payload" : {
+              "type" : "JSON_LITERAL",
+              "value" : { }
+            },
+            "sysId" : null
+          },
+          "operation" : null,
+          "targetId" : "ckyggwecciikaaaakcddjjiigghjjmpcqel",
+          "type" : "EVENT"
+        }, {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : null,
+            "payload" : {
+              "type" : "JSON_LITERAL",
+              "value" : { }
+            },
+            "sysId" : null
+          },
+          "operation" : null,
+          "targetId" : "ckyggxiinreeaaaarcddjjiiggiedddhheow",
+          "type" : "EVENT"
+        } ]
+      } ],
+      "slot" : "modal-content",
+      "definition" : {
+        "id" : "8592cf18d86865b5e96975a1294ed7a4",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
+    }, {
+      "elementId" : "list_3",
+      "elementLabel" : "List 3",
+      "propertyValues" : {
+        "menuSelection" : {
+          "type" : "JSON_LITERAL",
+          "value" : "Select menu to connect..."
+        },
+        "table" : {
+          "type" : "JSON_LITERAL",
+          "value" : "x_662584_orderma_0_ordermaster"
+        },
+        "listTitle" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "OrderMaster",
+            "comment" : ""
+          }
+        },
+        "selectedListId" : {
+          "type" : "JSON_LITERAL",
+          "value" : "Select..."
+        },
+        "query" : {
+          "type" : "CLIENT_TRANSFORM",
+          "transform" : {
+            "operands" : {
+              "type" : "LIST_CONTAINER",
+              "container" : [ {
+                "type" : "JSON_LITERAL",
+                "value" : "orderno="
+              }, {
+                "type" : "STATE_BINDING",
+                "binding" : {
+                  "address" : [ "selectedOrder" ]
+                }
+              }, {
+                "type" : "JSON_LITERAL",
+                "value" : ""
+              } ]
+            },
+            "operator" : "CONCAT"
+          }
+        },
+        "view" : {
+          "type" : "JSON_LITERAL",
+          "value" : ""
+        },
+        "columns" : {
+          "type" : "JSON_LITERAL",
+          "value" : "orderno,budget,remainbudget"
+        },
+        "groupByField" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "maxColumns" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "limit" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "actionConfigId" : {
+          "type" : "JSON_LITERAL",
+          "value" : ""
+        },
+        "hideDeclarativeActions" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "highlightedValueConfigId" : {
+          "type" : "JSON_LITERAL",
+          "value" : ""
+        },
+        "hideHighlightedValues" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "hideHeader" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "headerSize" : {
+          "type" : "JSON_LITERAL",
+          "value" : "lg"
+        },
+        "headingLevel" : {
+          "type" : "JSON_LITERAL",
+          "value" : 1
+        },
+        "hideTitle" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideTitleRowCount" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideRefreshButton" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideLastRefreshedText" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideMenuButton" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideListSharing" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideFilterPanel" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "listMenuOpen" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideQuickEdit" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideRowSelector" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideColumnGrouping" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideColumnResizing" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideColumnFiltering" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideColumnSorting" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideDragDrop" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideCellFilter" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideInlineEditing" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "wordWrap" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "maxCharLimit" : {
+          "type" : "JSON_LITERAL",
+          "value" : 4000
+        },
+        "isRefList" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideEmptyStateImage" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hidePagination" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hidePages" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideRange" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideRowCount" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideFirstPage" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideLastPage" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "hideLimitSelector" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "tiny" : {
+          "type" : "JSON_LITERAL",
+          "value" : ""
+        },
+        "error" : {
+          "type" : "JSON_LITERAL",
+          "value" : { }
+        },
+        "selectedRecords" : {
+          "type" : "JSON_LITERAL",
+          "value" : [ ]
+        },
+        "refreshRequested" : {
+          "type" : "JSON_LITERAL",
+          "value" : ""
+        },
+        "page" : {
+          "type" : "JSON_LITERAL",
+          "value" : 1
+        },
+        "recordSelectedTable" : {
+          "type" : "JSON_LITERAL",
+          "value" : ""
+        },
+        "recordSelectedSysId" : {
+          "type" : "JSON_LITERAL",
+          "value" : ""
+        },
+        "recordSelectedQuery" : {
+          "type" : "JSON_LITERAL",
+          "value" : ""
+        },
+        "recordSelectedView" : {
+          "type" : "JSON_LITERAL",
+          "value" : ""
+        },
+        "daClientActionContract" : {
+          "type" : "JSON_LITERAL",
+          "value" : ""
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : "modal-content",
+      "definition" : {
+        "id" : "66ee7d86e81f696c9f9be19d8424cc0d",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
+    }, {
+      "elementId" : "input_17",
+      "elementLabel" : "Input 17",
+      "propertyValues" : {
+        "type" : {
+          "type" : "JSON_LITERAL",
+          "value" : "text"
+        },
+        "label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "割り当て時間",
+            "comment" : ""
+          }
+        },
+        "placeholder" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "name" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "value" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "readonly" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "required" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "hideRequiredIndicator" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "optional" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "min" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "max" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "minlength" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "maxlength" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "multiple" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "pattern" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "autofocus" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "disabled" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "invalid" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "helperContent" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "messages" : {
+          "type" : "LIST_CONTAINER",
+          "container" : [ ]
+        }
+      },
+      "eventMappings" : [ {
+        "eventMappingId" : "ckygguiithhiiaaaadjddjjiiggqbbbbeeaayhee",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "sn_input.NOW_INPUT#VALUE_SET",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+            "payload" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "propName" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "assignedTime"
+                },
+                "value" : {
+                  "type" : "EVENT_PAYLOAD_BINDING",
+                  "binding" : {
+                    "address" : [ "value" ]
+                  }
+                }
+              }
+            },
+            "sysId" : "32408b42ff7a10109046e490703bf176"
+          },
+          "operation" : null,
+          "targetId" : "ckygguiithhiiaaaadkddjjiigguwgddjjitd",
+          "type" : "EVENT"
+        }, {
+          "broker" : null,
+          "clientScript" : {
+            "sysId" : "0ee32e7f2f300110545d56f62799b638"
+          },
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : null,
+          "targetId" : "ckyggweilxaaaakdddjjiiggaaniihutyii",
+          "type" : "CLIENT_SCRIPT"
+        } ]
+      } ],
+      "slot" : "modal-content",
+      "definition" : {
+        "id" : "bb0f92e8d7eff1590624bfe69d316f23",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
+    }, {
+      "elementId" : "label_value_4",
+      "elementLabel" : "Label value 4",
+      "propertyValues" : {
+        "label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "割り当て予算: ",
+            "comment" : ""
+          }
+        },
+        "value" : {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "assignedBudget" ]
+          }
+        },
+        "reversed" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "truncated" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : "modal-content",
+      "definition" : {
+        "id" : "bb63b710d208796b7ceaab7812bddef1",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
+    }, {
+      "elementId" : "label_value_5",
+      "elementLabel" : "Label value 5",
+      "propertyValues" : {
+        "label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "割り当て後の残予算: ",
+            "comment" : ""
+          }
+        },
+        "value" : {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "remainedBudget" ]
+          }
+        },
+        "reversed" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "truncated" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : "modal-content",
+      "definition" : {
+        "id" : "bb63b710d208796b7ceaab7812bddef1",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
+    }, {
+      "elementId" : "button_3",
+      "elementLabel" : "Button 3",
+      "propertyValues" : {
+        "variant" : {
+          "type" : "JSON_LITERAL",
+          "value" : "primary"
+        },
+        "size" : {
+          "type" : "JSON_LITERAL",
+          "value" : "md"
+        },
+        "label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "Assign",
+            "comment" : ""
+          }
+        },
+        "icon" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "disabled" : {
+          "type" : "CLIENT_TRANSFORM_SCRIPT",
+          "script" : {
+            "apiVersion" : "1.0.0",
+            "inlineScript" : "/**\n  * @param {params} params\n  * @param {api} params.api\n  * @param {any} params.imports\n  */\nfunction evaluateProperty({api}) {\n  return (api.state.remainedBudget &lt; 0);\n}"
+          }
+        },
+        "tooltipContent" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "Enter a label",
+            "comment" : ""
+          }
+        },
+        "configAria" : {
+          "type" : "MAP_CONTAINER",
+          "container" : { }
+        }
+      },
+      "eventMappings" : [ {
+        "eventMappingId" : "ckyggufbbitaaaaeaddjjiiggqezguxgh",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "sn_button.NOW_BUTTON#CLICKED",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "sn_button.NOW_BUTTON#CLICKED",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : {
+            "dataBrokerId" : "beda4252770300108d070d74c810618f",
+            "operationName" : "EXECUTE",
+            "parentResourceId" : "create_assigned_order",
+            "payload" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "table" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "x_662584_orderma_0_workingdetail"
+                },
+                "templateFields" : {
+                  "type" : "CLIENT_TRANSFORM",
+                  "transform" : {
+                    "operands" : {
+                      "type" : "LIST_CONTAINER",
+                      "container" : [ {
+                        "type" : "JSON_LITERAL",
+                        "value" : "name="
+                      }, {
+                        "type" : "STATE_BINDING",
+                        "binding" : {
+                          "address" : [ "selectedMember" ]
+                        }
+                      }, {
+                        "type" : "JSON_LITERAL",
+                        "value" : "^targetdate="
+                      }, {
+                        "type" : "STATE_BINDING",
+                        "binding" : {
+                          "address" : [ "targetDate" ]
+                        }
+                      }, {
+                        "type" : "JSON_LITERAL",
+                        "value" : "^assignuptime="
+                      }, {
+                        "type" : "STATE_BINDING",
+                        "binding" : {
+                          "address" : [ "assignedTime" ]
+                        }
+                      }, {
+                        "type" : "JSON_LITERAL",
+                        "value" : "^assignbudget="
+                      }, {
+                        "type" : "STATE_BINDING",
+                        "binding" : {
+                          "address" : [ "assignedBudget" ]
+                        }
+                      }, {
+                        "type" : "JSON_LITERAL",
+                        "value" : "^assignorder="
+                      }, {
+                        "type" : "STATE_BINDING",
+                        "binding" : {
+                          "address" : [ "selectedOrderSysId" ]
+                        }
+                      }, {
+                        "type" : "JSON_LITERAL",
+                        "value" : ""
+                      } ]
+                    },
+                    "operator" : "CONCAT"
+                  }
+                },
+                "useSetDisplayValue" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                }
+              }
+            }
+          },
+          "targetId" : "ckyggufbbitaaaaebddjjiiggkdbvffggji",
+          "type" : "DATABROKER_OP"
+        }, {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : {
+            "dataBrokerId" : "9b4b978353211010cbc2ddeeff7b1245",
+            "operationName" : "EXECUTE",
+            "parentResourceId" : "update_order_master",
+            "payload" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "table" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "x_662584_orderma_0_ordermaster"
+                },
+                "recordId" : {
+                  "type" : "STATE_BINDING",
+                  "binding" : {
+                    "address" : [ "selectedOrderSysId" ]
+                  }
+                },
+                "templateFields" : {
+                  "type" : "CLIENT_TRANSFORM",
+                  "transform" : {
+                    "operands" : {
+                      "type" : "LIST_CONTAINER",
+                      "container" : [ {
+                        "type" : "JSON_LITERAL",
+                        "value" : "remainbudget="
+                      }, {
+                        "type" : "STATE_BINDING",
+                        "binding" : {
+                          "address" : [ "remainedBudget" ]
+                        }
+                      }, {
+                        "type" : "JSON_LITERAL",
+                        "value" : ""
+                      } ]
+                    },
+                    "operator" : "CONCAT"
+                  }
+                },
+                "useSetDisplayValue" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                }
+              }
+            }
+          },
+          "targetId" : "ckyggxliiiieaaaatsddjjiiggdpjkpeenii",
+          "type" : "DATABROKER_OP"
+        }, {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : "x_662584_orderma_0.MODAL_SELECTED_RELAY_9a0900d92f373010545d56f62799b6fd",
+            "payload" : {
+              "type" : "JSON_LITERAL",
+              "value" : {
+                "modalId" : "[component-id$='assign_order']",
+                "showModal" : null,
+                "displayOptions" : null,
+                "bare" : true,
+                "preserveState" : null
+              }
+            },
+            "sysId" : "6f5f1abb2f300110545d56f62799b6f5"
+          },
+          "operation" : null,
+          "targetId" : "ckyggxmcweeaaaatyddjjiiggelompcmw",
+          "type" : "EVENT"
+        }, {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : {
+            "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+            "operationName" : "REFRESH",
+            "parentResourceId" : "working_detail",
+            "payload" : {
+              "type" : "MAP_CONTAINER",
+              "container" : { }
+            }
+          },
+          "targetId" : "ckyggyzhojaaaaxjddjjiiggcgfpxggwee",
+          "type" : "DATABROKER_OP"
+        }, {
+          "broker" : null,
+          "clientScript" : {
+            "sysId" : "fdfd62892fa00110545d56f62799b660"
+          },
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : null,
+          "targetId" : "ckyggyzpddnaaaaxkddjjiigggljmxsno",
+          "type" : "CLIENT_SCRIPT"
+        } ]
+      } ],
+      "slot" : "modal-footer",
+      "definition" : {
+        "id" : "d37ce8abca89d02905fed903c8e34d8e",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
+    }, {
+      "elementId" : "button_2",
+      "elementLabel" : "Button 2",
+      "propertyValues" : {
+        "variant" : {
+          "type" : "JSON_LITERAL",
+          "value" : "secondary"
+        },
+        "size" : {
+          "type" : "JSON_LITERAL",
+          "value" : "md"
+        },
+        "label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "Cancel",
+            "comment" : ""
+          }
+        },
+        "icon" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "disabled" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "tooltipContent" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "Enter a label",
+            "comment" : ""
+          }
+        },
+        "configAria" : {
+          "type" : "MAP_CONTAINER",
+          "container" : { }
+        }
+      },
+      "eventMappings" : [ {
+        "eventMappingId" : "ckyggtyqtwaaaactddjjiiggvhbxuccffp",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "sn_button.NOW_BUTTON#CLICKED",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "sn_button.NOW_BUTTON#CLICKED",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : "x_662584_orderma_0.MODAL_SELECTED_RELAY_9a0900d92f373010545d56f62799b6fd",
+            "payload" : {
+              "type" : "JSON_LITERAL",
+              "value" : {
+                "modalId" : "[component-id$='assign_order']",
+                "showModal" : null,
+                "displayOptions" : null,
+                "bare" : true,
+                "preserveState" : null
+              }
+            },
+            "sysId" : "6f5f1abb2f300110545d56f62799b6f5"
+          },
+          "operation" : null,
+          "targetId" : "ckyggtyqtwaaaacuddjjiiggzvmqikhf",
+          "type" : "EVENT"
+        } ]
+      } ],
+      "slot" : "modal-footer",
+      "definition" : {
+        "id" : "d37ce8abca89d02905fed903c8e34d8e",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
+    } ],
+    "layout" : {
+      "default" : {
+        "children" : null,
+        "items" : [{"slotName":"modal-title","rules":{"grid-area":"1 / 1 / 2 / 2","min-height":"50px"},"styles":{"display":"flex","flex-direction":"column"}},{"slotName":"modal-content","rules":{"grid-area":"2 / 1 / 3 / 2","min-height":"100px"},"styles":{"display":"flex","flex-direction":"column"}},{"slotName":"modal-footer","rules":{"grid-area":"3 / 1 / 4 / 2","min-height":"50px"},"styles":{"display":"flex","flex-direction":"row-reverse","justify-content":"flex-start","margin":"0px 0px 0px 0px"}}],
+        "root" : null,
+        "rules" : {"grid-template-columns":"1fr","grid-template-rows":"repeat(3, auto)","grid-column-gap":"0px","grid-row-gap":"1rem"},
+        "styles" : {},
+        "templateId" : null,
+        "type" : "grid"
       }
     }
   },
@@ -3252,8 +2893,147 @@
     }
   },
   "readEvaluationMode" : "EAGER"
+}, {
+  "definition" : {
+    "id" : "b997a84053021010cbc2ddeeff7b1228",
+    "type" : "COMPOSITE"
+  },
+  "elementId" : "order_master",
+  "elementLabel" : "OrderMaster",
+  "eventMappings" : [ ],
+  "inputValues" : {
+    "table" : {
+      "type" : "JSON_LITERAL",
+      "value" : "x_662584_orderma_0_ordermaster"
+    },
+    "encodedQuery" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "returnFields" : {
+      "type" : "JSON_LITERAL",
+      "value" : "orderno,budget,remainbudget"
+    },
+    "orderBy" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "sortType" : {
+      "type" : "JSON_LITERAL",
+      "value" : "asc"
+    },
+    "limit" : {
+      "type" : "JSON_LITERAL",
+      "value" : "1000"
+    },
+    "offset" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "queryCategory" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "returnFieldMetadata" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    }
+  },
+  "readEvaluationMode" : "EAGER"
+}, {
+  "definition" : {
+    "id" : "beda4252770300108d070d74c810618f",
+    "type" : "GRAPHQL"
+  },
+  "elementId" : "create_assigned_order",
+  "elementLabel" : "CreateAssignedOrder",
+  "eventMappings" : [ ],
+  "inputValues" : { },
+  "readEvaluationMode" : "EXPLICIT"
+}, {
+  "definition" : {
+    "id" : "9b4b978353211010cbc2ddeeff7b1245",
+    "type" : "GRAPHQL"
+  },
+  "elementId" : "update_order_master",
+  "elementLabel" : "UpdateOrderMaster",
+  "eventMappings" : [ ],
+  "inputValues" : { },
+  "readEvaluationMode" : "EXPLICIT"
+}, {
+  "definition" : {
+    "id" : "b997a84053021010cbc2ddeeff7b1228",
+    "type" : "COMPOSITE"
+  },
+  "elementId" : "working_detail",
+  "elementLabel" : "WorkingDetail",
+  "eventMappings" : [ ],
+  "inputValues" : {
+    "table" : {
+      "type" : "JSON_LITERAL",
+      "value" : "x_662584_orderma_0_workingdetail"
+    },
+    "encodedQuery" : {
+      "type" : "CLIENT_TRANSFORM",
+      "transform" : {
+        "operands" : {
+          "type" : "LIST_CONTAINER",
+          "container" : [ {
+            "type" : "JSON_LITERAL",
+            "value" : "name="
+          }, {
+            "type" : "STATE_BINDING",
+            "binding" : {
+              "address" : [ "selectedMember" ]
+            }
+          }, {
+            "type" : "JSON_LITERAL",
+            "value" : "^targetdate="
+          }, {
+            "type" : "STATE_BINDING",
+            "binding" : {
+              "address" : [ "targetDate" ]
+            }
+          }, {
+            "type" : "JSON_LITERAL",
+            "value" : ""
+          } ]
+        },
+        "operator" : "CONCAT"
+      }
+    },
+    "returnFields" : {
+      "type" : "JSON_LITERAL",
+      "value" : "assignuptime,assignbudget"
+    },
+    "orderBy" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "sortType" : {
+      "type" : "JSON_LITERAL",
+      "value" : "asc"
+    },
+    "limit" : {
+      "type" : "JSON_LITERAL",
+      "value" : "1000"
+    },
+    "offset" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "queryCategory" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "returnFieldMetadata" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    }
+  },
+  "readEvaluationMode" : "EAGER"
 } ]</data>
-        <dispatched_events/>
+        <dispatched_events>6f5f1abb2f300110545d56f62799b6f5</dispatched_events>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
         <handled_events/>
         <interactions/>
@@ -3277,25 +3057,49 @@
   "message" : "@",
   "comment" : ""
 }, {
+  "message" : "Assign",
+  "comment" : ""
+}, {
+  "message" : "AssignOrder",
+  "comment" : ""
+}, {
+  "message" : "Cancel",
+  "comment" : ""
+}, {
   "message" : "Enter a label",
+  "comment" : ""
+}, {
+  "message" : "OrderMaster",
   "comment" : ""
 }, {
   "message" : "Submit",
   "comment" : ""
 }, {
+  "message" : "WorkingDetail",
+  "comment" : ""
+}, {
+  "message" : "オーダー番号",
+  "comment" : ""
+}, {
   "message" : "コメント",
   "comment" : ""
 }, {
-  "message" : "今月割り当て予算",
+  "message" : "割り当て予算: ",
   "comment" : ""
 }, {
-  "message" : "今月割り当て時間",
+  "message" : "割り当て後の残予算: ",
+  "comment" : ""
+}, {
+  "message" : "割り当て時間",
   "comment" : ""
 }, {
   "message" : "単価：",
   "comment" : ""
 }, {
-  "message" : "合計",
+  "message" : "合計(割り当て予算)",
+  "comment" : ""
+}, {
+  "message" : "合計(割り当て時間)",
   "comment" : ""
 }, {
   "message" : "対象年月",
@@ -3318,160 +3122,6 @@
         <root_component_definition/>
         <schema_version>1.0.0</schema_version>
         <state_properties>[ {
-  "name" : "assignedBudget1",
-  "label" : "assignedBudget1",
-  "fieldType" : "number",
-  "valueType" : "number",
-  "shape" : "",
-  "description" : "",
-  "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : 0
-  }
-}, {
-  "name" : "assignedBudget2",
-  "label" : "assignedBudget2",
-  "fieldType" : "number",
-  "valueType" : "number",
-  "shape" : "",
-  "description" : "",
-  "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : 0
-  }
-}, {
-  "name" : "assignedBudget3",
-  "label" : "assignedBudget3",
-  "fieldType" : "number",
-  "valueType" : "number",
-  "shape" : "",
-  "description" : "",
-  "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : 0
-  }
-}, {
-  "name" : "assignedBudget4",
-  "label" : "assignedBudget4",
-  "fieldType" : "number",
-  "valueType" : "number",
-  "shape" : "",
-  "description" : "",
-  "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : 0
-  }
-}, {
-  "name" : "assignedBudget5",
-  "label" : "assignedBudget5",
-  "fieldType" : "number",
-  "valueType" : "number",
-  "shape" : "",
-  "description" : "",
-  "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : 0
-  }
-}, {
-  "name" : "assignedBudget6",
-  "label" : "assignedBudget6",
-  "fieldType" : "number",
-  "valueType" : "number",
-  "shape" : "",
-  "description" : "",
-  "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : 0
-  }
-}, {
-  "name" : "assignedBudget7",
-  "label" : "assignedBudget7",
-  "fieldType" : "number",
-  "valueType" : "number",
-  "shape" : "",
-  "description" : "",
-  "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : 0
-  }
-}, {
-  "name" : "assignedTime1",
-  "label" : "assignedTime1",
-  "fieldType" : "number",
-  "valueType" : "number",
-  "shape" : "",
-  "description" : "",
-  "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : 0
-  }
-}, {
-  "name" : "assignedTime2",
-  "label" : "assignedTime2",
-  "fieldType" : "number",
-  "valueType" : "number",
-  "shape" : "",
-  "description" : "",
-  "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : 0
-  }
-}, {
-  "name" : "assignedTime3",
-  "label" : "assignedTime3",
-  "fieldType" : "number",
-  "valueType" : "number",
-  "shape" : "",
-  "description" : "",
-  "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : 0
-  }
-}, {
-  "name" : "assignedTime4",
-  "label" : "assignedTime4",
-  "fieldType" : "number",
-  "valueType" : "number",
-  "shape" : "",
-  "description" : "",
-  "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : 0
-  }
-}, {
-  "name" : "assignedTime5",
-  "label" : "assignedTime5",
-  "fieldType" : "number",
-  "valueType" : "number",
-  "shape" : "",
-  "description" : "",
-  "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : 0
-  }
-}, {
-  "name" : "assignedTime6",
-  "label" : "assignedTime6",
-  "fieldType" : "number",
-  "valueType" : "number",
-  "shape" : "",
-  "description" : "",
-  "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : 0
-  }
-}, {
-  "name" : "assignedTime7",
-  "label" : "assignedTime7",
-  "fieldType" : "number",
-  "valueType" : "number",
-  "shape" : "",
-  "description" : "",
-  "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : 0
-  }
-}, {
   "name" : "selectedMember",
   "label" : "selectedMember",
   "fieldType" : "",
@@ -3559,18 +3209,95 @@
     "type" : "JSON_LITERAL",
     "value" : 0
   }
+}, {
+  "name" : "selectedOrder",
+  "label" : "selectedOrder",
+  "fieldType" : "",
+  "valueType" : "",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "assignedTime",
+  "label" : "assignedTime",
+  "fieldType" : "number",
+  "valueType" : "number",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "assignedBudget",
+  "label" : "assignedBudget",
+  "fieldType" : "number",
+  "valueType" : "number",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "remainedBudget",
+  "label" : "remainedBudget",
+  "fieldType" : "number",
+  "valueType" : "number",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "selectedBudget",
+  "label" : "selectedBudget",
+  "fieldType" : "number",
+  "valueType" : "number",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "selectedRemainBudget",
+  "label" : "selectedRemainBudget",
+  "fieldType" : "number",
+  "valueType" : "number",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "selectedOrderSysId",
+  "label" : "selectedOrderSysId",
+  "fieldType" : "",
+  "valueType" : "",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
 } ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-11-12 07:19:14</sys_created_on>
         <sys_id>9a0900d92f373010545d56f62799b6fd</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>50</sys_mod_count>
         <sys_name>ApplicationAssignOrder</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_macroponent_9a0900d92f373010545d56f62799b6fd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-19 08:04:59</sys_updated_on>
+        <sys_updated_on>2022-01-09 08:04:17</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>

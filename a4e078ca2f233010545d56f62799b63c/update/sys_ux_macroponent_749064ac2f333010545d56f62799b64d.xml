@@ -283,6 +283,28 @@
   },
   "isNonDestructive" : false,
   "styles" : { }
+}, {
+  "elementId" : "viewport_waq",
+  "elementLabel" : "Viewport 1",
+  "propertyValues" : {
+    "dynamicTabData" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : "Main",
+  "definition" : {
+    "id" : "MACROPONENT_VIEWPORT_HEADLESS",
+    "type" : "MACROPONENT_VIEWPORT_HEADLESS"
+  },
+  "overrides" : null,
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : { }
 } ]</composition>
         <da_relay_models/>
         <data>[ ]</data>
@@ -291,7 +313,35 @@
         <handled_events/>
         <interactions/>
         <interfaces/>
-        <internal_event_mappings>{ }</internal_event_mappings>
+        <internal_event_mappings>{
+  "MACROPONENT_READY" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "declarativeAction" : null,
+    "event" : {
+      "apiName" : "sn_uxf.MACROPONENT_VIEWPORT_LOAD_REQUESTED",
+      "payload" : {
+        "type" : "CLIENT_TRANSFORM_SCRIPT",
+        "script" : {
+          "apiVersion" : "1.0.0",
+          "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n* @param {any} params.imports\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tviewportElementId: \"viewport_waq\",\n\t\troute: \"subb\",\n\t\tfields: null,\n\t\tparams: null\n\t};\n}"
+        }
+      },
+      "sysId" : "f49aa75023071010b1e3c50947bf65de"
+    },
+    "operation" : null,
+    "targetId" : "ckyxqyxaapaaaaeejddiiiiggeehzdbboxjj",
+    "type" : "EVENT"
+  }, {
+    "broker" : null,
+    "clientScript" : null,
+    "declarativeAction" : null,
+    "event" : null,
+    "operation" : null,
+    "targetId" : "ckyxraadduaaaaeexddiiiigggkhohufu",
+    "type" : "EVENT"
+  } ]
+}</internal_event_mappings>
         <layout>{
   "default" : {
     "children" : null,
@@ -344,13 +394,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-11-10 01:06:40</sys_created_on>
         <sys_id>749064ac2f333010545d56f62799b64d</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>ApplicationFormMyRecords</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_macroponent_749064ac2f333010545d56f62799b64d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-17 06:37:13</sys_updated_on>
+        <sys_updated_on>2022-01-28 01:50:45</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_screen_type">
+    <sys_ux_screen_type action="DELETE">
+        <description/>
+        <name>test_templete</name>
+        <sys_class_name>sys_ux_screen_type</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-27 02:46:03</sys_created_on>
+        <sys_id>d553e2612f110110545d56f62799b6f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>test_templete</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_screen_type_d553e2612f110110545d56f62799b6f7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-27 02:46:03</sys_updated_on>
+    </sys_ux_screen_type>
+    <sys_translated_text action="DELETE" query="documentkey=d553e2612f110110545d56f62799b6f7"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</application>
+        <file_path/>
+        <instance_id>911940acdbfc7b4042b321c40596191e</instance_id>
+        <instance_name>dev80049</instance_name>
+        <name>sys_ux_screen_type_d553e2612f110110545d56f62799b6f7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_screen_type"><sys_ux_screen_type action="INSERT_OR_UPDATE"><description/><name>test_templete</name><sys_class_name>sys_ux_screen_type</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-01-27 02:46:03</sys_created_on><sys_id>d553e2612f110110545d56f62799b6f7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>test_templete</sys_name><sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package><sys_policy/><sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope><sys_update_name>sys_ux_screen_type_d553e2612f110110545d56f62799b6f7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-01-27 02:46:03</sys_updated_on></sys_ux_screen_type><sys_translated_text action="delete_multiple" query="documentkey=d553e2612f110110545d56f62799b6f7"/></record_update>]]></payload>
+        <payload_hash>173678806</payload_hash>
+        <record_name>test_templete</record_name>
+        <reverted_from/>
+        <source>424d1c322fe00110545d56f62799b671</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-27 02:46:03</sys_created_on>
+        <sys_id>115362652f110110545d56f62799b688</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17e996cfb630000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-27 02:46:03</sys_updated_on>
+        <type>UX Screen Collection</type>
+        <update_guid>59536265ef110110b5be705ff2607b87</update_guid>
+        <update_guid_history>59536265ef110110b5be705ff2607b87:173678806</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-27 02:50:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_screen_type">sys_ux_screen_type</sys_db_object>
+        <sys_id>1d88d4265a404fdb8455f4a1fe7079c1</sys_id>
+        <sys_metadata>d553e2612f110110545d56f62799b6f7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>test_templete</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_scope_delete display_value="">3204fa4ef40c4854a3d40a3cbe209890</sys_scope_delete>
+        <sys_update_name>sys_ux_screen_type_d553e2612f110110545d56f62799b6f7</sys_update_name>
+        <sys_update_version display_value="sys_ux_screen_type_d553e2612f110110545d56f62799b6f7">115362652f110110545d56f62799b688</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-27 02:50:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

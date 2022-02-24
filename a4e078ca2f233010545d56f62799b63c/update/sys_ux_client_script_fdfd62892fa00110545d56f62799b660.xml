@@ -2,7 +2,7 @@
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <includes/>
         <macroponent display_value="ApplicationAssignOrder">9a0900d92f373010545d56f62799b6fd</macroponent>
-        <name>CalcSumAssignedTime</name>
+        <name>CalcSum</name>
         <required_translations>[ ]</required_translations>
         <script><![CDATA[/**
  * @param {params} params
@@ -12,28 +12,33 @@
  * @param {ApiHelpers} params.helpers
  */
 function handler({api, event, helpers, imports}) {
-    var total = parseFloat(api.state.assignedTime1);
-    total += parseFloat(api.state.assignedTime2);
-    total += parseFloat(api.state.assignedTime3);
-    total += parseFloat(api.state.assignedTime4);
-    total += parseFloat(api.state.assignedTime5);
-    total += parseFloat(api.state.assignedTime6);
-    total += parseFloat(api.state.assignedTime7);
-    api.setState('sumAssignedTime', total);
-    api.setState('sumAssignedTime_88per', total * 0.88);
+    console.log(api.data.working_detail.results);
+    console.log(JSON.stringify(api.data.working_detail.results));
+    var totalTime = 0;
+    var totalBudget = 0;
+    for (const working_detail of api.data.working_detail.results) {
+        console.log(working_detail.assignuptime.value);
+        console.log(working_detail.assignbudget.value);
+        totalTime += working_detail.assignuptime.value;
+        totalBudget += working_detail.assignbudget.value;
+    }
+    
+    api.setState('sumAssignedTime', totalTime);
+    api.setState('sumAssignedTime_88per', totalTime * 0.88);
+    api.setState('sumAssignedBudget', totalBudget);
 }]]></script>
         <script_api_version>2.0.0</script_api_version>
         <sys_class_name>sys_ux_client_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-19 07:28:28</sys_created_on>
         <sys_id>fdfd62892fa00110545d56f62799b660</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>CalcSumAssignedTime</sys_name>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>CalcSum</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_client_script_fdfd62892fa00110545d56f62799b660</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-19 07:47:59</sys_updated_on>
+        <sys_updated_on>2022-01-09 07:54:52</sys_updated_on>
     </sys_ux_client_script>
 </record_update>

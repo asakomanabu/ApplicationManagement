@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="ApplicationAssignOrder">9a0900d92f373010545d56f62799b6fd</macroponent>
+        <name>SetAssignedBudget2</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({api, event, helpers, imports}) {
+    api.setState('assignedBudget2', api.state.unitPrice * api.state.assignedTime2);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-19 07:17:48</sys_created_on>
+        <sys_id>ed8b22452fa00110545d56f62799b6d9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>SetAssignedBudget2</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_client_script_ed8b22452fa00110545d56f62799b6d9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-19 07:20:10</sys_updated_on>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</application>
+        <file_path/>
+        <instance_id>911940acdbfc7b4042b321c40596191e</instance_id>
+        <instance_name>dev80049</instance_name>
+        <name>sys_ux_client_script_ed8b22452fa00110545d56f62799b6d9</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="ApplicationAssignOrder"&gt;9a0900d92f373010545d56f62799b6fd&lt;/macroponent&gt;&lt;name&gt;SetAssignedBudget2&lt;/name&gt;&lt;required_translations&gt;[ ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({api, event, helpers, imports}) {
+    api.setState('assignedBudget2', api.state.unitPrice * api.state.assignedTime2);
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-19 07:17:48&lt;/sys_created_on&gt;&lt;sys_id&gt;ed8b22452fa00110545d56f62799b6d9&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;SetAssignedBudget2&lt;/sys_name&gt;&lt;sys_package display_value="OrderManagement" source="x_662584_orderma_0"&gt;a4e078ca2f233010545d56f62799b63c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="OrderManagement"&gt;a4e078ca2f233010545d56f62799b63c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_ed8b22452fa00110545d56f62799b6d9&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-19 07:20:10&lt;/sys_updated_on&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1655895910</payload_hash>
+        <record_name>SetAssignedBudget2</record_name>
+        <reverted_from/>
+        <source>68e078ca2f233010545d56f62799b63e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-19 07:20:11</sys_created_on>
+        <sys_id>e41ce6092fa00110545d56f62799b6d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17dd18feff00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-19 07:20:11</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>ec1ce60955a001108709202941aca3d3</update_guid>
+        <update_guid_history>ec1ce60955a001108709202941aca3d3:-1655895910,798b224500a0011044c0b48c8f69efde:-219282966</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-09 07:32:18</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>01badc1d4fa8471080571ce60e5fb100</sys_id>
+        <sys_metadata>ed8b22452fa00110545d56f62799b6d9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SetAssignedBudget2</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_scope_delete display_value="">3204fa4ef40c4854a3d40a3cbe209890</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_ed8b22452fa00110545d56f62799b6d9</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_ed8b22452fa00110545d56f62799b6d9">e41ce6092fa00110545d56f62799b6d4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-09 07:32:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
