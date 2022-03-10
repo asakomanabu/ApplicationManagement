@@ -12,10 +12,9 @@
       "value" : "warning"
     },
     "content" : {
-      "type" : "TRANSLATION_LITERAL",
-      "value" : {
-        "message" : "This needs your attention",
-        "comment" : ""
+      "type" : "STATE_BINDING",
+      "binding" : {
+        "address" : [ "validMsg" ]
       }
     },
     "icon" : {
@@ -25,25 +24,13 @@
     "header" : {
       "type" : "TRANSLATION_LITERAL",
       "value" : {
-        "message" : "Heads up",
+        "message" : "Warning!!",
         "comment" : ""
       }
     },
     "textLinkProps" : {
-      "type" : "MAP_CONTAINER",
-      "container" : {
-        "label" : {
-          "type" : "TRANSLATION_LITERAL",
-          "value" : {
-            "message" : "Link label",
-            "comment" : ""
-          }
-        },
-        "href" : {
-          "type" : "JSON_LITERAL",
-          "value" : "dummyHref"
-        }
-      }
+      "type" : "JSON_LITERAL",
+      "value" : null
     },
     "action" : {
       "type" : "MAP_CONTAINER",
@@ -55,7 +42,7 @@
         "label" : {
           "type" : "TRANSLATION_LITERAL",
           "value" : {
-            "message" : "Custom ok",
+            "message" : "",
             "comment" : ""
           }
         }
@@ -70,7 +57,38 @@
       "value" : null
     }
   },
-  "eventMappings" : [ ],
+  "eventMappings" : [ {
+    "eventMappingId" : "claakoexctaaaabbdddphhxfggyaxjoff",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_alert.NOW_ALERT#ACTION_CLICKED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_alert.NOW_ALERT#ACTION_CLICKED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "propName" : "alert_hide",
+            "value" : true
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "claakoexctaaaabbeddphhxeekpqksoa",
+      "type" : "EVENT"
+    } ]
+  } ],
   "slot" : "Main",
   "definition" : {
     "id" : "553e398f150099fe18ece6938b5bea46",
@@ -108,35 +126,209 @@
       },
       "overrides" : {
         "composition" : [ {
-          "elementId" : "label_value_3",
-          "elementLabel" : "Label value 3",
+          "elementId" : "input_8",
+          "elementLabel" : "Input 8",
           "propertyValues" : {
+            "type" : {
+              "type" : "JSON_LITERAL",
+              "value" : "text"
+            },
             "label" : {
               "type" : "TRANSLATION_LITERAL",
               "value" : {
-                "message" : "This Month : ",
+                "message" : "対象年月",
                 "comment" : ""
               }
             },
+            "placeholder" : {
+              "type" : "JSON_LITERAL",
+              "value" : ""
+            },
+            "name" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
             "value" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "thisMonth" ]
-              }
+              "type" : "JSON_LITERAL",
+              "value" : null
             },
-            "reversed" : {
+            "readonly" : {
               "type" : "JSON_LITERAL",
               "value" : false
             },
-            "truncated" : {
+            "required" : {
               "type" : "JSON_LITERAL",
               "value" : false
+            },
+            "hideRequiredIndicator" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "optional" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "min" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "max" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "minlength" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "maxlength" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "multiple" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "pattern" : {
+              "type" : "JSON_LITERAL",
+              "value" : "[1-2][0-9][0-9][0-9]/[0-1][0-9]"
+            },
+            "autofocus" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "disabled" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "invalid" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "helperContent" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "messages" : {
+              "type" : "LIST_CONTAINER",
+              "container" : [ {
+                "type" : "MAP_CONTAINER",
+                "container" : {
+                  "status" : {
+                    "type" : "JSON_LITERAL",
+                    "value" : "info"
+                  },
+                  "content" : {
+                    "type" : "TRANSLATION_LITERAL",
+                    "value" : {
+                      "message" : "YYYY/MM形式で入力してください",
+                      "comment" : ""
+                    }
+                  }
+                }
+              } ]
             }
           },
-          "eventMappings" : [ ],
+          "eventMappings" : [ {
+            "eventMappingId" : "claakbgeryaaaaeegddpiiiibhrkczmg",
+            "isConfiguration" : false,
+            "offRowStorageId" : null,
+            "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
+            "sourceEventCorrelationId" : null,
+            "sourceEventDefinition" : {
+              "apiName" : "sn_input.NOW_INPUT#VALUE_SET",
+              "id" : null,
+              "type" : "UXEVENT"
+            },
+            "sourceEventSysId" : null,
+            "targets" : [ {
+              "broker" : null,
+              "clientScript" : null,
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                "payload" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : {
+                    "propName" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "tmp_TargetDate"
+                    },
+                    "value" : {
+                      "type" : "EVENT_PAYLOAD_BINDING",
+                      "binding" : {
+                        "address" : [ "value" ]
+                      }
+                    }
+                  }
+                },
+                "sysId" : "32408b42ff7a10109046e490703bf176"
+              },
+              "operation" : null,
+              "targetId" : "claakbnqddxaaaafftddpiiiiofxbbaabbtv",
+              "type" : "EVENT"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "declarativeAction" : null,
+              "event" : null,
+              "operation" : {
+                "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+                "operationName" : "REFRESH",
+                "parentResourceId" : "look_up_targetdate",
+                "payload" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : { }
+                }
+              },
+              "targetId" : "claakcheerbaaaajjrddpiiiigguggubbzho",
+              "type" : "DATABROKER_OP"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "declarativeAction" : null,
+              "event" : null,
+              "operation" : {
+                "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+                "operationName" : "REFRESH",
+                "parentResourceId" : "look_up_prevtarget",
+                "payload" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : { }
+                }
+              },
+              "targetId" : "claakhsggaaccaaaaihhddpiiiipqffzgghsh",
+              "type" : "DATABROKER_OP"
+            }, {
+              "broker" : null,
+              "clientScript" : {
+                "sysId" : "226e0f0307c20110b81efa9e7c1ed0cb"
+              },
+              "declarativeAction" : null,
+              "event" : null,
+              "operation" : null,
+              "targetId" : "claakibbyaiiaaaairddpiiiieklhzchhf",
+              "type" : "CLIENT_SCRIPT"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "declarativeAction" : null,
+              "event" : null,
+              "operation" : {
+                "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+                "operationName" : "REFRESH",
+                "parentResourceId" : "look_up_prevappinfo",
+                "payload" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : { }
+                }
+              },
+              "targetId" : "claaklsizeeaaaasvddpiiiiccffjyvffuw",
+              "type" : "DATABROKER_OP"
+            } ]
+          } ],
           "slot" : "Main",
           "definition" : {
-            "id" : "bb63b710d208796b7ceaab7812bddef1",
+            "id" : "bb0f92e8d7eff1590624bfe69d316f23",
             "type" : "MACROPONENT"
           },
           "overrides" : null,
@@ -164,7 +356,7 @@
             "placeholder" : {
               "type" : "DATA_OUTPUT_BINDING",
               "binding" : {
-                "address" : [ "this_standard_work_day", "results", "0", "workday", "value" ]
+                "address" : [ "look_up_targetdate", "results", "0", "workday", "value" ]
               }
             },
             "name" : {
@@ -265,8 +457,10 @@
               }
             },
             "placeholder" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "workingDate" ]
+              }
             },
             "name" : {
               "type" : "JSON_LITERAL",
@@ -325,22 +519,22 @@
               "value" : false
             },
             "invalid" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "validWorkingDate" ]
-              }
+              "type" : "JSON_LITERAL",
+              "value" : false
             },
             "helperContent" : {
               "type" : "JSON_LITERAL",
               "value" : null
             },
             "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ ]
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "WorkingDate_alertMsg" ]
+              }
             }
           },
           "eventMappings" : [ {
-            "eventMappingId" : "ckwnggphhxcaaaahhiiddiiiiggbbimckhhii",
+            "eventMappingId" : "claajfflpxiiaaaabbxddphhxbxuwaaeejjh",
             "isConfiguration" : false,
             "offRowStorageId" : null,
             "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
@@ -353,48 +547,14 @@
             "sourceEventSysId" : null,
             "targets" : [ {
               "broker" : null,
-              "clientScript" : null,
-              "declarativeAction" : null,
-              "event" : {
-                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                "payload" : {
-                  "type" : "MAP_CONTAINER",
-                  "container" : {
-                    "propName" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : "workingDate"
-                    },
-                    "value" : {
-                      "type" : "EVENT_PAYLOAD_BINDING",
-                      "binding" : {
-                        "address" : [ "value" ]
-                      }
-                    }
-                  }
-                },
-                "sysId" : "32408b42ff7a10109046e490703bf176"
+              "clientScript" : {
+                "sysId" : "eaed6de607460110b81efa9e7c1ed0a0"
               },
-              "operation" : null,
-              "targetId" : "ckwnggphhxcaaaahhjjddiiiiggpnqddwpes",
-              "type" : "EVENT"
-            }, {
-              "broker" : null,
-              "clientScript" : null,
               "declarativeAction" : null,
-              "event" : {
-                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                "payload" : {
-                  "type" : "CLIENT_TRANSFORM_SCRIPT",
-                  "script" : {
-                    "apiVersion" : "1.0.0",
-                    "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n* @param {any} params.imports\n*/\nfunction evaluateEvent({api, event}) {\n  const validWorkingDate = (event.payload.value &lt; 32 &amp;&amp; event.payload.value &gt; 0);\n\treturn {\n\t\tpropName: \"validWorkingDate\",\n\t\tvalue: validWorkingDate\n\t};\n}"
-                  }
-                },
-                "sysId" : "32408b42ff7a10109046e490703bf176"
-              },
+              "event" : null,
               "operation" : null,
-              "targetId" : "ckybbggiizujaaaaeeqddjjiiggqaiwcvaaa",
-              "type" : "EVENT"
+              "targetId" : "claajfflpxiiaaaabbyddphhxpbjccuplaa",
+              "type" : "CLIENT_SCRIPT"
             } ]
           } ],
           "slot" : "Main",
@@ -410,67 +570,12 @@
           "isNonDestructive" : false,
           "styles" : { }
         }, {
-          "elementId" : "alert_2",
-          "elementLabel" : "Alert 2",
-          "propertyValues" : {
-            "status" : {
-              "type" : "JSON_LITERAL",
-              "value" : "critical"
-            },
-            "content" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "message" : "invalid workingDate",
-                "comment" : ""
-              }
-            },
-            "icon" : {
-              "type" : "JSON_LITERAL",
-              "value" : "triangle-exclamation-outline"
-            },
-            "header" : {
-              "type" : "JSON_LITERAL",
-              "value" : ""
-            },
-            "textLinkProps" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "action" : {
-              "type" : "MAP_CONTAINER",
-              "container" : { }
-            },
-            "expanded" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "maxHeight" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Main",
-          "definition" : {
-            "id" : "553e398f150099fe18ece6938b5bea46",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "STATE_BINDING",
-            "binding" : {
-              "address" : [ "validWorkingDate" ]
-            }
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
           "elementId" : "input_6",
           "elementLabel" : "Input 6",
           "propertyValues" : {
             "type" : {
               "type" : "JSON_LITERAL",
-              "value" : "text"
+              "value" : "number"
             },
             "label" : {
               "type" : "TRANSLATION_LITERAL",
@@ -480,8 +585,10 @@
               }
             },
             "placeholder" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "workingTime" ]
+              }
             },
             "name" : {
               "type" : "JSON_LITERAL",
@@ -529,7 +636,7 @@
             },
             "pattern" : {
               "type" : "JSON_LITERAL",
-              "value" : "[1-9]|[1-2][0-9]|3[0-1]"
+              "value" : null
             },
             "autofocus" : {
               "type" : "JSON_LITERAL",
@@ -548,50 +655,14 @@
               "value" : null
             },
             "messages" : {
-              "type" : "LIST_CONTAINER",
-              "container" : [ {
-                "type" : "MAP_CONTAINER",
-                "container" : {
-                  "status" : {
-                    "type" : "JSON_LITERAL",
-                    "value" : "warning"
-                  },
-                  "content" : {
-                    "type" : "TRANSLATION_LITERAL",
-                    "value" : {
-                      "message" : "不正やで",
-                      "comment" : ""
-                    }
-                  }
-                }
-              } ]
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "WorkingTime_alertMsg" ]
+              }
             }
           },
           "eventMappings" : [ {
-            "eventMappingId" : "ckyfgzmyiiaaaaeemddjjhhtjjjjjjjjvrjx",
-            "isConfiguration" : false,
-            "offRowStorageId" : null,
-            "sourceEventApiName" : "sn_input.NOW_INPUT#INVALID_SET",
-            "sourceEventCorrelationId" : null,
-            "sourceEventDefinition" : {
-              "apiName" : "sn_input.NOW_INPUT#INVALID_SET",
-              "id" : null,
-              "type" : "UXEVENT"
-            },
-            "sourceEventSysId" : null,
-            "targets" : [ {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "a373d8392fc00110545d56f62799b684"
-              },
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "ckyfgzmyiiaaaaeenddjjhhtnsyldnbgg",
-              "type" : "CLIENT_SCRIPT"
-            } ]
-          }, {
-            "eventMappingId" : "ckwnggrkbbraaaahhdddiiiiggkccddyexde",
+            "eventMappingId" : "claajhhjpgraaaacciiddphhxvlhhihbrff",
             "isConfiguration" : false,
             "offRowStorageId" : null,
             "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
@@ -604,48 +675,14 @@
             "sourceEventSysId" : null,
             "targets" : [ {
               "broker" : null,
-              "clientScript" : null,
-              "declarativeAction" : null,
-              "event" : {
-                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                "payload" : {
-                  "type" : "MAP_CONTAINER",
-                  "container" : {
-                    "propName" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : "workingTime"
-                    },
-                    "value" : {
-                      "type" : "EVENT_PAYLOAD_BINDING",
-                      "binding" : {
-                        "address" : [ "value" ]
-                      }
-                    }
-                  }
-                },
-                "sysId" : "32408b42ff7a10109046e490703bf176"
+              "clientScript" : {
+                "sysId" : "bed0a23a07060110b81efa9e7c1ed0cc"
               },
-              "operation" : null,
-              "targetId" : "ckwnggrkbbraaaahheddiiiiggrggvpddaq",
-              "type" : "EVENT"
-            }, {
-              "broker" : null,
-              "clientScript" : null,
               "declarativeAction" : null,
-              "event" : {
-                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                "payload" : {
-                  "type" : "CLIENT_TRANSFORM_SCRIPT",
-                  "script" : {
-                    "apiVersion" : "1.0.0",
-                    "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n* @param {any} params.imports\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: 'directWorkingTime',\n\t\tvalue: Math.round(event.payload.value * 0.88 * 10) / 10\n\t};\n}"
-                  }
-                },
-                "sysId" : "32408b42ff7a10109046e490703bf176"
-              },
+              "event" : null,
               "operation" : null,
-              "targetId" : "ckwnggsjjyaaaaaahhfddiiiiggznriixnfh",
-              "type" : "EVENT"
+              "targetId" : "claajhhjpgraaaaccjjddphhxddpooccddu",
+              "type" : "CLIENT_SCRIPT"
             } ]
           } ],
           "slot" : "Main",
@@ -682,33 +719,156 @@
         "width" : "100%"
       }
     }, {
-      "elementId" : "label_value_2",
-      "elementLabel" : "Label value 2",
+      "elementId" : "input_7",
+      "elementLabel" : "Input 7",
       "propertyValues" : {
+        "type" : {
+          "type" : "JSON_LITERAL",
+          "value" : "text"
+        },
         "label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "申請者名",
+            "comment" : ""
+          }
+        },
+        "placeholder" : {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "tmp_User" ]
+          }
+        },
+        "name" : {
           "type" : "JSON_LITERAL",
           "value" : ""
         },
         "value" : {
-          "type" : "CLIENT_TRANSFORM_SCRIPT",
-          "script" : {
-            "apiVersion" : "1.0.0",
-            "inlineScript" : "/**\n  * @param {params} params\n  * @param {api} params.api\n  * @param {any} params.imports\n  */\nfunction evaluateProperty({api}) {\n\treturn \"Last Month : \" + api.state.prevMonth;\n}"
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "readonly" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "required" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "hideRequiredIndicator" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "optional" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "min" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "max" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "minlength" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "maxlength" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "multiple" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "pattern" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "autofocus" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "disabled" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "invalid" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "helperContent" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "messages" : {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "User_alertMsg" ]
           }
-        },
-        "reversed" : {
-          "type" : "JSON_LITERAL",
-          "value" : false
-        },
-        "truncated" : {
-          "type" : "JSON_LITERAL",
-          "value" : false
         }
       },
-      "eventMappings" : [ ],
+      "eventMappings" : [ {
+        "eventMappingId" : "claakbdhsggaaaaddrddpiiiilcffuhheedd",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "sn_input.NOW_INPUT#VALUE_SET",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+            "payload" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "propName" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "tmp_User"
+                },
+                "value" : {
+                  "type" : "EVENT_PAYLOAD_BINDING",
+                  "binding" : {
+                    "address" : [ "value" ]
+                  }
+                }
+              }
+            },
+            "sysId" : "32408b42ff7a10109046e490703bf176"
+          },
+          "operation" : null,
+          "targetId" : "claakbdhsggaaaaddsddpiiiiggxgptyqv",
+          "type" : "EVENT"
+        }, {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : {
+            "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+            "operationName" : "REFRESH",
+            "parentResourceId" : "look_up_loginuser",
+            "payload" : {
+              "type" : "MAP_CONTAINER",
+              "container" : { }
+            }
+          },
+          "targetId" : "claakdhhhkoaaaaeeeddpiiiijtytljwi",
+          "type" : "DATABROKER_OP"
+        } ]
+      } ],
       "slot" : "Column 1",
       "definition" : {
-        "id" : "bb63b710d208796b7ceaab7812bddef1",
+        "id" : "bb0f92e8d7eff1590624bfe69d316f23",
         "type" : "MACROPONENT"
       },
       "overrides" : null,
@@ -736,7 +896,7 @@
         "placeholder" : {
           "type" : "DATA_OUTPUT_BINDING",
           "binding" : {
-            "address" : [ "prev_standard_work_day", "results", "0", "workday", "value" ]
+            "address" : [ "look_up_prevtarget", "results", "0", "workday", "value" ]
           }
         },
         "name" : {
@@ -839,7 +999,7 @@
         "placeholder" : {
           "type" : "DATA_OUTPUT_BINDING",
           "binding" : {
-            "address" : [ "prev_working", "results", "0", "workingdate", "value" ]
+            "address" : [ "look_up_prevappinfo", "results", "0", "workingdate", "value" ]
           }
         },
         "name" : {
@@ -942,7 +1102,7 @@
         "placeholder" : {
           "type" : "DATA_OUTPUT_BINDING",
           "binding" : {
-            "address" : [ "prev_working", "results", "0", "workingtime", "value" ]
+            "address" : [ "look_up_prevappinfo", "results", "0", "uptime", "value" ]
           }
         },
         "name" : {
@@ -1047,7 +1207,8 @@
   },
   "isNonDestructive" : false,
   "styles" : {
-    "width" : "100%"
+    "width" : "100%",
+    "margin-right" : "2rem"
   }
 }, {
   "elementId" : "textarea_1",
@@ -1204,7 +1365,7 @@
     "label" : {
       "type" : "TRANSLATION_LITERAL",
       "value" : {
-        "message" : "Submit",
+        "message" : "申請",
         "comment" : ""
       }
     },
@@ -1216,7 +1377,7 @@
       "type" : "CLIENT_TRANSFORM_SCRIPT",
       "script" : {
         "apiVersion" : "2.0.0",
-        "inlineScript" : "/**\n  * @param {params} params\n  * @param {api} params.api\n  * @param {any} params.imports\n  */\nfunction evaluateProperty({api}) {\n  const validWorkingDate = (api.state.workingDate &lt; 32 &amp;&amp; api.state.workingDate &gt; 0);\n  const validWorkingTime = (api.state.workingTime &gt; 0 &amp;&amp; api.state.workingTime &lt;= api.state.workingDate * 24);\n\treturn !(validWorkingDate &amp;&amp; validWorkingTime);\n}"
+        "inlineScript" : "/**\n  * @param {params} params\n  * @param {api} params.api\n  * @param {any} params.imports\n  */\nfunction evaluateProperty({api}) {\n  //const validWorkingDate = (api.state.workingDate &lt; 32 &amp;&amp; api.state.workingDate &gt; 0);\n  //const validWorkingTime = (api.state.workingTime &gt; 0 &amp;&amp; api.state.workingTime &lt;= api.state.workingDate * 24);\n  return (api.state.validWorkingTime &amp;&amp; api.state.validWorkingTime);\n}"
       }
     },
     "tooltipContent" : {
@@ -1270,29 +1431,23 @@
                   }, {
                     "type" : "STATE_BINDING",
                     "binding" : {
-                      "address" : [ "tmp_user" ]
+                      "address" : [ "User" ]
                     }
-                  }, {
-                    "type" : "JSON_LITERAL",
-                    "value" : "^comment="
-                  }, {
-                    "type" : "STATE_BINDING",
-                    "binding" : {
-                      "address" : [ "comment" ]
-                    }
-                  }, {
-                    "type" : "JSON_LITERAL",
-                    "value" : "^state="
-                  }, {
-                    "type" : "JSON_LITERAL",
-                    "value" : "pending_approval"
                   }, {
                     "type" : "JSON_LITERAL",
                     "value" : "^targetdate="
                   }, {
                     "type" : "STATE_BINDING",
                     "binding" : {
-                      "address" : [ "thisMonth" ]
+                      "address" : [ "TargetDate" ]
+                    }
+                  }, {
+                    "type" : "JSON_LITERAL",
+                    "value" : "^workingdate="
+                  }, {
+                    "type" : "STATE_BINDING",
+                    "binding" : {
+                      "address" : [ "workingDate" ]
                     }
                   }, {
                     "type" : "JSON_LITERAL",
@@ -1304,11 +1459,11 @@
                     }
                   }, {
                     "type" : "JSON_LITERAL",
-                    "value" : "^workingdate="
+                    "value" : "^comment="
                   }, {
                     "type" : "STATE_BINDING",
                     "binding" : {
-                      "address" : [ "workingDate" ]
+                      "address" : [ "comment" ]
                     }
                   }, {
                     "type" : "JSON_LITERAL",
@@ -1334,35 +1489,54 @@
       "event" : {
         "apiName" : "x_662584_orderma_0.NAV_ITEM_SELECTED_RELAY_0344f66a2fa33010545d56f62799b631",
         "payload" : {
-          "type" : "JSON_LITERAL",
-          "value" : {
-            "route" : "applicationform",
-            "fields" : null,
-            "params" : null,
-            "redirect" : null,
-            "passiveNavigation" : null,
-            "title" : null,
-            "multiInstField" : null,
-            "targetRoute" : null,
-            "external" : null
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "route" : {
+              "type" : "JSON_LITERAL",
+              "value" : "open"
+            },
+            "fields" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "userid" : {
+                  "type" : "STATE_BINDING",
+                  "binding" : {
+                    "address" : [ "User" ]
+                  }
+                }
+              }
+            },
+            "params" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "redirect" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "passiveNavigation" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "title" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "multiInstField" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "targetRoute" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "external" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            }
           }
         },
         "sysId" : "46fdc99c2fa80110545d56f62799b621"
-      },
-      "operation" : null,
-      "targetId" : "ckxaggktnwaaaabbddddiiiiggptbjjffwme",
-      "type" : "EVENT"
-    }, {
-      "broker" : null,
-      "clientScript" : null,
-      "declarativeAction" : null,
-      "event" : {
-        "apiName" : null,
-        "payload" : {
-          "type" : "JSON_LITERAL",
-          "value" : { }
-        },
-        "sysId" : null
       },
       "operation" : null,
       "targetId" : "ckxahhumkkaaaaddggddiiiiggffnddyeuev",
@@ -1382,168 +1556,20 @@
       "operation" : null,
       "targetId" : "ckybbffaaasjaaaabbeeddjjiiggchgddjhhiit",
       "type" : "EVENT"
-    } ]
-  } ],
-  "slot" : "Main",
-  "definition" : {
-    "id" : "d37ce8abca89d02905fed903c8e34d8e",
-    "type" : "MACROPONENT"
-  },
-  "overrides" : null,
-  "isHidden" : {
-    "type" : "JSON_LITERAL",
-    "value" : ""
-  },
-  "isNonDestructive" : false,
-  "styles" : { }
-}, {
-  "elementId" : "alert_3",
-  "elementLabel" : "Alert 3",
-  "propertyValues" : {
-    "status" : {
-      "type" : "JSON_LITERAL",
-      "value" : "info"
-    },
-    "content" : {
-      "type" : "TRANSLATION_LITERAL",
-      "value" : {
-        "message" : "This needs your attention",
-        "comment" : ""
-      }
-    },
-    "icon" : {
-      "type" : "JSON_LITERAL",
-      "value" : "circle-info-outline"
-    },
-    "header" : {
-      "type" : "TRANSLATION_LITERAL",
-      "value" : {
-        "message" : "Heads up",
-        "comment" : ""
-      }
-    },
-    "textLinkProps" : {
-      "type" : "MAP_CONTAINER",
-      "container" : {
-        "label" : {
-          "type" : "TRANSLATION_LITERAL",
-          "value" : {
-            "message" : "Link label",
-            "comment" : ""
-          }
-        },
-        "href" : {
-          "type" : "JSON_LITERAL",
-          "value" : "dummyHref"
-        }
-      }
-    },
-    "action" : {
-      "type" : "MAP_CONTAINER",
-      "container" : {
-        "type" : {
-          "type" : "JSON_LITERAL",
-          "value" : "acknowledge"
-        },
-        "label" : {
-          "type" : "TRANSLATION_LITERAL",
-          "value" : {
-            "message" : "Custom ok",
-            "comment" : ""
-          }
-        }
-      }
-    },
-    "expanded" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "maxHeight" : {
-      "type" : "JSON_LITERAL",
-      "value" : null
-    }
-  },
-  "eventMappings" : [ ],
-  "slot" : "Main",
-  "definition" : {
-    "id" : "553e398f150099fe18ece6938b5bea46",
-    "type" : "MACROPONENT"
-  },
-  "overrides" : null,
-  "isHidden" : {
-    "type" : "JSON_LITERAL",
-    "value" : ""
-  },
-  "isNonDestructive" : false,
-  "styles" : { }
-}, {
-  "elementId" : "button_2",
-  "elementLabel" : "Button 2",
-  "propertyValues" : {
-    "variant" : {
-      "type" : "JSON_LITERAL",
-      "value" : "secondary"
-    },
-    "size" : {
-      "type" : "JSON_LITERAL",
-      "value" : "md"
-    },
-    "label" : {
-      "type" : "TRANSLATION_LITERAL",
-      "value" : {
-        "message" : "Button",
-        "comment" : ""
-      }
-    },
-    "icon" : {
-      "type" : "JSON_LITERAL",
-      "value" : null
-    },
-    "disabled" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "tooltipContent" : {
-      "type" : "TRANSLATION_LITERAL",
-      "value" : {
-        "message" : "Enter a label",
-        "comment" : ""
-      }
-    },
-    "configAria" : {
-      "type" : "MAP_CONTAINER",
-      "container" : { }
-    }
-  },
-  "eventMappings" : [ {
-    "eventMappingId" : "claaaaddbtnaaaaiizddjjhhwofukbiiyt",
-    "isConfiguration" : false,
-    "offRowStorageId" : null,
-    "sourceEventApiName" : "sn_button.NOW_BUTTON#CLICKED",
-    "sourceEventCorrelationId" : null,
-    "sourceEventDefinition" : {
-      "apiName" : "sn_button.NOW_BUTTON#CLICKED",
-      "id" : null,
-      "type" : "UXEVENT"
-    },
-    "sourceEventSysId" : null,
-    "targets" : [ {
+    }, {
       "broker" : null,
       "clientScript" : null,
       "declarativeAction" : null,
       "event" : {
-        "apiName" : "sn_uxf.MACROPONENT_VIEWPORT_LOAD_REQUESTED",
+        "apiName" : null,
         "payload" : {
-          "type" : "CLIENT_TRANSFORM_SCRIPT",
-          "script" : {
-            "apiVersion" : "1.0.0",
-            "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n* @param {any} params.imports\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tviewportElementId: \"viewport_oda\",\n\t\troute: \"subb\",\n\t\tfields: null,\n\t\tparams: null\n\t};\n}"
-          }
+          "type" : "JSON_LITERAL",
+          "value" : { }
         },
-        "sysId" : "f49aa75023071010b1e3c50947bf65de"
+        "sysId" : null
       },
       "operation" : null,
-      "targetId" : "claaaaddbtnaaaajjaaddjjhhwbbbsccdbbcj",
+      "targetId" : "claakmkudpaaaayiiddpiiiipbxagqzn",
       "type" : "EVENT"
     } ]
   } ],
@@ -1560,40 +1586,29 @@
   "isNonDestructive" : false,
   "styles" : { }
 }, {
-  "elementId" : "viewport_oda",
-  "elementLabel" : "Viewport 1",
+  "elementId" : "stylized_text_1",
+  "elementLabel" : "Stylized text 1",
   "propertyValues" : {
-    "dynamicTabData" : {
+    "text" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "message" : "稼働時間管理メニュー",
+        "comment" : ""
+      }
+    },
+    "tag" : {
       "type" : "JSON_LITERAL",
-      "value" : ""
-    }
-  },
-  "eventMappings" : [ ],
-  "slot" : "Main",
-  "definition" : {
-    "id" : "MACROPONENT_VIEWPORT_HEADLESS",
-    "type" : "MACROPONENT_VIEWPORT_HEADLESS"
-  },
-  "overrides" : null,
-  "isHidden" : {
-    "type" : "JSON_LITERAL",
-    "value" : ""
-  },
-  "isNonDestructive" : false,
-  "styles" : { }
-}, {
-  "elementId" : "rich_text_1",
-  "elementLabel" : "Rich text 1",
-  "propertyValues" : {
-    "html" : {
+      "value" : "h2"
+    },
+    "css" : {
       "type" : "JSON_LITERAL",
-      "value" : "&lt;p&gt;&lt;span style=\"font-size: 24pt;\"&gt;稼働時間管理&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/ordermanagementportal/applicationform\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;New&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/ordermanagementportal/applicationformopen\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;Open&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/ordermanagementportal/applicationformmyrecords\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;My Records&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/ordermanagementportal/applicationformmyassigned\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;My Assigned&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;"
+      "value" : "* { }"
     }
   },
   "eventMappings" : [ ],
   "slot" : "Sidebar 1",
   "definition" : {
-    "id" : "2d56f06d55f46bbd4e79b5e624beb940",
+    "id" : "4335ba6dca80378f7ba7a67cd6667bec",
     "type" : "MACROPONENT"
   },
   "overrides" : null,
@@ -1604,35 +1619,91 @@
   "isNonDestructive" : false,
   "styles" : { }
 }, {
-  "elementId" : "label_value_4",
-  "elementLabel" : "Label value 4",
+  "elementId" : "text_link_1",
+  "elementLabel" : "Text link 1",
   "propertyValues" : {
     "label" : {
       "type" : "TRANSLATION_LITERAL",
       "value" : {
-        "message" : "ユーザー名: ",
+        "message" : "New",
         "comment" : ""
       }
     },
-    "value" : {
-      "type" : "STATE_BINDING",
-      "binding" : {
-        "address" : [ "tmp_user" ]
+    "variant" : {
+      "type" : "JSON_LITERAL",
+      "value" : "primary"
+    },
+    "href" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "underlined" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "opensWindow" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "download" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "configAria" : {
+      "type" : "MAP_CONTAINER",
+      "container" : {
+        "aria-label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "Accessible Label",
+            "comment" : ""
+          }
+        }
       }
-    },
-    "reversed" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "truncated" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
     }
   },
-  "eventMappings" : [ ],
+  "eventMappings" : [ {
+    "eventMappingId" : "claakqjjpffccaaaaiihhddphhxqggztibnc",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_text_link.NOW_TEXT_LINK#CLICKED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_text_link.NOW_TEXT_LINK#CLICKED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "x_662584_orderma_0.NAV_ITEM_SELECTED_RELAY_0344f66a2fa33010545d56f62799b631",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "route" : "AppForm",
+            "fields" : null,
+            "params" : null,
+            "redirect" : null,
+            "passiveNavigation" : null,
+            "title" : null,
+            "multiInstField" : null,
+            "targetRoute" : null,
+            "external" : null
+          }
+        },
+        "sysId" : "46fdc99c2fa80110545d56f62799b621"
+      },
+      "operation" : null,
+      "targetId" : "claakqjjpffccaaaaiiiiddphhxccdiizxkffz",
+      "type" : "EVENT"
+    } ]
+  } ],
   "slot" : "Sidebar 1",
   "definition" : {
-    "id" : "bb63b710d208796b7ceaab7812bddef1",
+    "id" : "abe7db0526ec8705a0eff03521febfa3",
     "type" : "MACROPONENT"
   },
   "overrides" : null,
@@ -1641,21 +1712,203 @@
     "value" : ""
   },
   "isNonDestructive" : false,
-  "styles" : { }
+  "styles" : {
+    "font-size" : "20pt"
+  }
+}, {
+  "elementId" : "text_link_2",
+  "elementLabel" : "Text link 2",
+  "propertyValues" : {
+    "label" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "message" : "Open",
+        "comment" : ""
+      }
+    },
+    "variant" : {
+      "type" : "JSON_LITERAL",
+      "value" : "primary"
+    },
+    "href" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "underlined" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "opensWindow" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "download" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "configAria" : {
+      "type" : "MAP_CONTAINER",
+      "container" : {
+        "aria-label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "Accessible Label",
+            "comment" : ""
+          }
+        }
+      }
+    }
+  },
+  "eventMappings" : [ {
+    "eventMappingId" : "claakqaoiipaaaaiijjddphhxhhufvddjjxee",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_text_link.NOW_TEXT_LINK#CLICKED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_text_link.NOW_TEXT_LINK#CLICKED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "x_662584_orderma_0.NAV_ITEM_SELECTED_RELAY_0344f66a2fa33010545d56f62799b631",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "route" : {
+              "type" : "JSON_LITERAL",
+              "value" : "open"
+            },
+            "fields" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "userid" : {
+                  "type" : "STATE_BINDING",
+                  "binding" : {
+                    "address" : [ "User" ]
+                  }
+                }
+              }
+            },
+            "params" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "redirect" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "passiveNavigation" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "title" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "multiInstField" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "targetRoute" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "external" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            }
+          }
+        },
+        "sysId" : "46fdc99c2fa80110545d56f62799b621"
+      },
+      "operation" : null,
+      "targetId" : "claakqaoiipaaaaiiaddphhxlhhxixjjkaa",
+      "type" : "EVENT"
+    } ]
+  } ],
+  "slot" : "Sidebar 1",
+  "definition" : {
+    "id" : "abe7db0526ec8705a0eff03521febfa3",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null,
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : {
+    "font-size" : "20pt"
+  }
 } ]</composition>
         <da_relay_models/>
         <data>[ {
   "definition" : {
+    "id" : "beda4252770300108d070d74c810618f",
+    "type" : "GRAPHQL"
+  },
+  "elementId" : "create_application_info",
+  "elementLabel" : "CreateApplicationInfo",
+  "eventMappings" : [ ],
+  "inputValues" : { },
+  "readEvaluationMode" : "EXPLICIT"
+}, {
+  "definition" : {
     "id" : "b997a84053021010cbc2ddeeff7b1228",
     "type" : "COMPOSITE"
   },
-  "elementId" : "working_detail",
-  "elementLabel" : "WorkingDetail",
-  "eventMappings" : [ ],
+  "elementId" : "look_up_targetdate",
+  "elementLabel" : "Look Up TargetDate",
+  "eventMappings" : [ {
+    "eventMappingId" : "claakcdeedduaaaaiipddpiiiiiipddxddwahh",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "propName" : {
+              "type" : "JSON_LITERAL",
+              "value" : "TargetDate"
+            },
+            "value" : {
+              "type" : "DATA_OUTPUT_BINDING",
+              "binding" : {
+                "address" : [ "look_up_targetdate", "results", "0", "sys_id", "value" ]
+              }
+            }
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "claakcdeedduaaaaiiqddpiiiizwbbohaaccgg",
+      "type" : "EVENT"
+    } ]
+  } ],
   "inputValues" : {
     "table" : {
       "type" : "JSON_LITERAL",
-      "value" : "x_662584_orderma_0_workingdetail"
+      "value" : "x_662584_orderma_0_workingdaymaster"
     },
     "encodedQuery" : {
       "type" : "CLIENT_TRANSFORM",
@@ -1664,11 +1917,11 @@
           "type" : "LIST_CONTAINER",
           "container" : [ {
             "type" : "JSON_LITERAL",
-            "value" : "targetdateON"
+            "value" : "targetdate="
           }, {
             "type" : "STATE_BINDING",
             "binding" : {
-              "address" : [ "prevMonth" ]
+              "address" : [ "tmp_TargetDate" ]
             }
           }, {
             "type" : "JSON_LITERAL",
@@ -1680,7 +1933,7 @@
     },
     "returnFields" : {
       "type" : "JSON_LITERAL",
-      "value" : "assignbudget,assignuptime"
+      "value" : "workday,sys_id"
     },
     "orderBy" : {
       "type" : "JSON_LITERAL",
@@ -1713,8 +1966,8 @@
     "id" : "b997a84053021010cbc2ddeeff7b1228",
     "type" : "COMPOSITE"
   },
-  "elementId" : "prev_standard_work_day",
-  "elementLabel" : "PrevStandardWorkDay",
+  "elementId" : "look_up_prevtarget",
+  "elementLabel" : "Look Up PrevTarget",
   "eventMappings" : [ ],
   "inputValues" : {
     "table" : {
@@ -1744,11 +1997,11 @@
     },
     "returnFields" : {
       "type" : "JSON_LITERAL",
-      "value" : "workday,targetdate"
+      "value" : "workday"
     },
     "orderBy" : {
       "type" : "JSON_LITERAL",
-      "value" : "targetdate"
+      "value" : null
     },
     "sortType" : {
       "type" : "JSON_LITERAL",
@@ -1777,13 +2030,62 @@
     "id" : "b997a84053021010cbc2ddeeff7b1228",
     "type" : "COMPOSITE"
   },
-  "elementId" : "working",
-  "elementLabel" : "Working",
-  "eventMappings" : [ ],
+  "elementId" : "look_up_loginuser",
+  "elementLabel" : "Look Up LoginUser",
+  "eventMappings" : [ {
+    "eventMappingId" : "claakdifdwaaaaedddpiiiivgcsggffeej",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "propName" : {
+              "type" : "JSON_LITERAL",
+              "value" : "User"
+            },
+            "value" : {
+              "type" : "DATA_OUTPUT_BINDING",
+              "binding" : {
+                "address" : [ "look_up_loginuser", "results", "0", "sys_id", "value" ]
+              }
+            }
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "claakdifdwaaaaeeddpiiiiggqbblsgrj",
+      "type" : "EVENT"
+    }, {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "5d0a4f4f07420110b81efa9e7c1ed048"
+      },
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "claakhhvhhmaaaagfddpiiiikfuhjjiiqm",
+      "type" : "CLIENT_SCRIPT"
+    } ]
+  } ],
   "inputValues" : {
     "table" : {
       "type" : "JSON_LITERAL",
-      "value" : "x_662584_orderma_0_working"
+      "value" : "x_662584_orderma_0_membermaster"
     },
     "encodedQuery" : {
       "type" : "CLIENT_TRANSFORM",
@@ -1792,11 +2094,11 @@
           "type" : "LIST_CONTAINER",
           "container" : [ {
             "type" : "JSON_LITERAL",
-            "value" : "targetdateON"
+            "value" : "name.user_name="
           }, {
             "type" : "STATE_BINDING",
             "binding" : {
-              "address" : [ "prevMonth" ]
+              "address" : [ "tmp_User" ]
             }
           }, {
             "type" : "JSON_LITERAL",
@@ -1808,91 +2110,7 @@
     },
     "returnFields" : {
       "type" : "JSON_LITERAL",
-      "value" : "workingdate,workingtime"
-    },
-    "orderBy" : {
-      "type" : "JSON_LITERAL",
-      "value" : null
-    },
-    "sortType" : {
-      "type" : "JSON_LITERAL",
-      "value" : "asc"
-    },
-    "limit" : {
-      "type" : "JSON_LITERAL",
-      "value" : "1000"
-    },
-    "offset" : {
-      "type" : "JSON_LITERAL",
-      "value" : null
-    },
-    "queryCategory" : {
-      "type" : "JSON_LITERAL",
-      "value" : ""
-    },
-    "returnFieldMetadata" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    }
-  },
-  "readEvaluationMode" : "EAGER"
-}, {
-  "definition" : {
-    "id" : "beda4252770300108d070d74c810618f",
-    "type" : "GRAPHQL"
-  },
-  "elementId" : "create_order_master",
-  "elementLabel" : "CreateOrderMaster",
-  "eventMappings" : [ ],
-  "inputValues" : { },
-  "readEvaluationMode" : "EXPLICIT"
-}, {
-  "definition" : {
-    "id" : "beda4252770300108d070d74c810618f",
-    "type" : "GRAPHQL"
-  },
-  "elementId" : "create_working",
-  "elementLabel" : "CreateWorking",
-  "eventMappings" : [ ],
-  "inputValues" : { },
-  "readEvaluationMode" : "EXPLICIT"
-}, {
-  "definition" : {
-    "id" : "b997a84053021010cbc2ddeeff7b1228",
-    "type" : "COMPOSITE"
-  },
-  "elementId" : "this_standard_work_day",
-  "elementLabel" : "ThisStandardWorkDay",
-  "eventMappings" : [ ],
-  "inputValues" : {
-    "table" : {
-      "type" : "JSON_LITERAL",
-      "value" : "x_662584_orderma_0_workingdaymaster"
-    },
-    "encodedQuery" : {
-      "type" : "CLIENT_TRANSFORM",
-      "transform" : {
-        "operands" : {
-          "type" : "LIST_CONTAINER",
-          "container" : [ {
-            "type" : "JSON_LITERAL",
-            "value" : "targetdate="
-          }, {
-            "type" : "STATE_BINDING",
-            "binding" : {
-              "address" : [ "thisMonth" ]
-            }
-          }, {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          } ]
-        },
-        "operator" : "CONCAT"
-      }
-    },
-    "returnFields" : {
-      "type" : "JSON_LITERAL",
-      "value" : "targetdate,workday"
+      "value" : "sys_id"
     },
     "orderBy" : {
       "type" : "JSON_LITERAL",
@@ -1925,13 +2143,13 @@
     "id" : "b997a84053021010cbc2ddeeff7b1228",
     "type" : "COMPOSITE"
   },
-  "elementId" : "prev_working",
-  "elementLabel" : "PrevWorking",
+  "elementId" : "look_up_prevappinfo",
+  "elementLabel" : "Look Up prevAppinfo",
   "eventMappings" : [ ],
   "inputValues" : {
     "table" : {
       "type" : "JSON_LITERAL",
-      "value" : "x_662584_orderma_0_working"
+      "value" : "x_662584_orderma_0_applicationinfo"
     },
     "encodedQuery" : {
       "type" : "CLIENT_TRANSFORM",
@@ -1944,11 +2162,11 @@
           }, {
             "type" : "STATE_BINDING",
             "binding" : {
-              "address" : [ "tmp_user" ]
+              "address" : [ "User" ]
             }
           }, {
             "type" : "JSON_LITERAL",
-            "value" : "^targetdate="
+            "value" : "^targetdate.targetdate="
           }, {
             "type" : "STATE_BINDING",
             "binding" : {
@@ -1964,7 +2182,7 @@
     },
     "returnFields" : {
       "type" : "JSON_LITERAL",
-      "value" : "workingdate,workingtime"
+      "value" : "workingdate,uptime"
     },
     "orderBy" : {
       "type" : "JSON_LITERAL",
@@ -1992,16 +2210,6 @@
     }
   },
   "readEvaluationMode" : "EAGER"
-}, {
-  "definition" : {
-    "id" : "beda4252770300108d070d74c810618f",
-    "type" : "GRAPHQL"
-  },
-  "elementId" : "create_application_info",
-  "elementLabel" : "CreateApplicationInfo",
-  "eventMappings" : [ ],
-  "inputValues" : { },
-  "readEvaluationMode" : "EXPLICIT"
 } ]</data>
         <dispatched_events>46fdc99c2fa80110545d56f62799b621</dispatched_events>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
@@ -2019,7 +2227,7 @@
         "type" : "CLIENT_TRANSFORM_SCRIPT",
         "script" : {
           "apiVersion" : "1.0.0",
-          "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n* @param {any} params.imports\n*/\nfunction evaluateEvent({api, event}) {\n    const date = new Date();\n\tconst value = date.getFullYear().toString()+\"-\"+(date.getMonth()).toString();\n\treturn {\n\t\tpropName: \"prevMonth\",\n\t\tvalue: value\n\t};\n}"
+          "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n* @param {any} params.imports\n*/\nfunction evaluateEvent({api, event}) {\n    const date = new Date();\n\tconst value = date.getFullYear().toString()+\"/\"+(date.getMonth()).toString();\n\treturn {\n\t\tpropName: \"prevMonth\",\n\t\tvalue: value\n\t};\n}"
         }
       },
       "sysId" : "32408b42ff7a10109046e490703bf176"
@@ -2037,7 +2245,7 @@
         "type" : "CLIENT_TRANSFORM_SCRIPT",
         "script" : {
           "apiVersion" : "1.0.0",
-          "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n* @param {any} params.imports\n*/\nfunction evaluateEvent({api, event}) {\n    const date = new Date();\n\tconst value = date.getFullYear().toString()+\"-\"+(date.getMonth()+1).toString();\n\treturn {\n\t\tpropName: \"thisMonth\",\n\t\tvalue: value\n\t};\n}"
+          "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n* @param {any} params.imports\n*/\nfunction evaluateEvent({api, event}) {\n    const date = new Date();\n\tconst value = date.getFullYear().toString()+\"/\"+(date.getMonth()+1).toString();\n\treturn {\n\t\tpropName: \"thisMonth\",\n\t\tvalue: value\n\t};\n}"
         }
       },
       "sysId" : "32408b42ff7a10109046e490703bf176"
@@ -2049,35 +2257,18 @@
     "broker" : null,
     "clientScript" : null,
     "declarativeAction" : null,
-    "event" : {
-      "apiName" : "sn_uxf.MACROPONENT_VIEWPORT_LOAD_REQUESTED",
+    "event" : null,
+    "operation" : {
+      "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+      "operationName" : "REFRESH",
+      "parentResourceId" : "look_up_targetdate",
       "payload" : {
-        "type" : "CLIENT_TRANSFORM_SCRIPT",
-        "script" : {
-          "apiVersion" : "1.0.0",
-          "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n* @param {any} params.imports\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tviewportElementId: \"viewport_oda\",\n\t\troute: \"suba\",\n\t\tfields: null,\n\t\tparams: null\n\t};\n}"
-        }
-      },
-      "sysId" : "f49aa75023071010b1e3c50947bf65de"
+        "type" : "MAP_CONTAINER",
+        "container" : { }
+      }
     },
-    "operation" : null,
-    "targetId" : "ckweibbdolaaaabbdddiiiiggffwskjjbbvi",
-    "type" : "EVENT"
-  }, {
-    "broker" : null,
-    "clientScript" : null,
-    "declarativeAction" : null,
-    "event" : {
-      "apiName" : null,
-      "payload" : {
-        "type" : "JSON_LITERAL",
-        "value" : { }
-      },
-      "sysId" : null
-    },
-    "operation" : null,
     "targetId" : "ckxiiriibbojaaaacchddiiiiggccltbhhlqaa",
-    "type" : "EVENT"
+    "type" : "DATABROKER_OP"
   }, {
     "broker" : null,
     "clientScript" : null,
@@ -2108,6 +2299,21 @@
     "operation" : null,
     "targetId" : "claaaadaowpaaaaiiiddjjhhwfjjqbaeyq",
     "type" : "EVENT"
+  }, {
+    "broker" : null,
+    "clientScript" : null,
+    "declarativeAction" : null,
+    "event" : {
+      "apiName" : null,
+      "payload" : {
+        "type" : "JSON_LITERAL",
+        "value" : { }
+      },
+      "sysId" : null
+    },
+    "operation" : null,
+    "targetId" : "claakciisddiiaaaaiibbddpiiiiffsggpjjdkl",
+    "type" : "EVENT"
   } ]
 }</internal_event_mappings>
         <layout>{
@@ -2125,40 +2331,25 @@
         <name>ApplicationForm</name>
         <props>[ ]</props>
         <required_translations>[ {
-  "message" : "Button",
+  "message" : "Accessible Label",
   "comment" : ""
 }, {
   "message" : "Comment",
   "comment" : ""
 }, {
-  "message" : "Custom ok",
-  "comment" : ""
-}, {
   "message" : "Enter a label",
   "comment" : ""
 }, {
-  "message" : "Heads up",
+  "message" : "New",
   "comment" : ""
 }, {
-  "message" : "Link label",
+  "message" : "Open",
   "comment" : ""
 }, {
-  "message" : "Submit",
+  "message" : "Warning!!",
   "comment" : ""
 }, {
-  "message" : "This Month : ",
-  "comment" : ""
-}, {
-  "message" : "This needs your attention",
-  "comment" : ""
-}, {
-  "message" : "invalid workingDate",
-  "comment" : ""
-}, {
-  "message" : "ユーザー名: ",
-  "comment" : ""
-}, {
-  "message" : "不正やで",
+  "message" : "YYYY/MM形式で入力してください",
   "comment" : ""
 }, {
   "message" : "今月標準日数",
@@ -2177,6 +2368,18 @@
   "comment" : ""
 }, {
   "message" : "先月稼働時間",
+  "comment" : ""
+}, {
+  "message" : "対象年月",
+  "comment" : ""
+}, {
+  "message" : "申請",
+  "comment" : ""
+}, {
+  "message" : "申請者名",
+  "comment" : ""
+}, {
+  "message" : "稼働時間管理メニュー",
   "comment" : ""
 } ]</required_translations>
         <root_component/>
@@ -2261,15 +2464,17 @@
     "value" : null
   }
 }, {
-  "name" : "tmp_user",
-  "label" : "tmp_user",
+  "name" : "User",
+  "label" : "User",
   "fieldType" : "",
   "valueType" : "",
   "shape" : "",
   "description" : "",
   "initialValue" : {
-    "type" : "JSON_LITERAL",
-    "value" : "丹羽亮太"
+    "type" : "DATA_OUTPUT_BINDING",
+    "binding" : {
+      "address" : [ "look_up_loginuser", "results", "0", "sys_id", "value" ]
+    }
   }
 }, {
   "name" : "thisMonth",
@@ -2304,18 +2509,131 @@
     "type" : "JSON_LITERAL",
     "value" : true
   }
+}, {
+  "name" : "validMsg",
+  "label" : "validMsg",
+  "fieldType" : "",
+  "valueType" : "",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : "テスト用メッセージ"
+  }
+}, {
+  "name" : "WorkingDate_alertMsg",
+  "label" : "WorkingDate_alertMsg",
+  "fieldType" : "json",
+  "valueType" : "json",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : [ {
+      "status" : "warning",
+      "content" : "必須入力項目です"
+    } ]
+  }
+}, {
+  "name" : "validWorkingTime",
+  "label" : "validWorkingTime",
+  "fieldType" : "boolean",
+  "valueType" : "boolean",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : true
+  }
+}, {
+  "name" : "WorkingTime_alertMsg",
+  "label" : "WorkingTime_alertMsg",
+  "fieldType" : "json",
+  "valueType" : "json",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : [ {
+      "status" : "warning",
+      "content" : "必須入力項目です"
+    } ]
+  }
+}, {
+  "name" : "TargetDate",
+  "label" : "TargetDate",
+  "fieldType" : "",
+  "valueType" : "",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "DATA_OUTPUT_BINDING",
+    "binding" : {
+      "address" : [ "look_up_targetdate", "results", "0", "sys_id", "value" ]
+    }
+  }
+}, {
+  "name" : "tmp_TargetDate",
+  "label" : "tmp_TargetDate",
+  "fieldType" : "",
+  "valueType" : "",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : "2021/02"
+  }
+}, {
+  "name" : "tmp_User",
+  "label" : "tmp_User",
+  "fieldType" : "",
+  "valueType" : "",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "CONTEXT_BINDING",
+    "binding" : {
+      "address" : [ "user", "userName" ],
+      "category" : "session"
+    }
+  }
+}, {
+  "name" : "User_alertMsg",
+  "label" : "User_alertMsg",
+  "fieldType" : "json",
+  "valueType" : "json",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : [ {
+      "status" : "warning",
+      "content" : "必須入力項目です"
+    } ]
+  }
+}, {
+  "name" : "tmp_prev",
+  "label" : "tmp_prev",
+  "fieldType" : "",
+  "valueType" : "",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
 } ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-11-04 06:44:13</sys_created_on>
         <sys_id>0344f66a2fa33010545d56f62799b631</sys_id>
-        <sys_mod_count>213</sys_mod_count>
+        <sys_mod_count>345</sys_mod_count>
         <sys_name>ApplicationForm</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_macroponent_0344f66a2fa33010545d56f62799b631</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-02-24 02:32:05</sys_updated_on>
+        <sys_updated_on>2022-03-10 08:30:49</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>

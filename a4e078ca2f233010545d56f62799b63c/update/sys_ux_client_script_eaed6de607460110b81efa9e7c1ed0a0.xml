@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="ApplicationForm">0344f66a2fa33010545d56f62799b631</macroponent>
+        <name>valid_WorkDay</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({api, event, helpers, imports}) {
+
+    //フィールドに入力された稼働日数を取得
+    let workday = event.payload.value;
+   console.log("稼働日："+ workday);
+
+    //クライアントパラメータ設定
+    api.setState('workingDate',workday);
+
+    if(workday){
+        
+         //アラートメッセージ設定
+         api.setState('WorkingDate_alertMsg','[]'); 
+         
+        //稼働日の有効判定
+        if(workday >=0 && workday <= 31){
+            
+            //クライアントパラメータ設定    
+            api.setState('workingDate',workday);
+            api.setState('validWorkingDate',false);
+        }else{
+            //検証条件に一致しない場合はエラーメッセージ表示
+            api.setState('WorkingDate_alertMsg','[{"status":"warning","content":"0から31日以内で入力してください"}]');    
+            api.setState('validWorkingDate',true);
+        }
+
+    }else{
+    
+        //デフォルトは項目に対するサジェスト
+        api.setState('WorkingDate_alertMsg','[{"status":"warning","content":"必須入力項目です"}]');
+        api.setState('validWorkingDate',true);
+    }
+
+}
+
+
+]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-08 08:13:41</sys_created_on>
+        <sys_id>eaed6de607460110b81efa9e7c1ed0a0</sys_id>
+        <sys_mod_count>62</sys_mod_count>
+        <sys_name>valid_WorkDay</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_client_script_eaed6de607460110b81efa9e7c1ed0a0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-09 08:10:42</sys_updated_on>
+    </sys_ux_client_script>
+</record_update>

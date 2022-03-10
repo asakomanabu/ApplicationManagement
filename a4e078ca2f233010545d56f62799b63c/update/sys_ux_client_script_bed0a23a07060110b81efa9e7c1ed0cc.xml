@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="ApplicationForm">0344f66a2fa33010545d56f62799b631</macroponent>
+        <name>valid_WorkTime</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({api, event, helpers, imports}) {
+
+    //入力稼働時間、稼働日の取得
+    let worktime = event.payload.value;
+    let workday = api.state.workingDate;
+
+    //debug
+    console.log("稼働時間:" + worktime);
+    console.log("稼働日:" + workday);
+
+    //稼働時間上限の計算
+    let limit_time = workday * 24;
+
+    if(worktime){
+        
+        api.setState('WorkingTime_alertMsg','[]');
+
+        if(limit_time >= worktime){
+
+            //クライアントパラメータに設定
+            api.setState('workingTime',worktime);
+
+            //エラーフラグを設定
+            api.setState('validWorkingTime',false);
+            api.setState('alert_hide',true);
+            //debug
+            console.log("稼働時間OK");
+
+        }else if(limit_time < worktime){
+
+            //アラートダイアログを表示
+            api.setState('validMsg',"稼働時間は稼働日*24時間以内で入力してください");
+            api.setState('alert_hide',false);
+
+            //エラーフラグを設定
+            api.setState('validWorkingTime',true);
+
+            //debug
+            console.log("稼働時間NG");
+
+        }
+    
+    }else{
+        api.setState('validWorkingTime',true);
+        api.setState('WorkingTime_alertMsg','[{"status":"warning","content":"必須入力項目です"}]');
+    }
+}
+]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-09 06:34:44</sys_created_on>
+        <sys_id>bed0a23a07060110b81efa9e7c1ed0cc</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>valid_WorkTime</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_client_script_bed0a23a07060110b81efa9e7c1ed0cc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-09 08:10:42</sys_updated_on>
+    </sys_ux_client_script>
+</record_update>

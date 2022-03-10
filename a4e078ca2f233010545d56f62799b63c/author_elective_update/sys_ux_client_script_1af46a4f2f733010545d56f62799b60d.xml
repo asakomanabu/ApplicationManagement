@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="ApplicationForm">0344f66a2fa33010545d56f62799b631</macroponent>
+        <name>InitDateParams</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({api, event, helpers, imports}) {
+    const getCurDate = function() {
+        const date = new Date();
+        return date.toString();
+    };
+    const date = Date();
+    const prevMonth = date.getFullYear()
+    + '/' + ('0' + (date.getMonth() + 1)).slice(-2)
+    + '/' + '01';  // + ('0' + date.getDate()).slice(-2);
+    api.setState('prevMonth', prevMonth);
+    
+    const thisMonth = date.getFullYear().toString()
+    + '/' + ('0' + (date.getMonth().toString())).slice(-2);
+    api.setState('thisMonth', thisMonth);
+
+    return getCurDate();
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-18 05:09:56</sys_created_on>
+        <sys_id>1af46a4f2f733010545d56f62799b60d</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>InitDateParams</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_client_script_1af46a4f2f733010545d56f62799b60d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-09 09:03:53</sys_updated_on>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</application>
+        <file_path/>
+        <instance_id>3df77da9db17ff484d2bac44d496195a</instance_id>
+        <instance_name>dev91783</instance_name>
+        <name>sys_ux_client_script_1af46a4f2f733010545d56f62799b60d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="ApplicationForm"&gt;0344f66a2fa33010545d56f62799b631&lt;/macroponent&gt;&lt;name&gt;InitDateParams&lt;/name&gt;&lt;required_translations&gt;[ ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({api, event, helpers, imports}) {
+    const getCurDate = function() {
+        const date = new Date();
+        return date.toString();
+    };
+    const date = Date();
+    const prevMonth = date.getFullYear()
+    + '/' + ('0' + (date.getMonth() + 1)).slice(-2)
+    + '/' + '01';  // + ('0' + date.getDate()).slice(-2);
+    api.setState('prevMonth', prevMonth);
+    
+    const thisMonth = date.getFullYear().toString()
+    + '/' + ('0' + (date.getMonth().toString())).slice(-2);
+    api.setState('thisMonth', thisMonth);
+
+    return getCurDate();
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-11-18 05:09:56&lt;/sys_created_on&gt;&lt;sys_id&gt;1af46a4f2f733010545d56f62799b60d&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name&gt;InitDateParams&lt;/sys_name&gt;&lt;sys_package display_value="OrderManagement" source="x_662584_orderma_0"&gt;a4e078ca2f233010545d56f62799b63c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="OrderManagement"&gt;a4e078ca2f233010545d56f62799b63c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_1af46a4f2f733010545d56f62799b60d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-03-09 09:03:53&lt;/sys_updated_on&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>187490807</payload_hash>
+        <record_name>InitDateParams</record_name>
+        <reverted_from/>
+        <source>935c27f807820110b81efa9e7c1ed0b4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-09 09:03:54</sys_created_on>
+        <sys_id>3ff203f207860110b81efa9e7c1ed062</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17f6deba52c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-09 09:03:54</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>f3f203f2a48601103e4557c0f818f162</update_guid>
+        <update_guid_history>f3f203f2a48601103e4557c0f818f162:187490807,b448192a7f060110f01b386ae6b55a61:-1269372679,b57c14ead74201106e9ebc4f3f916e6a:0,9d9e88228342011037d6f96597bddb31:-1269372679,60ea2fb856c20110cb955d678719438d:1461287547</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-10 02:09:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>1c72efbb3f374b8983369511256fbce1</sys_id>
+        <sys_metadata>1af46a4f2f733010545d56f62799b60d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>InitDateParams</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_scope_delete display_value="">3204fa4ef40c4854a3d40a3cbe209890</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_1af46a4f2f733010545d56f62799b60d</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_1af46a4f2f733010545d56f62799b60d">3ff203f207860110b81efa9e7c1ed062</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-10 02:09:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

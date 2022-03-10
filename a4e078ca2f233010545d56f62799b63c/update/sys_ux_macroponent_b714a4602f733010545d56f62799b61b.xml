@@ -9,7 +9,7 @@
   "propertyValues" : {
     "html" : {
       "type" : "JSON_LITERAL",
-      "value" : "&lt;p&gt;&lt;span style=\"font-size: 24pt;\"&gt;稼働時間管理&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/ordermanagementportal/applicationform\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;New&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/ordermanagementportal/applicationformopen\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;Open&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/ordermanagementportal/applicationformmyrecords\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;My Records&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/ordermanagementportal/applicationformmyassigned\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;My Assigned&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;"
+      "value" : "&lt;p&gt;&lt;span style=\"font-size: 24pt;\"&gt;稼働時間管理&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/OrderManagment/AppForm\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;New&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/OrderManagment/open\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;Open&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/ordermanagementportal/applicationformmyrecords\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;My Records&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/ordermanagementportal/applicationformmyassigned\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;My Assigned&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;"
     }
   },
   "eventMappings" : [ ],
@@ -35,12 +35,12 @@
     },
     "table" : {
       "type" : "JSON_LITERAL",
-      "value" : "x_662584_orderma_0_working"
+      "value" : "x_662584_orderma_0_applicationinfo"
     },
     "listTitle" : {
       "type" : "TRANSLATION_LITERAL",
       "value" : {
-        "message" : "Working",
+        "message" : "申請情報一覧",
         "comment" : ""
       }
     },
@@ -55,18 +55,10 @@
           "type" : "LIST_CONTAINER",
           "container" : [ {
             "type" : "JSON_LITERAL",
-            "value" : "name="
-          }, {
-            "type" : "STATE_BINDING",
-            "binding" : {
-              "address" : [ "tmp_user" ]
-            }
+            "value" : ""
           }, {
             "type" : "JSON_LITERAL",
-            "value" : "^isapproved="
-          }, {
-            "type" : "JSON_LITERAL",
-            "value" : "requested"
+            "value" : ""
           }, {
             "type" : "JSON_LITERAL",
             "value" : ""
@@ -81,7 +73,7 @@
     },
     "columns" : {
       "type" : "JSON_LITERAL",
-      "value" : "name,targetdate,workingdate,workingtime,directuptime,isapproved"
+      "value" : "number,name,targetdate,workingdate,uptime,state"
     },
     "groupByField" : {
       "type" : "JSON_LITERAL",
@@ -129,7 +121,7 @@
     },
     "hideTitleRowCount" : {
       "type" : "JSON_LITERAL",
-      "value" : false
+      "value" : true
     },
     "hideRefreshButton" : {
       "type" : "JSON_LITERAL",
@@ -141,7 +133,7 @@
     },
     "hideMenuButton" : {
       "type" : "JSON_LITERAL",
-      "value" : false
+      "value" : true
     },
     "hideListSharing" : {
       "type" : "JSON_LITERAL",
@@ -153,11 +145,11 @@
     },
     "listMenuOpen" : {
       "type" : "JSON_LITERAL",
-      "value" : true
+      "value" : false
     },
     "hideQuickEdit" : {
       "type" : "JSON_LITERAL",
-      "value" : false
+      "value" : true
     },
     "hideRowSelector" : {
       "type" : "JSON_LITERAL",
@@ -173,7 +165,7 @@
     },
     "hideColumnFiltering" : {
       "type" : "JSON_LITERAL",
-      "value" : false
+      "value" : true
     },
     "hideColumnSorting" : {
       "type" : "JSON_LITERAL",
@@ -276,7 +268,46 @@
       "value" : ""
     }
   },
-  "eventMappings" : [ ],
+  "eventMappings" : [ {
+    "eventMappingId" : "claakoqhlwaaaaccggddphhxlxviaaxgd",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_record_list_con.NOW_RECORD_LIST_CONNECTED#SELECTED_RECORD_COUNT_UPDATED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_record_list_con.NOW_RECORD_LIST_CONNECTED#SELECTED_RECORD_COUNT_UPDATED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "propName" : {
+              "type" : "JSON_LITERAL",
+              "value" : "selectRecords"
+            },
+            "value" : {
+              "type" : "EVENT_PAYLOAD_BINDING",
+              "binding" : {
+                "address" : [ "selectedRecords" ]
+              }
+            }
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "claakoqhlwaaaacchhddphhxslbbriypl",
+      "type" : "EVENT"
+    } ]
+  } ],
   "slot" : "Main",
   "definition" : {
     "id" : "66ee7d86e81f696c9f9be19d8424cc0d",
@@ -289,9 +320,520 @@
   },
   "isNonDestructive" : false,
   "styles" : { }
+}, {
+  "elementId" : "container_1",
+  "elementLabel" : "Container 1",
+  "propertyValues" : { },
+  "eventMappings" : [ ],
+  "slot" : "Main",
+  "definition" : {
+    "id" : "d356d14b6e293a3020a244b63d278d8f",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : {
+    "composition" : [ {
+      "elementId" : "button_1",
+      "elementLabel" : "Button 1",
+      "propertyValues" : {
+        "variant" : {
+          "type" : "JSON_LITERAL",
+          "value" : "secondary"
+        },
+        "size" : {
+          "type" : "JSON_LITERAL",
+          "value" : "lg"
+        },
+        "label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "承認",
+            "comment" : ""
+          }
+        },
+        "icon" : {
+          "type" : "JSON_LITERAL",
+          "value" : "check-fill"
+        },
+        "disabled" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "tooltipContent" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "Enter a label",
+            "comment" : ""
+          }
+        },
+        "configAria" : {
+          "type" : "MAP_CONTAINER",
+          "container" : { }
+        }
+      },
+      "eventMappings" : [ {
+        "eventMappingId" : "claakozjjriaaaaccoddphhxaamccxkwwe",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "sn_button.NOW_BUTTON#CLICKED",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "sn_button.NOW_BUTTON#CLICKED",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : {
+            "dataBrokerId" : "43f97dd2770300108d070d74c81061c2",
+            "operationName" : "EXECUTE",
+            "parentResourceId" : "update_multiple_approved",
+            "payload" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "table" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "x_662584_orderma_0_applicationinfo"
+                },
+                "query" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : {
+                    "concatenated" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "sys_idIN@state.selectRecords"
+                    },
+                    "model" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : {
+                        "groupByModel" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : [ ]
+                        },
+                        "comparisonModel" : {
+                          "type" : "LIST_CONTAINER",
+                          "container" : [ {
+                            "type" : "MAP_CONTAINER",
+                            "container" : {
+                              "__typename" : {
+                                "type" : "JSON_LITERAL",
+                                "value" : "GlideConditionBuilder_BasicComparisonType"
+                              },
+                              "comparisonType" : {
+                                "type" : "JSON_LITERAL",
+                                "value" : "NEW_QUERY"
+                              },
+                              "field" : {
+                                "type" : "JSON_LITERAL",
+                                "value" : {
+                                  "internal" : "sys_id",
+                                  "display" : "Sys ID",
+                                  "type" : "GUID",
+                                  "pathData" : {
+                                    "dotwalkMode" : "TABLE_FIELDS",
+                                    "path" : [ {
+                                      "fieldName" : "sys_id",
+                                      "fieldLabel" : "Sys ID",
+                                      "table" : "x_662584_orderma_0_applicationinfo",
+                                      "type" : "GUID",
+                                      "referenceTable" : null,
+                                      "referenceTableDefaultField" : null
+                                    } ]
+                                  }
+                                }
+                              },
+                              "operator" : {
+                                "type" : "JSON_LITERAL",
+                                "value" : {
+                                  "internal" : "IN",
+                                  "display" : "is one of"
+                                }
+                              },
+                              "conditionValue" : {
+                                "type" : "MAP_CONTAINER",
+                                "container" : {
+                                  "internal" : {
+                                    "type" : "STATE_BINDING",
+                                    "binding" : {
+                                      "address" : [ "selectRecords" ]
+                                    }
+                                  },
+                                  "display" : {
+                                    "type" : "JSON_LITERAL",
+                                    "value" : ""
+                                  },
+                                  "displayParts" : {
+                                    "type" : "JSON_LITERAL",
+                                    "value" : [ "@state." ]
+                                  }
+                                }
+                              },
+                              "id" : {
+                                "type" : "JSON_LITERAL",
+                                "value" : "cl0kpn162000y3p950kuxw6dj"
+                              }
+                            }
+                          } ]
+                        },
+                        "orderByModel" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : [ {
+                            "orderByField" : {
+                              "pathData" : {
+                                "dotwalkMode" : "TABLE_FIELDS",
+                                "path" : [ ]
+                              },
+                              "display" : "",
+                              "internal" : "",
+                              "type" : ""
+                            },
+                            "orderByType" : "ASCENDING",
+                            "orderById" : "cl0kpn162000z3p95xnzw9hl7"
+                          } ]
+                        },
+                        "relatedListQueryModel" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : {
+                            "comparisons" : [ {
+                              "field" : {
+                                "internal" : "",
+                                "display" : "",
+                                "type" : "",
+                                "pathData" : { }
+                              },
+                              "operator" : {
+                                "internal" : "",
+                                "display" : ""
+                              },
+                              "conditionValue" : {
+                                "internal" : "",
+                                "display" : "",
+                                "displayParts" : [ ]
+                              },
+                              "comparisonType" : "NEW_QUERY",
+                              "__typename" : "GlideConditionBuilder_BasicComparisonType",
+                              "id" : "cl0kpn162000x3p95a96d697b"
+                            } ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "templateFields" : {
+                  "type" : "CLIENT_TRANSFORM",
+                  "transform" : {
+                    "operands" : {
+                      "type" : "LIST_CONTAINER",
+                      "container" : [ {
+                        "type" : "JSON_LITERAL",
+                        "value" : "state="
+                      }, {
+                        "type" : "JSON_LITERAL",
+                        "value" : "approved"
+                      }, {
+                        "type" : "JSON_LITERAL",
+                        "value" : ""
+                      } ]
+                    },
+                    "operator" : "CONCAT"
+                  }
+                }
+              }
+            }
+          },
+          "targetId" : "claakozjjriaaaaccpddphhxolehhztwu",
+          "type" : "DATABROKER_OP"
+        } ]
+      } ],
+      "slot" : "Column 1",
+      "definition" : {
+        "id" : "d37ce8abca89d02905fed903c8e34d8e",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
+    }, {
+      "elementId" : "button_2",
+      "elementLabel" : "Button 2",
+      "propertyValues" : {
+        "variant" : {
+          "type" : "JSON_LITERAL",
+          "value" : "secondary"
+        },
+        "size" : {
+          "type" : "JSON_LITERAL",
+          "value" : "lg"
+        },
+        "label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "否決",
+            "comment" : ""
+          }
+        },
+        "icon" : {
+          "type" : "JSON_LITERAL",
+          "value" : "close-fill"
+        },
+        "disabled" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "tooltipContent" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "Enter a label",
+            "comment" : ""
+          }
+        },
+        "configAria" : {
+          "type" : "MAP_CONTAINER",
+          "container" : { }
+        }
+      },
+      "eventMappings" : [ {
+        "eventMappingId" : "claakpjjomdaaaaddgddphhxmkggjggmeeaa",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "sn_button.NOW_BUTTON#CLICKED",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "sn_button.NOW_BUTTON#CLICKED",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : {
+            "dataBrokerId" : "43f97dd2770300108d070d74c81061c2",
+            "operationName" : "EXECUTE",
+            "parentResourceId" : "update_multiple_rejected",
+            "payload" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "table" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "x_662584_orderma_0_applicationinfo"
+                },
+                "query" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : {
+                    "concatenated" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "sys_idIN@state.selectRecords"
+                    },
+                    "model" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : {
+                        "groupByModel" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : [ ]
+                        },
+                        "comparisonModel" : {
+                          "type" : "LIST_CONTAINER",
+                          "container" : [ {
+                            "type" : "MAP_CONTAINER",
+                            "container" : {
+                              "__typename" : {
+                                "type" : "JSON_LITERAL",
+                                "value" : "GlideConditionBuilder_BasicComparisonType"
+                              },
+                              "comparisonType" : {
+                                "type" : "JSON_LITERAL",
+                                "value" : "NEW_QUERY"
+                              },
+                              "field" : {
+                                "type" : "JSON_LITERAL",
+                                "value" : {
+                                  "internal" : "sys_id",
+                                  "display" : "Sys ID",
+                                  "type" : "GUID",
+                                  "pathData" : {
+                                    "dotwalkMode" : "TABLE_FIELDS",
+                                    "path" : [ {
+                                      "fieldName" : "sys_id",
+                                      "fieldLabel" : "Sys ID",
+                                      "table" : "x_662584_orderma_0_applicationinfo",
+                                      "type" : "GUID",
+                                      "referenceTable" : null,
+                                      "referenceTableDefaultField" : null
+                                    } ]
+                                  }
+                                }
+                              },
+                              "operator" : {
+                                "type" : "JSON_LITERAL",
+                                "value" : {
+                                  "internal" : "IN",
+                                  "display" : "is one of"
+                                }
+                              },
+                              "conditionValue" : {
+                                "type" : "MAP_CONTAINER",
+                                "container" : {
+                                  "internal" : {
+                                    "type" : "STATE_BINDING",
+                                    "binding" : {
+                                      "address" : [ "selectRecords" ]
+                                    }
+                                  },
+                                  "display" : {
+                                    "type" : "JSON_LITERAL",
+                                    "value" : ""
+                                  },
+                                  "displayParts" : {
+                                    "type" : "JSON_LITERAL",
+                                    "value" : [ ]
+                                  }
+                                }
+                              },
+                              "id" : {
+                                "type" : "JSON_LITERAL",
+                                "value" : "cl0kppdvy00173p95nwoygqo5"
+                              }
+                            }
+                          } ]
+                        },
+                        "orderByModel" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : [ {
+                            "orderByField" : {
+                              "pathData" : {
+                                "dotwalkMode" : "TABLE_FIELDS",
+                                "path" : [ ]
+                              },
+                              "display" : "",
+                              "internal" : "",
+                              "type" : ""
+                            },
+                            "orderByType" : "ASCENDING",
+                            "orderById" : "cl0kppdvy00183p95ayifxsid"
+                          } ]
+                        },
+                        "relatedListQueryModel" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : {
+                            "comparisons" : [ {
+                              "field" : {
+                                "internal" : "",
+                                "display" : "",
+                                "type" : "",
+                                "pathData" : { }
+                              },
+                              "operator" : {
+                                "internal" : "",
+                                "display" : ""
+                              },
+                              "conditionValue" : {
+                                "internal" : "",
+                                "display" : "",
+                                "displayParts" : [ ]
+                              },
+                              "comparisonType" : "NEW_QUERY",
+                              "__typename" : "GlideConditionBuilder_BasicComparisonType",
+                              "id" : "cl0kppdvy00163p95vmd1s8d1"
+                            } ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "templateFields" : {
+                  "type" : "CLIENT_TRANSFORM",
+                  "transform" : {
+                    "operands" : {
+                      "type" : "LIST_CONTAINER",
+                      "container" : [ {
+                        "type" : "JSON_LITERAL",
+                        "value" : "state="
+                      }, {
+                        "type" : "JSON_LITERAL",
+                        "value" : "rejected"
+                      }, {
+                        "type" : "JSON_LITERAL",
+                        "value" : ""
+                      } ]
+                    },
+                    "operator" : "CONCAT"
+                  }
+                }
+              }
+            }
+          },
+          "targetId" : "claakpjjomdaaaaddhddphhxggjjjiifwccj",
+          "type" : "DATABROKER_OP"
+        } ]
+      } ],
+      "slot" : "Column 2",
+      "definition" : {
+        "id" : "d37ce8abca89d02905fed903c8e34d8e",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
+    } ],
+    "layout" : {
+      "default" : {
+        "children" : null,
+        "items" : [{"slotName":"Column 1","rules":{"flex":"1","margin-right":"1rem"},"styles":{"display":"flex","flex-direction":"column"}},{"slotName":"Column 2","rules":{"flex":"1"},"styles":{"display":"flex","flex-direction":"column"}}],
+        "root" : null,
+        "rules" : {"flex-flow":"row nowrap","align-items":"stretch","height":"100%"},
+        "styles" : null,
+        "templateId" : "a653f1cd53c31010e6bcddeeff7b128c",
+        "type" : "flex"
+      },
+      "version" : "2.0.0"
+    }
+  },
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : {
+    "width" : "100%"
+  }
 } ]</composition>
         <da_relay_models/>
-        <data>[ ]</data>
+        <data>[ {
+  "definition" : {
+    "id" : "43f97dd2770300108d070d74c81061c2",
+    "type" : "GRAPHQL"
+  },
+  "elementId" : "update_multiple_approved",
+  "elementLabel" : "Update Multiple Approved",
+  "eventMappings" : [ ],
+  "inputValues" : { },
+  "readEvaluationMode" : "EXPLICIT"
+}, {
+  "definition" : {
+    "id" : "43f97dd2770300108d070d74c81061c2",
+    "type" : "GRAPHQL"
+  },
+  "elementId" : "update_multiple_rejected",
+  "elementLabel" : "Update Multiple Rejected",
+  "eventMappings" : [ ],
+  "inputValues" : { },
+  "readEvaluationMode" : "EXPLICIT"
+} ]</data>
         <dispatched_events/>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
         <handled_events/>
@@ -311,9 +853,29 @@
 }</layout>
         <macroponent_dependencies/>
         <name>ApplicationFormOpen</name>
-        <props>[ ]</props>
+        <props>[ {
+  "name" : "userid",
+  "label" : "userid",
+  "fieldType" : "string",
+  "typeMetadata" : null,
+  "valueType" : "string",
+  "mandatory" : false,
+  "defaultValue" : "",
+  "description" : null,
+  "readOnly" : true,
+  "selectable" : false
+} ]</props>
         <required_translations>[ {
-  "message" : "Working",
+  "message" : "Enter a label",
+  "comment" : ""
+}, {
+  "message" : "否決",
+  "comment" : ""
+}, {
+  "message" : "承認",
+  "comment" : ""
+}, {
+  "message" : "申請情報一覧",
   "comment" : ""
 } ]</required_translations>
         <root_component/>
@@ -321,28 +883,28 @@
         <root_component_definition/>
         <schema_version>1.0.0</schema_version>
         <state_properties>[ {
-  "name" : "tmp_user",
-  "label" : "tmp_user",
+  "name" : "selectRecords",
+  "label" : "selectRecords",
   "fieldType" : "",
   "valueType" : "",
   "shape" : "",
   "description" : "",
   "initialValue" : {
     "type" : "JSON_LITERAL",
-    "value" : "丹羽亮太"
+    "value" : null
   }
 } ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-11-10 01:22:10</sys_created_on>
         <sys_id>b714a4602f733010545d56f62799b61b</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>ApplicationFormOpen</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_macroponent_b714a4602f733010545d56f62799b61b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-12-17 11:00:07</sys_updated_on>
+        <sys_updated_on>2022-03-10 08:18:43</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>
