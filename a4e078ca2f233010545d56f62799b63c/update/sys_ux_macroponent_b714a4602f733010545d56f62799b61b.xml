@@ -4,28 +4,6 @@
         <category>page</category>
         <component_dependencies/>
         <composition>[ {
-  "elementId" : "rich_text_1",
-  "elementLabel" : "Rich text 1",
-  "propertyValues" : {
-    "html" : {
-      "type" : "JSON_LITERAL",
-      "value" : "&lt;p&gt;&lt;span style=\"font-size: 24pt;\"&gt;稼働時間管理&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/OrderManagment/AppForm\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;New&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/OrderManagment/open\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;Open&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/ordermanagementportal/applicationformmyrecords\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;My Records&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"x/662584/ordermanagementportal/applicationformmyassigned\"&gt;&lt;span style=\"font-size: 18pt;\"&gt;My Assigned&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;"
-    }
-  },
-  "eventMappings" : [ ],
-  "slot" : "Sidebar 1",
-  "definition" : {
-    "id" : "2d56f06d55f46bbd4e79b5e624beb940",
-    "type" : "MACROPONENT"
-  },
-  "overrides" : null,
-  "isHidden" : {
-    "type" : "JSON_LITERAL",
-    "value" : ""
-  },
-  "isNonDestructive" : false,
-  "styles" : { }
-}, {
   "elementId" : "list_1",
   "elementLabel" : "List 1",
   "propertyValues" : {
@@ -55,10 +33,10 @@
           "type" : "LIST_CONTAINER",
           "container" : [ {
             "type" : "JSON_LITERAL",
-            "value" : ""
+            "value" : "state="
           }, {
             "type" : "JSON_LITERAL",
-            "value" : ""
+            "value" : "requested"
           }, {
             "type" : "JSON_LITERAL",
             "value" : ""
@@ -240,8 +218,10 @@
       "value" : [ ]
     },
     "refreshRequested" : {
-      "type" : "JSON_LITERAL",
-      "value" : ""
+      "type" : "DATA_OUTPUT_BINDING",
+      "binding" : {
+        "address" : [ "List_refresh_1", "results" ]
+      }
     },
     "page" : {
       "type" : "JSON_LITERAL",
@@ -399,127 +379,24 @@
                   "value" : "x_662584_orderma_0_applicationinfo"
                 },
                 "query" : {
-                  "type" : "MAP_CONTAINER",
-                  "container" : {
-                    "concatenated" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : "sys_idIN@state.selectRecords"
-                    },
-                    "model" : {
-                      "type" : "MAP_CONTAINER",
-                      "container" : {
-                        "groupByModel" : {
-                          "type" : "JSON_LITERAL",
-                          "value" : [ ]
-                        },
-                        "comparisonModel" : {
-                          "type" : "LIST_CONTAINER",
-                          "container" : [ {
-                            "type" : "MAP_CONTAINER",
-                            "container" : {
-                              "__typename" : {
-                                "type" : "JSON_LITERAL",
-                                "value" : "GlideConditionBuilder_BasicComparisonType"
-                              },
-                              "comparisonType" : {
-                                "type" : "JSON_LITERAL",
-                                "value" : "NEW_QUERY"
-                              },
-                              "field" : {
-                                "type" : "JSON_LITERAL",
-                                "value" : {
-                                  "internal" : "sys_id",
-                                  "display" : "Sys ID",
-                                  "type" : "GUID",
-                                  "pathData" : {
-                                    "dotwalkMode" : "TABLE_FIELDS",
-                                    "path" : [ {
-                                      "fieldName" : "sys_id",
-                                      "fieldLabel" : "Sys ID",
-                                      "table" : "x_662584_orderma_0_applicationinfo",
-                                      "type" : "GUID",
-                                      "referenceTable" : null,
-                                      "referenceTableDefaultField" : null
-                                    } ]
-                                  }
-                                }
-                              },
-                              "operator" : {
-                                "type" : "JSON_LITERAL",
-                                "value" : {
-                                  "internal" : "IN",
-                                  "display" : "is one of"
-                                }
-                              },
-                              "conditionValue" : {
-                                "type" : "MAP_CONTAINER",
-                                "container" : {
-                                  "internal" : {
-                                    "type" : "STATE_BINDING",
-                                    "binding" : {
-                                      "address" : [ "selectRecords" ]
-                                    }
-                                  },
-                                  "display" : {
-                                    "type" : "JSON_LITERAL",
-                                    "value" : ""
-                                  },
-                                  "displayParts" : {
-                                    "type" : "JSON_LITERAL",
-                                    "value" : [ "@state." ]
-                                  }
-                                }
-                              },
-                              "id" : {
-                                "type" : "JSON_LITERAL",
-                                "value" : "cl0kpn162000y3p950kuxw6dj"
-                              }
-                            }
-                          } ]
-                        },
-                        "orderByModel" : {
-                          "type" : "JSON_LITERAL",
-                          "value" : [ {
-                            "orderByField" : {
-                              "pathData" : {
-                                "dotwalkMode" : "TABLE_FIELDS",
-                                "path" : [ ]
-                              },
-                              "display" : "",
-                              "internal" : "",
-                              "type" : ""
-                            },
-                            "orderByType" : "ASCENDING",
-                            "orderById" : "cl0kpn162000z3p95xnzw9hl7"
-                          } ]
-                        },
-                        "relatedListQueryModel" : {
-                          "type" : "JSON_LITERAL",
-                          "value" : {
-                            "comparisons" : [ {
-                              "field" : {
-                                "internal" : "",
-                                "display" : "",
-                                "type" : "",
-                                "pathData" : { }
-                              },
-                              "operator" : {
-                                "internal" : "",
-                                "display" : ""
-                              },
-                              "conditionValue" : {
-                                "internal" : "",
-                                "display" : "",
-                                "displayParts" : [ ]
-                              },
-                              "comparisonType" : "NEW_QUERY",
-                              "__typename" : "GlideConditionBuilder_BasicComparisonType",
-                              "id" : "cl0kpn162000x3p95a96d697b"
-                            } ]
-                          }
+                  "type" : "CLIENT_TRANSFORM",
+                  "transform" : {
+                    "operands" : {
+                      "type" : "LIST_CONTAINER",
+                      "container" : [ {
+                        "type" : "JSON_LITERAL",
+                        "value" : "sys_idIN"
+                      }, {
+                        "type" : "STATE_BINDING",
+                        "binding" : {
+                          "address" : [ "selectRecords" ]
                         }
-                      }
-                    }
+                      }, {
+                        "type" : "JSON_LITERAL",
+                        "value" : ""
+                      } ]
+                    },
+                    "operator" : "CONCAT"
                   }
                 },
                 "templateFields" : {
@@ -628,127 +505,24 @@
                   "value" : "x_662584_orderma_0_applicationinfo"
                 },
                 "query" : {
-                  "type" : "MAP_CONTAINER",
-                  "container" : {
-                    "concatenated" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : "sys_idIN@state.selectRecords"
-                    },
-                    "model" : {
-                      "type" : "MAP_CONTAINER",
-                      "container" : {
-                        "groupByModel" : {
-                          "type" : "JSON_LITERAL",
-                          "value" : [ ]
-                        },
-                        "comparisonModel" : {
-                          "type" : "LIST_CONTAINER",
-                          "container" : [ {
-                            "type" : "MAP_CONTAINER",
-                            "container" : {
-                              "__typename" : {
-                                "type" : "JSON_LITERAL",
-                                "value" : "GlideConditionBuilder_BasicComparisonType"
-                              },
-                              "comparisonType" : {
-                                "type" : "JSON_LITERAL",
-                                "value" : "NEW_QUERY"
-                              },
-                              "field" : {
-                                "type" : "JSON_LITERAL",
-                                "value" : {
-                                  "internal" : "sys_id",
-                                  "display" : "Sys ID",
-                                  "type" : "GUID",
-                                  "pathData" : {
-                                    "dotwalkMode" : "TABLE_FIELDS",
-                                    "path" : [ {
-                                      "fieldName" : "sys_id",
-                                      "fieldLabel" : "Sys ID",
-                                      "table" : "x_662584_orderma_0_applicationinfo",
-                                      "type" : "GUID",
-                                      "referenceTable" : null,
-                                      "referenceTableDefaultField" : null
-                                    } ]
-                                  }
-                                }
-                              },
-                              "operator" : {
-                                "type" : "JSON_LITERAL",
-                                "value" : {
-                                  "internal" : "IN",
-                                  "display" : "is one of"
-                                }
-                              },
-                              "conditionValue" : {
-                                "type" : "MAP_CONTAINER",
-                                "container" : {
-                                  "internal" : {
-                                    "type" : "STATE_BINDING",
-                                    "binding" : {
-                                      "address" : [ "selectRecords" ]
-                                    }
-                                  },
-                                  "display" : {
-                                    "type" : "JSON_LITERAL",
-                                    "value" : ""
-                                  },
-                                  "displayParts" : {
-                                    "type" : "JSON_LITERAL",
-                                    "value" : [ ]
-                                  }
-                                }
-                              },
-                              "id" : {
-                                "type" : "JSON_LITERAL",
-                                "value" : "cl0kppdvy00173p95nwoygqo5"
-                              }
-                            }
-                          } ]
-                        },
-                        "orderByModel" : {
-                          "type" : "JSON_LITERAL",
-                          "value" : [ {
-                            "orderByField" : {
-                              "pathData" : {
-                                "dotwalkMode" : "TABLE_FIELDS",
-                                "path" : [ ]
-                              },
-                              "display" : "",
-                              "internal" : "",
-                              "type" : ""
-                            },
-                            "orderByType" : "ASCENDING",
-                            "orderById" : "cl0kppdvy00183p95ayifxsid"
-                          } ]
-                        },
-                        "relatedListQueryModel" : {
-                          "type" : "JSON_LITERAL",
-                          "value" : {
-                            "comparisons" : [ {
-                              "field" : {
-                                "internal" : "",
-                                "display" : "",
-                                "type" : "",
-                                "pathData" : { }
-                              },
-                              "operator" : {
-                                "internal" : "",
-                                "display" : ""
-                              },
-                              "conditionValue" : {
-                                "internal" : "",
-                                "display" : "",
-                                "displayParts" : [ ]
-                              },
-                              "comparisonType" : "NEW_QUERY",
-                              "__typename" : "GlideConditionBuilder_BasicComparisonType",
-                              "id" : "cl0kppdvy00163p95vmd1s8d1"
-                            } ]
-                          }
+                  "type" : "CLIENT_TRANSFORM",
+                  "transform" : {
+                    "operands" : {
+                      "type" : "LIST_CONTAINER",
+                      "container" : [ {
+                        "type" : "JSON_LITERAL",
+                        "value" : "sys_idIN"
+                      }, {
+                        "type" : "STATE_BINDING",
+                        "binding" : {
+                          "address" : [ "selectRecords" ]
                         }
-                      }
-                    }
+                      }, {
+                        "type" : "JSON_LITERAL",
+                        "value" : ""
+                      } ]
+                    },
+                    "operator" : "CONCAT"
                   }
                 },
                 "templateFields" : {
@@ -793,14 +567,13 @@
     "layout" : {
       "default" : {
         "children" : null,
-        "items" : [{"slotName":"Column 1","rules":{"flex":"1","margin-right":"1rem"},"styles":{"display":"flex","flex-direction":"column"}},{"slotName":"Column 2","rules":{"flex":"1"},"styles":{"display":"flex","flex-direction":"column"}}],
+        "items" : [{"slotName":"Column 1","rules":{"flex":"1","margin-right":"1rem"},"styles":{"display":"flex","flex-direction":"column","margin":"0px 100px"}},{"slotName":"Column 2","rules":{"flex":"1"},"styles":{"display":"flex","flex-direction":"column","margin":"0px 100px"}}],
         "root" : null,
         "rules" : {"flex-flow":"row nowrap","align-items":"stretch","height":"100%"},
         "styles" : null,
         "templateId" : "a653f1cd53c31010e6bcddeeff7b128c",
         "type" : "flex"
-      },
-      "version" : "2.0.0"
+      }
     }
   },
   "isHidden" : {
@@ -820,7 +593,36 @@
   },
   "elementId" : "update_multiple_approved",
   "elementLabel" : "Update Multiple Approved",
-  "eventMappings" : [ ],
+  "eventMappings" : [ {
+    "eventMappingId" : "claalpwdcraaaaddnddpiiiibbyccwjjhpf",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf.DATA_OP_SUCCEEDED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf.DATA_OP_SUCCEEDED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : {
+        "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+        "operationName" : "REFRESH",
+        "parentResourceId" : "List_refresh_1",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : { }
+        }
+      },
+      "targetId" : "claalpwdcraaaaddoddpiiiiajvjjjggpv",
+      "type" : "DATABROKER_OP"
+    } ]
+  } ],
   "inputValues" : { },
   "readEvaluationMode" : "EXPLICIT"
 }, {
@@ -830,24 +632,133 @@
   },
   "elementId" : "update_multiple_rejected",
   "elementLabel" : "Update Multiple Rejected",
-  "eventMappings" : [ ],
+  "eventMappings" : [ {
+    "eventMappingId" : "claalqbbddvqaaaaffiiddpiiiijjhriibwqu",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf.DATA_OP_SUCCEEDED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf.DATA_OP_SUCCEEDED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : {
+        "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+        "operationName" : "REFRESH",
+        "parentResourceId" : "List_refresh_1",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : { }
+        }
+      },
+      "targetId" : "claalqbbddvqaaaaffjjddpiiiiqbbddyhhaoe",
+      "type" : "DATABROKER_OP"
+    } ]
+  } ],
   "inputValues" : { },
   "readEvaluationMode" : "EXPLICIT"
+}, {
+  "definition" : {
+    "id" : "b997a84053021010cbc2ddeeff7b1228",
+    "type" : "COMPOSITE"
+  },
+  "elementId" : "List_refresh_1",
+  "elementLabel" : "Refresh List",
+  "eventMappings" : [ ],
+  "inputValues" : {
+    "table" : {
+      "type" : "JSON_LITERAL",
+      "value" : "x_662584_orderma_0_applicationinfo"
+    },
+    "encodedQuery" : {
+      "type" : "CLIENT_TRANSFORM",
+      "transform" : {
+        "operands" : {
+          "type" : "LIST_CONTAINER",
+          "container" : [ {
+            "type" : "JSON_LITERAL",
+            "value" : "numberANYTHING"
+          }, {
+            "type" : "JSON_LITERAL",
+            "value" : ""
+          }, {
+            "type" : "JSON_LITERAL",
+            "value" : ""
+          } ]
+        },
+        "operator" : "CONCAT"
+      }
+    },
+    "returnFields" : {
+      "type" : "JSON_LITERAL",
+      "value" : "number,name,state,uptime,workingdate,targetdate,approver,applied,sys_mod_count,sys_updated_on,sys_tags,sys_id,approved,sys_updated_by,sys_created_on,comment,sys_created_by"
+    },
+    "orderBy" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "sortType" : {
+      "type" : "JSON_LITERAL",
+      "value" : "asc"
+    },
+    "limit" : {
+      "type" : "JSON_LITERAL",
+      "value" : "1000"
+    },
+    "offset" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "queryCategory" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "returnFieldMetadata" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    }
+  },
+  "readEvaluationMode" : "EAGER"
 } ]</data>
         <dispatched_events/>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
         <handled_events/>
         <interactions/>
         <interfaces/>
-        <internal_event_mappings>{ }</internal_event_mappings>
+        <internal_event_mappings>{
+  "MACROPONENT_READY" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "declarativeAction" : null,
+    "event" : null,
+    "operation" : {
+      "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+      "operationName" : "REFRESH",
+      "parentResourceId" : "List_refresh_1",
+      "payload" : {
+        "type" : "MAP_CONTAINER",
+        "container" : { }
+      }
+    },
+    "targetId" : "claalqjjmaaccaaaaaawddphhxxlhhcbbggyhh",
+    "type" : "DATABROKER_OP"
+  } ]
+}</internal_event_mappings>
         <layout>{
   "default" : {
     "children" : null,
-    "items" : [{"slotName":"Sidebar 1","rules":{"flex":"1","margin-right":"1rem"},"styles":{"display":"flex","flex-direction":"column"}},{"slotName":"Main","rules":{"flex":"2"},"styles":{"display":"flex","flex-direction":"column"}}],
+    "items" : [{"slotName":"Main","rules":{"flex":"1"},"styles":{"display":"flex","flex-direction":"column"}}],
     "root" : null,
     "rules" : {"flex-flow":"row nowrap","align-items":"stretch","min-height":"400px","height":"100%"},
     "styles" : null,
-    "templateId" : "436ea14d53c31010e6bcddeeff7b1231",
+    "templateId" : "28bde4cd53431010e6bcddeeff7b12cc",
     "type" : "flex"
   }
 }</layout>
@@ -855,13 +766,13 @@
         <name>ApplicationFormOpen</name>
         <props>[ {
   "name" : "userid",
-  "label" : "userid",
+  "label" : "userId",
   "fieldType" : "string",
   "typeMetadata" : null,
   "valueType" : "string",
   "mandatory" : false,
   "defaultValue" : "",
-  "description" : null,
+  "description" : "",
   "readOnly" : true,
   "selectable" : false
 } ]</props>
@@ -898,13 +809,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-11-10 01:22:10</sys_created_on>
         <sys_id>b714a4602f733010545d56f62799b61b</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name>ApplicationFormOpen</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_macroponent_b714a4602f733010545d56f62799b61b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-10 08:18:43</sys_updated_on>
+        <sys_updated_on>2022-03-11 02:20:03</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>

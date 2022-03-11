@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="WorkingDetail" max_length="40" name="x_662584_orderma_0_workingdetail" sizeclass="6" type="collection">
+    <element label="WorkingDetail" max_length="40" name="x_662584_orderma_0_workingdetail" sizeclass="0" type="collection">
         <element label="AssignBudget" max_length="40" name="assignbudget" type="integer"/>
         <element label="AssignOrder" max_length="32" name="assignorder" reference="x_662584_orderma_0_ordermaster" type="reference"/>
-        <element label="AssignUpTime" max_length="20" name="assignuptime" type="decimal"/>
-        <element label="Name" max_length="40" name="name" type="string"/>
-        <element label="TargetDate" max_length="40" name="targetdate" type="string"/>
+        <element label="AssignTime" max_length="20" name="assigntime" type="decimal"/>
+        <element label="Name" max_length="32" name="name" reference="x_662584_orderma_0_membermaster" type="reference"/>
+        <element label="TargetDate" max_length="32" name="targetdate" reference="x_662584_orderma_0_workingdaymaster" type="reference"/>
         <index name="index">
             <element name="assignorder"/>
         </index>

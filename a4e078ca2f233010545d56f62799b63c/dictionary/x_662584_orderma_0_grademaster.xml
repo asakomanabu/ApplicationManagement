@@ -9,6 +9,7 @@
                 <element inactive_on_update="false" label="01" sequence="50" value="01"/>
             </choice>
         </element>
+        <element label="hourly wage" max_length="20" name="hourly_wage" type="decimal"/>
         <element label="Price" max_length="40" name="price" type="integer"/>
     </element>
 </database>

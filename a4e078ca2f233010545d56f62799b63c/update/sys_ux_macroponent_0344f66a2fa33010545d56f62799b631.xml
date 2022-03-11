@@ -1197,8 +1197,7 @@
         "styles" : null,
         "templateId" : "a653f1cd53c31010e6bcddeeff7b128c",
         "type" : "flex"
-      },
-      "version" : "2.0.0"
+      }
     }
   },
   "isHidden" : {
@@ -1489,69 +1488,20 @@
       "event" : {
         "apiName" : "x_662584_orderma_0.NAV_ITEM_SELECTED_RELAY_0344f66a2fa33010545d56f62799b631",
         "payload" : {
-          "type" : "MAP_CONTAINER",
-          "container" : {
-            "route" : {
-              "type" : "JSON_LITERAL",
-              "value" : "open"
-            },
-            "fields" : {
-              "type" : "MAP_CONTAINER",
-              "container" : {
-                "userid" : {
-                  "type" : "STATE_BINDING",
-                  "binding" : {
-                    "address" : [ "User" ]
-                  }
-                }
-              }
-            },
-            "params" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "redirect" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "passiveNavigation" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "title" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiInstField" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "targetRoute" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "external" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            }
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "route" : "open",
+            "fields" : null,
+            "params" : null,
+            "redirect" : null,
+            "passiveNavigation" : null,
+            "title" : null,
+            "multiInstField" : null,
+            "targetRoute" : null,
+            "external" : null
           }
         },
         "sysId" : "46fdc99c2fa80110545d56f62799b621"
-      },
-      "operation" : null,
-      "targetId" : "ckxahhumkkaaaaddggddiiiiggffnddyeuev",
-      "type" : "EVENT"
-    }, {
-      "broker" : null,
-      "clientScript" : null,
-      "declarativeAction" : null,
-      "event" : {
-        "apiName" : null,
-        "payload" : {
-          "type" : "JSON_LITERAL",
-          "value" : { }
-        },
-        "sysId" : null
       },
       "operation" : null,
       "targetId" : "ckybbffaaasjaaaabbeeddjjiiggchgddjhhiit",
@@ -1571,6 +1521,14 @@
       "operation" : null,
       "targetId" : "claakmkudpaaaayiiddpiiiipbxagqzn",
       "type" : "EVENT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "claalxcolraaaabbdddphhxpjggnbbvch",
+      "type" : "EVENT"
     } ]
   } ],
   "slot" : "Main",
@@ -1585,267 +1543,6 @@
   },
   "isNonDestructive" : false,
   "styles" : { }
-}, {
-  "elementId" : "stylized_text_1",
-  "elementLabel" : "Stylized text 1",
-  "propertyValues" : {
-    "text" : {
-      "type" : "TRANSLATION_LITERAL",
-      "value" : {
-        "message" : "稼働時間管理メニュー",
-        "comment" : ""
-      }
-    },
-    "tag" : {
-      "type" : "JSON_LITERAL",
-      "value" : "h2"
-    },
-    "css" : {
-      "type" : "JSON_LITERAL",
-      "value" : "* { }"
-    }
-  },
-  "eventMappings" : [ ],
-  "slot" : "Sidebar 1",
-  "definition" : {
-    "id" : "4335ba6dca80378f7ba7a67cd6667bec",
-    "type" : "MACROPONENT"
-  },
-  "overrides" : null,
-  "isHidden" : {
-    "type" : "JSON_LITERAL",
-    "value" : ""
-  },
-  "isNonDestructive" : false,
-  "styles" : { }
-}, {
-  "elementId" : "text_link_1",
-  "elementLabel" : "Text link 1",
-  "propertyValues" : {
-    "label" : {
-      "type" : "TRANSLATION_LITERAL",
-      "value" : {
-        "message" : "New",
-        "comment" : ""
-      }
-    },
-    "variant" : {
-      "type" : "JSON_LITERAL",
-      "value" : "primary"
-    },
-    "href" : {
-      "type" : "JSON_LITERAL",
-      "value" : ""
-    },
-    "underlined" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "opensWindow" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "download" : {
-      "type" : "JSON_LITERAL",
-      "value" : null
-    },
-    "configAria" : {
-      "type" : "MAP_CONTAINER",
-      "container" : {
-        "aria-label" : {
-          "type" : "TRANSLATION_LITERAL",
-          "value" : {
-            "message" : "Accessible Label",
-            "comment" : ""
-          }
-        }
-      }
-    }
-  },
-  "eventMappings" : [ {
-    "eventMappingId" : "claakqjjpffccaaaaiihhddphhxqggztibnc",
-    "isConfiguration" : false,
-    "offRowStorageId" : null,
-    "sourceEventApiName" : "sn_text_link.NOW_TEXT_LINK#CLICKED",
-    "sourceEventCorrelationId" : null,
-    "sourceEventDefinition" : {
-      "apiName" : "sn_text_link.NOW_TEXT_LINK#CLICKED",
-      "id" : null,
-      "type" : "UXEVENT"
-    },
-    "sourceEventSysId" : null,
-    "targets" : [ {
-      "broker" : null,
-      "clientScript" : null,
-      "declarativeAction" : null,
-      "event" : {
-        "apiName" : "x_662584_orderma_0.NAV_ITEM_SELECTED_RELAY_0344f66a2fa33010545d56f62799b631",
-        "payload" : {
-          "type" : "JSON_LITERAL",
-          "value" : {
-            "route" : "AppForm",
-            "fields" : null,
-            "params" : null,
-            "redirect" : null,
-            "passiveNavigation" : null,
-            "title" : null,
-            "multiInstField" : null,
-            "targetRoute" : null,
-            "external" : null
-          }
-        },
-        "sysId" : "46fdc99c2fa80110545d56f62799b621"
-      },
-      "operation" : null,
-      "targetId" : "claakqjjpffccaaaaiiiiddphhxccdiizxkffz",
-      "type" : "EVENT"
-    } ]
-  } ],
-  "slot" : "Sidebar 1",
-  "definition" : {
-    "id" : "abe7db0526ec8705a0eff03521febfa3",
-    "type" : "MACROPONENT"
-  },
-  "overrides" : null,
-  "isHidden" : {
-    "type" : "JSON_LITERAL",
-    "value" : ""
-  },
-  "isNonDestructive" : false,
-  "styles" : {
-    "font-size" : "20pt"
-  }
-}, {
-  "elementId" : "text_link_2",
-  "elementLabel" : "Text link 2",
-  "propertyValues" : {
-    "label" : {
-      "type" : "TRANSLATION_LITERAL",
-      "value" : {
-        "message" : "Open",
-        "comment" : ""
-      }
-    },
-    "variant" : {
-      "type" : "JSON_LITERAL",
-      "value" : "primary"
-    },
-    "href" : {
-      "type" : "JSON_LITERAL",
-      "value" : ""
-    },
-    "underlined" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "opensWindow" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "download" : {
-      "type" : "JSON_LITERAL",
-      "value" : null
-    },
-    "configAria" : {
-      "type" : "MAP_CONTAINER",
-      "container" : {
-        "aria-label" : {
-          "type" : "TRANSLATION_LITERAL",
-          "value" : {
-            "message" : "Accessible Label",
-            "comment" : ""
-          }
-        }
-      }
-    }
-  },
-  "eventMappings" : [ {
-    "eventMappingId" : "claakqaoiipaaaaiijjddphhxhhufvddjjxee",
-    "isConfiguration" : false,
-    "offRowStorageId" : null,
-    "sourceEventApiName" : "sn_text_link.NOW_TEXT_LINK#CLICKED",
-    "sourceEventCorrelationId" : null,
-    "sourceEventDefinition" : {
-      "apiName" : "sn_text_link.NOW_TEXT_LINK#CLICKED",
-      "id" : null,
-      "type" : "UXEVENT"
-    },
-    "sourceEventSysId" : null,
-    "targets" : [ {
-      "broker" : null,
-      "clientScript" : null,
-      "declarativeAction" : null,
-      "event" : {
-        "apiName" : "x_662584_orderma_0.NAV_ITEM_SELECTED_RELAY_0344f66a2fa33010545d56f62799b631",
-        "payload" : {
-          "type" : "MAP_CONTAINER",
-          "container" : {
-            "route" : {
-              "type" : "JSON_LITERAL",
-              "value" : "open"
-            },
-            "fields" : {
-              "type" : "MAP_CONTAINER",
-              "container" : {
-                "userid" : {
-                  "type" : "STATE_BINDING",
-                  "binding" : {
-                    "address" : [ "User" ]
-                  }
-                }
-              }
-            },
-            "params" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "redirect" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "passiveNavigation" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "title" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "multiInstField" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "targetRoute" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            },
-            "external" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            }
-          }
-        },
-        "sysId" : "46fdc99c2fa80110545d56f62799b621"
-      },
-      "operation" : null,
-      "targetId" : "claakqaoiipaaaaiiaddphhxlhhxixjjkaa",
-      "type" : "EVENT"
-    } ]
-  } ],
-  "slot" : "Sidebar 1",
-  "definition" : {
-    "id" : "abe7db0526ec8705a0eff03521febfa3",
-    "type" : "MACROPONENT"
-  },
-  "overrides" : null,
-  "isHidden" : {
-    "type" : "JSON_LITERAL",
-    "value" : ""
-  },
-  "isNonDestructive" : false,
-  "styles" : {
-    "font-size" : "20pt"
-  }
 } ]</composition>
         <da_relay_models/>
         <data>[ {
@@ -2319,11 +2016,11 @@
         <layout>{
   "default" : {
     "children" : null,
-    "items" : [{"slotName":"Sidebar 1","rules":{"flex":"1","margin-right":"1rem"},"styles":{"display":"flex","flex-direction":"column"}},{"slotName":"Main","rules":{"flex":"2"},"styles":{"display":"flex","flex-direction":"column"}}],
+    "items" : [{"slotName":"Main","rules":{"flex":"1"},"styles":{"display":"flex","flex-direction":"column"}}],
     "root" : null,
     "rules" : {"flex-flow":"row nowrap","align-items":"stretch","min-height":"400px","height":"100%"},
     "styles" : null,
-    "templateId" : "436ea14d53c31010e6bcddeeff7b1231",
+    "templateId" : "28bde4cd53431010e6bcddeeff7b12cc",
     "type" : "flex"
   }
 }</layout>
@@ -2331,19 +2028,10 @@
         <name>ApplicationForm</name>
         <props>[ ]</props>
         <required_translations>[ {
-  "message" : "Accessible Label",
-  "comment" : ""
-}, {
   "message" : "Comment",
   "comment" : ""
 }, {
   "message" : "Enter a label",
-  "comment" : ""
-}, {
-  "message" : "New",
-  "comment" : ""
-}, {
-  "message" : "Open",
   "comment" : ""
 }, {
   "message" : "Warning!!",
@@ -2377,9 +2065,6 @@
   "comment" : ""
 }, {
   "message" : "申請者名",
-  "comment" : ""
-}, {
-  "message" : "稼働時間管理メニュー",
   "comment" : ""
 } ]</required_translations>
         <root_component/>
@@ -2627,13 +2312,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-11-04 06:44:13</sys_created_on>
         <sys_id>0344f66a2fa33010545d56f62799b631</sys_id>
-        <sys_mod_count>345</sys_mod_count>
+        <sys_mod_count>347</sys_mod_count>
         <sys_name>ApplicationForm</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_macroponent_0344f66a2fa33010545d56f62799b631</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-10 08:30:49</sys_updated_on>
+        <sys_updated_on>2022-03-11 04:34:37</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>

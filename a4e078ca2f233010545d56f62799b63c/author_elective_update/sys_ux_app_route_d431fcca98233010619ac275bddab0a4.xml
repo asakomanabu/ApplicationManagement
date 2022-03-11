@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="OrderManagementPortal Config">b321fcca2f233010545d56f62799b66c</app_config>
+        <description/>
+        <fields/>
+        <icon/>
+        <name>Additional Details</name>
+        <optional_parameters/>
+        <order>200</order>
+        <parent_macroponent display_value="Record Page(task)">5c31fcca6c233010f66ca59e1162cfa1</parent_macroponent>
+        <parent_macroponent_composition_element_id>tab_set_1</parent_macroponent_composition_element_id>
+        <route_type>rec_task_additional</route_type>
+        <screen_type display_value="Additional Details">9431fcca0b2330100c52662132052da4</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2021-11-02 07:54:31</sys_created_on>
+        <sys_id>d431fcca98233010619ac275bddab0a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Additional Details</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_app_route_d431fcca98233010619ac275bddab0a4</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-11-02 07:54:31</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=d431fcca98233010619ac275bddab0a4"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</application>
+        <file_path/>
+        <instance_id>3df77da9db17ff484d2bac44d496195a</instance_id>
+        <instance_name>dev91783</instance_name>
+        <name>sys_ux_app_route_d431fcca98233010619ac275bddab0a4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config display_value="OrderManagementPortal Config">b321fcca2f233010545d56f62799b66c</app_config>
+        <description/>
+        <fields/>
+        <icon/>
+        <name>Additional Details</name>
+        <optional_parameters/>
+        <order>200</order>
+        <parent_macroponent display_value="Record Page(task)">5c31fcca6c233010f66ca59e1162cfa1</parent_macroponent>
+        <parent_macroponent_composition_element_id>tab_set_1</parent_macroponent_composition_element_id>
+        <route_type>rec_task_additional</route_type>
+        <screen_type display_value="Additional Details">9431fcca0b2330100c52662132052da4</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2021-11-02 07:54:31</sys_created_on>
+        <sys_id>d431fcca98233010619ac275bddab0a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Additional Details</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_app_route_d431fcca98233010619ac275bddab0a4</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-11-02 07:54:31</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="delete_multiple" query="documentkey=d431fcca98233010619ac275bddab0a4"/>
+</record_update>]]></payload>
+        <payload_hash>720344312</payload_hash>
+        <record_name>Additional Details</record_name>
+        <reverted_from/>
+        <source>9cba23b807c20110b81efa9e7c1ed05f</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-03 06:50:18</sys_created_on>
+        <sys_id>18ea2fb807c20110b81efa9e7c1ed03b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17f4e8b2e150000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-03 06:50:18</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>d4ea2fb8f5c201104ea3d0e39b3b483b</update_guid>
+        <update_guid_history>d4ea2fb8f5c201104ea3d0e39b3b483b:720344312</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-11 04:50:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>46d9957ac1ad47f0a575d0e4c7e2ed90</sys_id>
+        <sys_metadata>d431fcca98233010619ac275bddab0a4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Additional Details</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_scope_delete display_value="">3204fa4ef40c4854a3d40a3cbe209890</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_d431fcca98233010619ac275bddab0a4</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_d431fcca98233010619ac275bddab0a4">18ea2fb807c20110b81efa9e7c1ed03b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-11 04:50:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

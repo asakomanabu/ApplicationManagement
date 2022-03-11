@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="OrderMaster" max_length="40" name="x_662584_orderma_0_ordermaster" sizeclass="8" type="collection">
+    <element label="OrderMaster" max_length="40" name="x_662584_orderma_0_ordermaster" sizeclass="0" type="collection">
         <element label="Budget" max_length="40" name="budget" type="integer"/>
         <element label="OrderNo" max_length="20" name="orderno" type="string"/>
         <element label="RemainBudget" max_length="40" name="remainbudget" type="integer"/>
