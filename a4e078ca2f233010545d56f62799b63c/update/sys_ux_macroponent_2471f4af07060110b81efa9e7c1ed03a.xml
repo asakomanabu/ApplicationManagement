@@ -222,7 +222,7 @@
               "operation" : {
                 "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
                 "operationName" : "REFRESH",
-                "parentResourceId" : "look_up_grade",
+                "parentResourceId" : "look_up_memberinfo",
                 "payload" : {
                   "type" : "MAP_CONTAINER",
                   "container" : { }
@@ -258,8 +258,8 @@
             "items" : {
               "type" : "CLIENT_TRANSFORM_SCRIPT",
               "script" : {
-                "apiVersion" : "2.0.0",
-                "inlineScript" : "/**\n  * @param {params} params\n  * @param {api} params.api\n  * @param {any} params.imports\n  */\nfunction evaluateProperty({api}) {\n  var selects = [];\n  for (const working_day of api.data.look_up_daymaster.results) { \n    selects.push({\n      id:working_day._row_data.displayValue,\n      label:working_day._row_data.displayValue\n    });\n  }\n\n\treturn selects;\n}"
+                "apiVersion" : "1.0.0",
+                "inlineScript" : "/**\n  * @param {params} params\n  * @param {api} params.api\n  * @param {any} params.imports\n  */\nfunction evaluateProperty({api}) {\n  var selects = [];\n  for (const working_day of api.data.look_up_daymaster.results) { \n    selects.push({\n      id:working_day._row_data.uniqueValue,\n      label:working_day._row_data.displayValue\n    });\n  }\n\n\treturn selects;\n}"
               }
             },
             "optional" : {
@@ -430,6 +430,45 @@
               "type" : "STATE_BINDING",
               "binding" : {
                 "address" : [ "selectName" ]
+              }
+            },
+            "reversed" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "truncated" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            }
+          },
+          "eventMappings" : [ ],
+          "slot" : "Main",
+          "definition" : {
+            "id" : "bb63b710d208796b7ceaab7812bddef1",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : null,
+          "isHidden" : {
+            "type" : "JSON_LITERAL",
+            "value" : ""
+          },
+          "isNonDestructive" : false,
+          "styles" : { }
+        }, {
+          "elementId" : "label_value_10",
+          "elementLabel" : "Label value 10",
+          "propertyValues" : {
+            "label" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "message" : "対象者sysid：",
+                "comment" : ""
+              }
+            },
+            "value" : {
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "selectNameSysid" ]
               }
             },
             "reversed" : {
@@ -849,7 +888,7 @@
           "propertyValues" : {
             "type" : {
               "type" : "JSON_LITERAL",
-              "value" : "text"
+              "value" : "number"
             },
             "label" : {
               "type" : "TRANSLATION_LITERAL",
@@ -859,8 +898,10 @@
               }
             },
             "placeholder" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "TotalTime" ]
+              }
             },
             "name" : {
               "type" : "JSON_LITERAL",
@@ -872,7 +913,7 @@
             },
             "readonly" : {
               "type" : "JSON_LITERAL",
-              "value" : false
+              "value" : true
             },
             "required" : {
               "type" : "JSON_LITERAL",
@@ -950,7 +991,7 @@
           "propertyValues" : {
             "type" : {
               "type" : "JSON_LITERAL",
-              "value" : "text"
+              "value" : "number"
             },
             "label" : {
               "type" : "TRANSLATION_LITERAL",
@@ -960,8 +1001,10 @@
               }
             },
             "placeholder" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "TotalBudget" ]
+              }
             },
             "name" : {
               "type" : "JSON_LITERAL",
@@ -973,7 +1016,7 @@
             },
             "readonly" : {
               "type" : "JSON_LITERAL",
-              "value" : false
+              "value" : true
             },
             "required" : {
               "type" : "JSON_LITERAL",
@@ -1365,8 +1408,10 @@
                       "value" : [ ]
                     },
                     "refreshRequested" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : ""
+                      "type" : "DATA_OUTPUT_BINDING",
+                      "binding" : {
+                        "address" : [ "look_up_assign", "results" ]
+                      }
                     },
                     "page" : {
                       "type" : "JSON_LITERAL",
@@ -1682,7 +1727,48 @@
       "value" : true
     }
   },
-  "eventMappings" : [ ],
+  "eventMappings" : [ {
+    "eventMappingId" : "claaqakbdyaaaajjpddphhxjahenott",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf_page.CANVAS_MODAL#OPENED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf_page.CANVAS_MODAL#OPENED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "4bf600e807160110b81efa9e7c1ed09b"
+      },
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "claaqakbdyaaaajjqddphhxduscjjffaal",
+      "type" : "CLIENT_SCRIPT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "propName" : "assignJudge",
+            "value" : true
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "claaqbaauflaaaabkddphhxewcjjiirwd",
+      "type" : "EVENT"
+    } ]
+  } ],
   "slot" : null,
   "definition" : {
     "id" : "9c2e3b0978b3250ef3081204f151026a",
@@ -2199,8 +2285,8 @@
                 "items" : {
                   "type" : "CLIENT_TRANSFORM_SCRIPT",
                   "script" : {
-                    "apiVersion" : "1.0.0",
-                    "inlineScript" : "function evaluateProperty({api}) {\n  var selects = [];\n  for (const order of api.data.look_up_order.results) { \n    selects.push({\n      id:order.orderno.value,\n      label:order.orderno.value\n    });\n  }\n\treturn selects;\n}"
+                    "apiVersion" : "2.0.0",
+                    "inlineScript" : "function evaluateProperty({api}) {\n  var selects = [];\n  for (const order of api.data.look_up_order.results) { \n    selects.push({\n      id:order.sys_id.value,\n      label:order.orderno.value\n    });\n  }\n\treturn selects;\n}"
                   }
                 },
                 "optional" : {
@@ -2293,6 +2379,22 @@
                   "operation" : null,
                   "targetId" : "claamggltnhaaaambddphhxffzbbsyenl",
                   "type" : "EVENT"
+                }, {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "declarativeAction" : null,
+                  "event" : null,
+                  "operation" : {
+                    "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+                    "operationName" : "REFRESH",
+                    "parentResourceId" : "look_up_remainbudget",
+                    "payload" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : { }
+                    }
+                  },
+                  "targetId" : "claaqaadfvggaaaaffeddphhxuiiddhwpxc",
+                  "type" : "DATABROKER_OP"
                 } ]
               } ],
               "slot" : "Column 1",
@@ -2314,7 +2416,7 @@
                 "label" : {
                   "type" : "TRANSLATION_LITERAL",
                   "value" : {
-                    "message" : "Label",
+                    "message" : "選択オーダー：",
                     "comment" : ""
                   }
                 },
@@ -2435,43 +2537,27 @@
                 }
               },
               "eventMappings" : [ {
-                "eventMappingId" : "claamggmgccnaaaamcddphhxvouftzzbb",
+                "eventMappingId" : "claapxapbbpaaaabbkddphhxsvqtqkeecc",
                 "isConfiguration" : false,
                 "offRowStorageId" : null,
-                "sourceEventApiName" : "sn_input.NOW_INPUT#INVALID_SET",
+                "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
                 "sourceEventCorrelationId" : null,
                 "sourceEventDefinition" : {
-                  "apiName" : "sn_input.NOW_INPUT#INVALID_SET",
+                  "apiName" : "sn_input.NOW_INPUT#VALUE_SET",
                   "id" : null,
                   "type" : "UXEVENT"
                 },
                 "sourceEventSysId" : null,
                 "targets" : [ {
                   "broker" : null,
-                  "clientScript" : null,
-                  "declarativeAction" : null,
-                  "event" : {
-                    "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                    "payload" : {
-                      "type" : "MAP_CONTAINER",
-                      "container" : {
-                        "propName" : {
-                          "type" : "JSON_LITERAL",
-                          "value" : "assignTime"
-                        },
-                        "value" : {
-                          "type" : "EVENT_PAYLOAD_BINDING",
-                          "binding" : {
-                            "address" : [ "value" ]
-                          }
-                        }
-                      }
-                    },
-                    "sysId" : "32408b42ff7a10109046e490703bf176"
+                  "clientScript" : {
+                    "sysId" : "96c495ab07860110b81efa9e7c1ed01c"
                   },
+                  "declarativeAction" : null,
+                  "event" : null,
                   "operation" : null,
-                  "targetId" : "claamggmgccnaaaamdddphhxggeeldrmcgg",
-                  "type" : "EVENT"
+                  "targetId" : "claapxapbbpaaaabblddphhxdrmirfhaa",
+                  "type" : "CLIENT_SCRIPT"
                 } ]
               } ],
               "slot" : "Column 2",
@@ -2590,13 +2676,15 @@
             "label" : {
               "type" : "TRANSLATION_LITERAL",
               "value" : {
-                "message" : "割り当て予算：",
+                "message" : "割り当て予算",
                 "comment" : ""
               }
             },
             "placeholder" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "assignBudget" ]
+              }
             },
             "name" : {
               "type" : "JSON_LITERAL",
@@ -2696,8 +2784,10 @@
               }
             },
             "placeholder" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "ResultBudget" ]
+              }
             },
             "name" : {
               "type" : "JSON_LITERAL",
@@ -2781,6 +2871,45 @@
           },
           "isNonDestructive" : false,
           "styles" : { }
+        }, {
+          "elementId" : "label_value_9",
+          "elementLabel" : "Label value 9",
+          "propertyValues" : {
+            "label" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "message" : "残予算：",
+                "comment" : ""
+              }
+            },
+            "value" : {
+              "type" : "DATA_OUTPUT_BINDING",
+              "binding" : {
+                "address" : [ "look_up_remainbudget", "results", "0", "remainbudget", "vale" ]
+              }
+            },
+            "reversed" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "truncated" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            }
+          },
+          "eventMappings" : [ ],
+          "slot" : "Column 2",
+          "definition" : {
+            "id" : "bb63b710d208796b7ceaab7812bddef1",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : null,
+          "isHidden" : {
+            "type" : "JSON_LITERAL",
+            "value" : ""
+          },
+          "isNonDestructive" : false,
+          "styles" : { }
         } ],
         "layout" : {
           "default" : {
@@ -2803,6 +2932,45 @@
       "styles" : {
         "width" : "100%"
       }
+    }, {
+      "elementId" : "label_value_11",
+      "elementLabel" : "Label value 11",
+      "propertyValues" : {
+        "label" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "ジャッジ：",
+            "comment" : ""
+          }
+        },
+        "value" : {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "assignJudge" ]
+          }
+        },
+        "reversed" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "truncated" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : "modal-footer",
+      "definition" : {
+        "id" : "bb63b710d208796b7ceaab7812bddef1",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
     }, {
       "elementId" : "container_21",
       "elementLabel" : "Container 21",
@@ -2838,8 +3006,11 @@
               "value" : null
             },
             "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
+              "type" : "CLIENT_TRANSFORM_SCRIPT",
+              "script" : {
+                "apiVersion" : "2.0.0",
+                "inlineScript" : "/**\n  * @param {params} params\n  * @param {api} params.api\n  * @param {any} params.imports\n  */\nfunction evaluateProperty({api}) {\n  return api.state.assignJudge;\n}"
+              }
             },
             "tooltipContent" : {
               "type" : "TRANSLATION_LITERAL",
@@ -2853,7 +3024,135 @@
               "container" : { }
             }
           },
-          "eventMappings" : [ ],
+          "eventMappings" : [ {
+            "eventMappingId" : "claaqccggzgyaaaajjtddphhxbvaavbgccdd",
+            "isConfiguration" : false,
+            "offRowStorageId" : null,
+            "sourceEventApiName" : "sn_button.NOW_BUTTON#CLICKED",
+            "sourceEventCorrelationId" : null,
+            "sourceEventDefinition" : {
+              "apiName" : "sn_button.NOW_BUTTON#CLICKED",
+              "id" : null,
+              "type" : "UXEVENT"
+            },
+            "sourceEventSysId" : null,
+            "targets" : [ {
+              "broker" : null,
+              "clientScript" : null,
+              "declarativeAction" : null,
+              "event" : null,
+              "operation" : {
+                "dataBrokerId" : "beda4252770300108d070d74c810618f",
+                "operationName" : "EXECUTE",
+                "parentResourceId" : "create_working_detail",
+                "payload" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : {
+                    "table" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "x_662584_orderma_0_workingdetail"
+                    },
+                    "templateFields" : {
+                      "type" : "CLIENT_TRANSFORM",
+                      "transform" : {
+                        "operands" : {
+                          "type" : "LIST_CONTAINER",
+                          "container" : [ {
+                            "type" : "JSON_LITERAL",
+                            "value" : "assignbudget="
+                          }, {
+                            "type" : "STATE_BINDING",
+                            "binding" : {
+                              "address" : [ "assignBudget" ]
+                            }
+                          }, {
+                            "type" : "JSON_LITERAL",
+                            "value" : "^assigntime="
+                          }, {
+                            "type" : "STATE_BINDING",
+                            "binding" : {
+                              "address" : [ "assignTime" ]
+                            }
+                          }, {
+                            "type" : "JSON_LITERAL",
+                            "value" : "^assignorder="
+                          }, {
+                            "type" : "STATE_BINDING",
+                            "binding" : {
+                              "address" : [ "selectOrder" ]
+                            }
+                          }, {
+                            "type" : "JSON_LITERAL",
+                            "value" : "^targetdate="
+                          }, {
+                            "type" : "STATE_BINDING",
+                            "binding" : {
+                              "address" : [ "selectDate" ]
+                            }
+                          }, {
+                            "type" : "JSON_LITERAL",
+                            "value" : "^name="
+                          }, {
+                            "type" : "STATE_BINDING",
+                            "binding" : {
+                              "address" : [ "selectNameSysid" ]
+                            }
+                          }, {
+                            "type" : "JSON_LITERAL",
+                            "value" : ""
+                          } ]
+                        },
+                        "operator" : "CONCAT"
+                      }
+                    },
+                    "useSetDisplayValue" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    }
+                  }
+                }
+              },
+              "targetId" : "claaqccggzgyaaaajjuddphhxsvnsiddddp",
+              "type" : "DATABROKER_OP"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "x_662584_orderma_0.MODAL_SELECTED_RELAY_2471f4af07060110b81efa9e7c1ed03a",
+                "payload" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : {
+                    "modalId" : "[component-id$='custom_1']",
+                    "showModal" : null,
+                    "displayOptions" : null,
+                    "bare" : true,
+                    "preserveState" : null
+                  }
+                },
+                "sysId" : "39c441af07460110b81efa9e7c1ed0a0"
+              },
+              "operation" : null,
+              "targetId" : "claaqiiqpffhaaaacciiddphhxzcccuebbwf",
+              "type" : "EVENT"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "declarativeAction" : null,
+              "event" : null,
+              "operation" : {
+                "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+                "operationName" : "REFRESH",
+                "parentResourceId" : "look_up_assign",
+                "payload" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : { }
+                }
+              },
+              "targetId" : "claaqiisuzvaaaaccbddphhxqzynyreu",
+              "type" : "DATABROKER_OP"
+            } ]
+          } ],
           "slot" : "Column 1",
           "definition" : {
             "id" : "d37ce8abca89d02905fed903c8e34d8e",
@@ -2888,6 +3187,107 @@
       "styles" : {
         "width" : "100%"
       }
+    }, {
+      "elementId" : "alert_1",
+      "elementLabel" : "Alert 1",
+      "propertyValues" : {
+        "status" : {
+          "type" : "JSON_LITERAL",
+          "value" : "critical"
+        },
+        "content" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "割り当て予算額が残予算額を超過しています",
+            "comment" : ""
+          }
+        },
+        "icon" : {
+          "type" : "JSON_LITERAL",
+          "value" : "ban-fill"
+        },
+        "header" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "message" : "ERROR：",
+            "comment" : ""
+          }
+        },
+        "textLinkProps" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "action" : {
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "type" : {
+              "type" : "JSON_LITERAL",
+              "value" : "acknowledge"
+            },
+            "label" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "message" : "OK",
+                "comment" : ""
+              }
+            }
+          }
+        },
+        "expanded" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "maxHeight" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        }
+      },
+      "eventMappings" : [ {
+        "eventMappingId" : "claaqaarhhggeeaaaabboddphhxggqveucffo",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "sn_alert.NOW_ALERT#ACTION_CLICKED",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "sn_alert.NOW_ALERT#ACTION_CLICKED",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+            "payload" : {
+              "type" : "JSON_LITERAL",
+              "value" : {
+                "propName" : "assignAlert",
+                "value" : true
+              }
+            },
+            "sysId" : "32408b42ff7a10109046e490703bf176"
+          },
+          "operation" : null,
+          "targetId" : "claaqaarhhggeeaaaabbpddphhxqqjjffogaao",
+          "type" : "EVENT"
+        } ]
+      } ],
+      "slot" : "modal-footer",
+      "definition" : {
+        "id" : "553e398f150099fe18ece6938b5bea46",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "STATE_BINDING",
+        "binding" : {
+          "address" : [ "assignAlert" ]
+        }
+      },
+      "isNonDestructive" : false,
+      "styles" : { }
     } ],
     "layout" : {
       "default" : {
@@ -3067,7 +3467,7 @@
     },
     "orderBy" : {
       "type" : "JSON_LITERAL",
-      "value" : null
+      "value" : "orderno"
     },
     "sortType" : {
       "type" : "JSON_LITERAL",
@@ -3158,7 +3558,7 @@
             }
           }, {
             "type" : "JSON_LITERAL",
-            "value" : "^targetdate.targetdate="
+            "value" : "^targetdate.sys_id="
           }, {
             "type" : "STATE_BINDING",
             "binding" : {
@@ -3209,7 +3609,30 @@
   },
   "elementId" : "look_up_assign",
   "elementLabel" : "Look Up AssignInfo",
-  "eventMappings" : [ ],
+  "eventMappings" : [ {
+    "eventMappingId" : "claaqajjfejaaaajjaaddphhxljggccbbaujj",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "93fc3ca307460110b81efa9e7c1ed03e"
+      },
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "claaqajjfejaaaajjbbddphhxccfeejjiesu",
+      "type" : "CLIENT_SCRIPT"
+    } ]
+  } ],
   "inputValues" : {
     "table" : {
       "type" : "JSON_LITERAL",
@@ -3222,15 +3645,15 @@
           "type" : "LIST_CONTAINER",
           "container" : [ {
             "type" : "JSON_LITERAL",
-            "value" : "name.name.name="
+            "value" : "name="
           }, {
             "type" : "STATE_BINDING",
             "binding" : {
-              "address" : [ "selectName" ]
+              "address" : [ "selectNameSysid" ]
             }
           }, {
             "type" : "JSON_LITERAL",
-            "value" : "^targetdate.targetdate="
+            "value" : "^targetdate="
           }, {
             "type" : "STATE_BINDING",
             "binding" : {
@@ -3279,8 +3702,8 @@
     "id" : "b997a84053021010cbc2ddeeff7b1228",
     "type" : "COMPOSITE"
   },
-  "elementId" : "look_up_grade",
-  "elementLabel" : "Look Up Grade",
+  "elementId" : "look_up_memberinfo",
+  "elementLabel" : "Look Up MemberInfo",
   "eventMappings" : [ {
     "eventMappingId" : "claamhhfcrcaaaaohhddphhxscjtybbsii",
     "isConfiguration" : false,
@@ -3309,7 +3732,7 @@
             "value" : {
               "type" : "DATA_OUTPUT_BINDING",
               "binding" : {
-                "address" : [ "look_up_grade", "results", "0", "grade", "displayValue" ]
+                "address" : [ "look_up_memberinfo", "results", "0", "grade", "displayValue" ]
               }
             }
           }
@@ -3335,6 +3758,32 @@
       },
       "targetId" : "claamhhrthqaaaapkddphhxffhbqoccmr",
       "type" : "DATABROKER_OP"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "propName" : {
+              "type" : "JSON_LITERAL",
+              "value" : "selectNameSysid"
+            },
+            "value" : {
+              "type" : "DATA_OUTPUT_BINDING",
+              "binding" : {
+                "address" : [ "look_up_memberinfo", "results", "0", "sys_id", "value" ]
+              }
+            }
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "claaqiiaauwvaaaaeevddphhxqvtmtfiq",
+      "type" : "EVENT"
     } ]
   } ],
   "inputValues" : {
@@ -3365,7 +3814,7 @@
     },
     "returnFields" : {
       "type" : "JSON_LITERAL",
-      "value" : "grade"
+      "value" : "grade,name,sys_id"
     },
     "orderBy" : {
       "type" : "JSON_LITERAL",
@@ -3496,6 +3945,119 @@
     }
   },
   "readEvaluationMode" : "EAGER"
+}, {
+  "definition" : {
+    "id" : "b997a84053021010cbc2ddeeff7b1228",
+    "type" : "COMPOSITE"
+  },
+  "elementId" : "look_up_remainbudget",
+  "elementLabel" : "Look Up RemainBudget",
+  "eventMappings" : [ {
+    "eventMappingId" : "claapyaaxrqaaaaeeeddphhxdccvxhiit",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "propName" : {
+              "type" : "JSON_LITERAL",
+              "value" : "RemainBudget"
+            },
+            "value" : {
+              "type" : "DATA_OUTPUT_BINDING",
+              "binding" : {
+                "address" : [ "look_up_remainbudget", "results", "0", "remainbudget", "value" ]
+              }
+            }
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "claapyaaxrqaaaaeefddphhxggaajjcjhhvf",
+      "type" : "EVENT"
+    } ]
+  } ],
+  "inputValues" : {
+    "table" : {
+      "type" : "JSON_LITERAL",
+      "value" : "x_662584_orderma_0_ordermaster"
+    },
+    "encodedQuery" : {
+      "type" : "CLIENT_TRANSFORM",
+      "transform" : {
+        "operands" : {
+          "type" : "LIST_CONTAINER",
+          "container" : [ {
+            "type" : "JSON_LITERAL",
+            "value" : "sys_id="
+          }, {
+            "type" : "STATE_BINDING",
+            "binding" : {
+              "address" : [ "selectOrder" ]
+            }
+          }, {
+            "type" : "JSON_LITERAL",
+            "value" : ""
+          } ]
+        },
+        "operator" : "CONCAT"
+      }
+    },
+    "returnFields" : {
+      "type" : "JSON_LITERAL",
+      "value" : "remainbudget"
+    },
+    "orderBy" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "sortType" : {
+      "type" : "JSON_LITERAL",
+      "value" : "asc"
+    },
+    "limit" : {
+      "type" : "JSON_LITERAL",
+      "value" : "1000"
+    },
+    "offset" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "queryCategory" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "returnFieldMetadata" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    }
+  },
+  "readEvaluationMode" : "EAGER"
+}, {
+  "definition" : {
+    "id" : "beda4252770300108d070d74c810618f",
+    "type" : "GRAPHQL"
+  },
+  "elementId" : "create_working_detail",
+  "elementLabel" : "Create WorkingDetail",
+  "eventMappings" : [ ],
+  "inputValues" : { },
+  "readEvaluationMode" : "EXPLICIT"
 } ]</data>
         <dispatched_events>39c441af07460110b81efa9e7c1ed0a0</dispatched_events>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
@@ -3521,10 +4083,16 @@
   "message" : "All Active Tasks",
   "comment" : ""
 }, {
+  "message" : "ERROR：",
+  "comment" : ""
+}, {
   "message" : "Enter a label",
   "comment" : ""
 }, {
   "message" : "Label",
+  "comment" : ""
+}, {
+  "message" : "OK",
   "comment" : ""
 }, {
   "message" : "オーダー割り当て",
@@ -3536,6 +4104,9 @@
   "message" : "グレード：",
   "comment" : ""
 }, {
+  "message" : "ジャッジ：",
+  "comment" : ""
+}, {
   "message" : "割り当てオーダー選択：",
   "comment" : ""
 }, {
@@ -3545,7 +4116,10 @@
   "message" : "割り当てステータス：",
   "comment" : ""
 }, {
-  "message" : "割り当て予算：",
+  "message" : "割り当て予算",
+  "comment" : ""
+}, {
+  "message" : "割り当て予算額が残予算額を超過しています",
   "comment" : ""
 }, {
   "message" : "割り当て後残予算：",
@@ -3584,6 +4158,12 @@
   "message" : "対象年月：",
   "comment" : ""
 }, {
+  "message" : "対象者sysid：",
+  "comment" : ""
+}, {
+  "message" : "残予算：",
+  "comment" : ""
+}, {
   "message" : "申請時間(直接率88%)：",
   "comment" : ""
 }, {
@@ -3591,6 +4171,9 @@
   "comment" : ""
 }, {
   "message" : "申請者：",
+  "comment" : ""
+}, {
+  "message" : "選択オーダー：",
   "comment" : ""
 } ]</required_translations>
         <root_component/>
@@ -3722,18 +4305,73 @@
     "type" : "JSON_LITERAL",
     "value" : null
   }
+}, {
+  "name" : "RemainBudget",
+  "label" : "RemainBudget",
+  "fieldType" : "number",
+  "valueType" : "number",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "ResultBudget",
+  "label" : "ResultBudget",
+  "fieldType" : "",
+  "valueType" : "",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "assignAlert",
+  "label" : "assignAlert",
+  "fieldType" : "boolean",
+  "valueType" : "boolean",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : true
+  }
+}, {
+  "name" : "assignJudge",
+  "label" : "assignJudge",
+  "fieldType" : "boolean",
+  "valueType" : "boolean",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : true
+  }
+}, {
+  "name" : "selectNameSysid",
+  "label" : "selectNameSysid",
+  "fieldType" : "",
+  "valueType" : "",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
 } ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-11 06:23:24</sys_created_on>
         <sys_id>2471f4af07060110b81efa9e7c1ed03a</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>89</sys_mod_count>
         <sys_name>AssignForm</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_macroponent_2471f4af07060110b81efa9e7c1ed03a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-11 09:34:57</sys_updated_on>
+        <sys_updated_on>2022-03-14 06:08:27</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>
