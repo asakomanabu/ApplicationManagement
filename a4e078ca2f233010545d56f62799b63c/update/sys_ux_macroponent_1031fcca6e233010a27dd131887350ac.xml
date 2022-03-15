@@ -46,6 +46,14 @@
     "defer" : {
       "type" : "JSON_LITERAL",
       "value" : false
+    },
+    "collapseButtonTooltipContent" : {
+      "type" : "JSON_LITERAL",
+      "value" : "Collapse container to hide contents"
+    },
+    "expandButtonTooltipContent" : {
+      "type" : "JSON_LITERAL",
+      "value" : "Expand container to show contents"
     }
   },
   "eventMappings" : [ ],
@@ -137,10 +145,6 @@
           "type" : "JSON_LITERAL",
           "value" : ""
         },
-        "logoAltText" : {
-          "type" : "JSON_LITERAL",
-          "value" : ""
-        },
         "heading" : {
           "type" : "TRANSLATION_LITERAL",
           "value" : {
@@ -149,10 +153,8 @@
           }
         },
         "destinationUrl" : {
-          "type" : "DATA_OUTPUT_BINDING",
-          "binding" : {
-            "address" : [ "chrome_state_for_app_shell_ui_1", "loginRedirectUrl" ]
-          }
+          "type" : "JSON_LITERAL",
+          "value" : "https://dev91783.service-now.com/x/662584/OrderManagment/open"
         },
         "ssoLabel" : {
           "type" : "TRANSLATION_LITERAL",
@@ -215,6 +217,10 @@
       "type" : "JSON_LITERAL",
       "value" : null
     },
+    "processedUserPrefs" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
     "notificationConfiguration" : {
       "type" : "JSON_LITERAL",
       "value" : null
@@ -242,7 +248,13 @@
         <macroponent_dependencies/>
         <name>Login</name>
         <props>[ ]</props>
-        <required_translations>[{"message":"Log in","comment":""},{"message":"Use SSO","comment":""}]</required_translations>
+        <required_translations>[ {
+  "message" : "Log in",
+  "comment" : ""
+}, {
+  "message" : "Use SSO",
+  "comment" : ""
+} ]</required_translations>
         <root_component/>
         <root_component_config>{ }</root_component_config>
         <root_component_definition/>
@@ -252,13 +264,13 @@
         <sys_created_by>system</sys_created_by>
         <sys_created_on>2021-11-02 07:54:32</sys_created_on>
         <sys_id>1031fcca6e233010a27dd131887350ac</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Login</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_macroponent_1031fcca6e233010a27dd131887350ac</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-11-02 07:54:32</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-14 23:47:15</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>

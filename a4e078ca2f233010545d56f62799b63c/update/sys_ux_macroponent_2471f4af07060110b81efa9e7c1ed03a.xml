@@ -26,6 +26,107 @@
       },
       "overrides" : {
         "composition" : [ {
+          "elementId" : "alert_2",
+          "elementLabel" : "Alert 2",
+          "propertyValues" : {
+            "status" : {
+              "type" : "JSON_LITERAL",
+              "value" : "critical"
+            },
+            "content" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "message" : "対象の承認済み稼働時間レコードが存在しません。申請者名と対象年月を確認してください",
+                "comment" : ""
+              }
+            },
+            "icon" : {
+              "type" : "JSON_LITERAL",
+              "value" : "circle-info-outline"
+            },
+            "header" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "message" : "ERROR：",
+                "comment" : ""
+              }
+            },
+            "textLinkProps" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "action" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "type" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "acknowledge"
+                },
+                "label" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "message" : "OK",
+                    "comment" : ""
+                  }
+                }
+              }
+            },
+            "expanded" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "maxHeight" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            }
+          },
+          "eventMappings" : [ {
+            "eventMappingId" : "claaqdijjszaaaanccddphhxreezliihhye",
+            "isConfiguration" : false,
+            "offRowStorageId" : null,
+            "sourceEventApiName" : "sn_alert.NOW_ALERT#ACTION_CLICKED",
+            "sourceEventCorrelationId" : null,
+            "sourceEventDefinition" : {
+              "apiName" : "sn_alert.NOW_ALERT#ACTION_CLICKED",
+              "id" : null,
+              "type" : "UXEVENT"
+            },
+            "sourceEventSysId" : null,
+            "targets" : [ {
+              "broker" : null,
+              "clientScript" : null,
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                "payload" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : {
+                    "propName" : "targetrecordAlert",
+                    "value" : true
+                  }
+                },
+                "sysId" : "32408b42ff7a10109046e490703bf176"
+              },
+              "operation" : null,
+              "targetId" : "claaqdijjszaaaanddddphhxhhbbopycctl",
+              "type" : "EVENT"
+            } ]
+          } ],
+          "slot" : "Main",
+          "definition" : {
+            "id" : "553e398f150099fe18ece6938b5bea46",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : null,
+          "isHidden" : {
+            "type" : "STATE_BINDING",
+            "binding" : {
+              "address" : [ "targetrecordAlert" ]
+            }
+          },
+          "isNonDestructive" : false,
+          "styles" : { }
+        }, {
           "elementId" : "stylized_text_1",
           "elementLabel" : "Stylized text 1",
           "propertyValues" : {
@@ -367,6 +468,22 @@
                 }
               },
               "targetId" : "claameertehaaaaeoddphhxqiikggfhhhr",
+              "type" : "DATABROKER_OP"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "declarativeAction" : null,
+              "event" : null,
+              "operation" : {
+                "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+                "operationName" : "REFRESH",
+                "parentResourceId" : "look_up_assign",
+                "payload" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : { }
+                }
+              },
+              "targetId" : "claaqbchabaaaacjddphhxayddgnbbiio",
               "type" : "DATABROKER_OP"
             } ]
           } ],
@@ -833,9 +950,9 @@
                   }
                 },
                 "value" : {
-                  "type" : "DATA_OUTPUT_BINDING",
+                  "type" : "STATE_BINDING",
                   "binding" : {
-                    "address" : [ "look_up_workinfo", "results", "0", "isassigned", "displayValue" ]
+                    "address" : [ "IsAssigned" ]
                   }
                 },
                 "reversed" : {
@@ -1232,8 +1349,33 @@
                       "value" : "Select..."
                     },
                     "query" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : null
+                      "type" : "CLIENT_TRANSFORM",
+                      "transform" : {
+                        "operands" : {
+                          "type" : "LIST_CONTAINER",
+                          "container" : [ {
+                            "type" : "JSON_LITERAL",
+                            "value" : "name.name.name="
+                          }, {
+                            "type" : "STATE_BINDING",
+                            "binding" : {
+                              "address" : [ "selectName" ]
+                            }
+                          }, {
+                            "type" : "JSON_LITERAL",
+                            "value" : "^targetdate="
+                          }, {
+                            "type" : "STATE_BINDING",
+                            "binding" : {
+                              "address" : [ "selectDate" ]
+                            }
+                          }, {
+                            "type" : "JSON_LITERAL",
+                            "value" : ""
+                          } ]
+                        },
+                        "operator" : "CONCAT"
+                      }
                     },
                     "view" : {
                       "type" : "JSON_LITERAL",
@@ -1408,10 +1550,8 @@
                       "value" : [ ]
                     },
                     "refreshRequested" : {
-                      "type" : "DATA_OUTPUT_BINDING",
-                      "binding" : {
-                        "address" : [ "look_up_assign", "results" ]
-                      }
+                      "type" : "JSON_LITERAL",
+                      "value" : ""
                     },
                     "page" : {
                       "type" : "JSON_LITERAL",
@@ -1486,8 +1626,10 @@
                           "value" : "menu-fill"
                         },
                         "disabled" : {
-                          "type" : "JSON_LITERAL",
-                          "value" : false
+                          "type" : "STATE_BINDING",
+                          "binding" : {
+                            "address" : [ "IsAssigned" ]
+                          }
                         },
                         "tooltipContent" : {
                           "type" : "TRANSLATION_LITERAL",
@@ -1572,22 +1714,55 @@
                           "value" : "circle-check-outline"
                         },
                         "disabled" : {
-                          "type" : "JSON_LITERAL",
-                          "value" : false
+                          "type" : "STATE_BINDING",
+                          "binding" : {
+                            "address" : [ "IsAssigned" ]
+                          }
                         },
                         "tooltipContent" : {
-                          "type" : "TRANSLATION_LITERAL",
-                          "value" : {
-                            "message" : "Enter a label",
-                            "comment" : ""
-                          }
+                          "type" : "JSON_LITERAL",
+                          "value" : ""
                         },
                         "configAria" : {
                           "type" : "MAP_CONTAINER",
                           "container" : { }
                         }
                       },
-                      "eventMappings" : [ ],
+                      "eventMappings" : [ {
+                        "eventMappingId" : "claaqctfiuaaaaiuddphhxaauhhddsccyd",
+                        "isConfiguration" : false,
+                        "offRowStorageId" : null,
+                        "sourceEventApiName" : "sn_button.NOW_BUTTON#CLICKED",
+                        "sourceEventCorrelationId" : null,
+                        "sourceEventDefinition" : {
+                          "apiName" : "sn_button.NOW_BUTTON#CLICKED",
+                          "id" : null,
+                          "type" : "UXEVENT"
+                        },
+                        "sourceEventSysId" : null,
+                        "targets" : [ {
+                          "broker" : null,
+                          "clientScript" : null,
+                          "declarativeAction" : null,
+                          "event" : {
+                            "apiName" : "x_662584_orderma_0.MODAL_SELECTED_RELAY_2471f4af07060110b81efa9e7c1ed03a",
+                            "payload" : {
+                              "type" : "JSON_LITERAL",
+                              "value" : {
+                                "modalId" : "[component-id$='confirm_1']",
+                                "showModal" : true,
+                                "displayOptions" : null,
+                                "bare" : null,
+                                "preserveState" : null
+                              }
+                            },
+                            "sysId" : "39c441af07460110b81efa9e7c1ed0a0"
+                          },
+                          "operation" : null,
+                          "targetId" : "claaqctfiuaaaaivddphhxuufglcjjl",
+                          "type" : "EVENT"
+                        } ]
+                      } ],
                       "slot" : "Column 2",
                       "definition" : {
                         "id" : "d37ce8abca89d02905fed903c8e34d8e",
@@ -3309,6 +3484,213 @@
   "styles" : {
     "width" : "100%"
   }
+}, {
+  "elementId" : "confirm_1",
+  "elementLabel" : "Confirm 1",
+  "propertyValues" : {
+    "headerLabel" : {
+      "type" : "JSON_LITERAL",
+      "value" : "オーダー割り当てを確定しますか？"
+    },
+    "content" : {
+      "type" : "JSON_LITERAL",
+      "value" : "確定後はオーダー割り当てを行うことはできなくなります"
+    },
+    "primaryButtonLabel" : {
+      "type" : "JSON_LITERAL",
+      "value" : "Yes"
+    },
+    "secondaryButtonLabel" : {
+      "type" : "JSON_LITERAL",
+      "value" : "Cancel"
+    },
+    "size" : {
+      "type" : "JSON_LITERAL",
+      "value" : "md"
+    },
+    "preventDefaultPrimaryAction" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "preventDefaultSecondaryAction" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "defer" : {
+      "type" : "JSON_LITERAL",
+      "value" : true
+    }
+  },
+  "eventMappings" : [ {
+    "eventMappingId" : "claaqcpjjyzaaaaiccddphhxrggeehmaicc",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_canvas_chrome.NOW_CONFIRM_MODAL#POSITIVE_BUTTON_CLICKED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_canvas_chrome.NOW_CONFIRM_MODAL#POSITIVE_BUTTON_CLICKED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : {
+        "dataBrokerId" : "9b4b978353211010cbc2ddeeff7b1245",
+        "operationName" : "EXECUTE",
+        "parentResourceId" : "update_isassigned",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : { }
+        }
+      },
+      "targetId" : "claaqcpjjyzaaaaiddddphhxddiixeekcgj",
+      "type" : "DATABROKER_OP"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : {
+        "dataBrokerId" : "43f97dd2770300108d070d74c81061c2",
+        "operationName" : "EXECUTE",
+        "parentResourceId" : "update_isassign",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "table" : {
+              "type" : "JSON_LITERAL",
+              "value" : "x_662584_orderma_0_working"
+            },
+            "query" : {
+              "type" : "CLIENT_TRANSFORM",
+              "transform" : {
+                "operands" : {
+                  "type" : "LIST_CONTAINER",
+                  "container" : [ {
+                    "type" : "JSON_LITERAL",
+                    "value" : "name.name.name="
+                  }, {
+                    "type" : "STATE_BINDING",
+                    "binding" : {
+                      "address" : [ "selectName" ]
+                    }
+                  }, {
+                    "type" : "JSON_LITERAL",
+                    "value" : "^targetdate="
+                  }, {
+                    "type" : "STATE_BINDING",
+                    "binding" : {
+                      "address" : [ "selectDate" ]
+                    }
+                  }, {
+                    "type" : "JSON_LITERAL",
+                    "value" : ""
+                  } ]
+                },
+                "operator" : "CONCAT"
+              }
+            },
+            "templateFields" : {
+              "type" : "CLIENT_TRANSFORM",
+              "transform" : {
+                "operands" : {
+                  "type" : "LIST_CONTAINER",
+                  "container" : [ {
+                    "type" : "JSON_LITERAL",
+                    "value" : "isassigned="
+                  }, {
+                    "type" : "JSON_LITERAL",
+                    "value" : "true"
+                  }, {
+                    "type" : "JSON_LITERAL",
+                    "value" : ""
+                  } ]
+                },
+                "operator" : "CONCAT"
+              }
+            }
+          }
+        }
+      },
+      "targetId" : "claaqcyxzeeaaaajaddphhxggvggggoegr",
+      "type" : "DATABROKER_OP"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "x_662584_orderma_0.NAV_ITEM_SELECTED_RELAY_2471f4af07060110b81efa9e7c1ed03a",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "route" : "assign",
+            "fields" : null,
+            "params" : null,
+            "redirect" : null,
+            "passiveNavigation" : null,
+            "title" : null,
+            "multiInstField" : null,
+            "targetRoute" : null,
+            "external" : null
+          }
+        },
+        "sysId" : "a697dca407560110b81efa9e7c1ed0fe"
+      },
+      "operation" : null,
+      "targetId" : "claaqdaauowaaaakxddphhxaxuuffofr",
+      "type" : "EVENT"
+    } ]
+  }, {
+    "eventMappingId" : "claaqclppbbaaaahwddphhxsrvhhitdff",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_canvas_chrome.NOW_CONFIRM_MODAL#NEGATIVE_BUTTON_CLICKED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_canvas_chrome.NOW_CONFIRM_MODAL#NEGATIVE_BUTTON_CLICKED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "x_662584_orderma_0.MODAL_SELECTED_RELAY_2471f4af07060110b81efa9e7c1ed03a",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "modalId" : "[component-id$='confirm_1']",
+            "showModal" : null,
+            "displayOptions" : null,
+            "bare" : null,
+            "preserveState" : null
+          }
+        },
+        "sysId" : "39c441af07460110b81efa9e7c1ed0a0"
+      },
+      "operation" : null,
+      "targetId" : "claaqclppbbaaaahxddphhxlzxeebafo",
+      "type" : "EVENT"
+    } ]
+  } ],
+  "slot" : null,
+  "definition" : {
+    "id" : "13ecfe155b630010b913cbd59b81c7d6",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null,
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : { }
 } ]</composition>
         <da_relay_models/>
         <data>[ {
@@ -3536,6 +3918,32 @@
       "operation" : null,
       "targetId" : "claameeohruaaaaeeddphhxuavcgpwdd",
       "type" : "EVENT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "propName" : {
+              "type" : "JSON_LITERAL",
+              "value" : "IsAssigned"
+            },
+            "value" : {
+              "type" : "DATA_OUTPUT_BINDING",
+              "binding" : {
+                "address" : [ "look_up_workinfo", "results", "0", "isassigned", "displayValue" ]
+              }
+            }
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "claaqdgghjjeeaaaamlddphhxjjwdndanbb",
+      "type" : "EVENT"
     } ]
   } ],
   "inputValues" : {
@@ -3631,6 +4039,16 @@
       "operation" : null,
       "targetId" : "claaqajjfejaaaajjbbddphhxccfeejjiesu",
       "type" : "CLIENT_SCRIPT"
+    }, {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "39e8946807560110b81efa9e7c1ed088"
+      },
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "claaqebeeeewaaaarggddphhxhxaazggffbbs",
+      "type" : "CLIENT_SCRIPT"
     } ]
   } ],
   "inputValues" : {
@@ -3669,7 +4087,7 @@
     },
     "returnFields" : {
       "type" : "JSON_LITERAL",
-      "value" : null
+      "value" : "assigntime,name,assignbudget,assignorder,targetdate"
     },
     "orderBy" : {
       "type" : "JSON_LITERAL",
@@ -4058,8 +4476,18 @@
   "eventMappings" : [ ],
   "inputValues" : { },
   "readEvaluationMode" : "EXPLICIT"
+}, {
+  "definition" : {
+    "id" : "43f97dd2770300108d070d74c81061c2",
+    "type" : "GRAPHQL"
+  },
+  "elementId" : "update_isassign",
+  "elementLabel" : "Update IsAssign",
+  "eventMappings" : [ ],
+  "inputValues" : { },
+  "readEvaluationMode" : "EXPLICIT"
 } ]</data>
-        <dispatched_events>39c441af07460110b81efa9e7c1ed0a0</dispatched_events>
+        <dispatched_events>a697dca407560110b81efa9e7c1ed0fe,39c441af07460110b81efa9e7c1ed0a0</dispatched_events>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
         <handled_events/>
         <interactions/>
@@ -4152,6 +4580,9 @@
   "message" : "合計割り当て時間：",
   "comment" : ""
 }, {
+  "message" : "対象の承認済み稼働時間レコードが存在しません。申請者名と対象年月を確認してください",
+  "comment" : ""
+}, {
   "message" : "対象レコード選択：",
   "comment" : ""
 }, {
@@ -4240,15 +4671,13 @@
 }, {
   "name" : "IsAssigned",
   "label" : "IsAssigned",
-  "fieldType" : "",
-  "valueType" : "",
+  "fieldType" : "boolean",
+  "valueType" : "boolean",
   "shape" : "",
   "description" : "",
   "initialValue" : {
-    "type" : "DATA_OUTPUT_BINDING",
-    "binding" : {
-      "address" : [ "look_up_workinfo", "results", "0", "isassigned", "displayValue" ]
-    }
+    "type" : "JSON_LITERAL",
+    "value" : false
   }
 }, {
   "name" : "selectOrder",
@@ -4360,18 +4789,29 @@
     "type" : "JSON_LITERAL",
     "value" : null
   }
+}, {
+  "name" : "targetrecordAlert",
+  "label" : "targetrecordAlert",
+  "fieldType" : "boolean",
+  "valueType" : "boolean",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : true
+  }
 } ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-11 06:23:24</sys_created_on>
         <sys_id>2471f4af07060110b81efa9e7c1ed03a</sys_id>
-        <sys_mod_count>89</sys_mod_count>
+        <sys_mod_count>114</sys_mod_count>
         <sys_name>AssignForm</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_macroponent_2471f4af07060110b81efa9e7c1ed03a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-14 06:08:27</sys_updated_on>
+        <sys_updated_on>2022-03-14 07:57:43</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>
