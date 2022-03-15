@@ -532,124 +532,7 @@
         "type" : "MACROPONENT"
       },
       "overrides" : {
-        "composition" : [ {
-          "elementId" : "label_value_1",
-          "elementLabel" : "Label value 1",
-          "propertyValues" : {
-            "label" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "message" : "申請者：",
-                "comment" : ""
-              }
-            },
-            "value" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "selectName" ]
-              }
-            },
-            "reversed" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "truncated" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Main",
-          "definition" : {
-            "id" : "bb63b710d208796b7ceaab7812bddef1",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "label_value_10",
-          "elementLabel" : "Label value 10",
-          "propertyValues" : {
-            "label" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "message" : "対象者sysid：",
-                "comment" : ""
-              }
-            },
-            "value" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "selectNameSysid" ]
-              }
-            },
-            "reversed" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "truncated" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Main",
-          "definition" : {
-            "id" : "bb63b710d208796b7ceaab7812bddef1",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "label_value_2",
-          "elementLabel" : "Label value 2",
-          "propertyValues" : {
-            "label" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "message" : "対象年月：",
-                "comment" : ""
-              }
-            },
-            "value" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "selectDate" ]
-              }
-            },
-            "reversed" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "truncated" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Main",
-          "definition" : {
-            "id" : "bb63b710d208796b7ceaab7812bddef1",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        } ],
+        "composition" : [ ],
         "layout" : {
           "default" : {
             "children" : null,
@@ -682,84 +565,6 @@
       },
       "overrides" : {
         "composition" : [ {
-          "elementId" : "label_value_6",
-          "elementLabel" : "Label value 6",
-          "propertyValues" : {
-            "label" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "message" : "グレード：",
-                "comment" : ""
-              }
-            },
-            "value" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "selectUserGrade" ]
-              }
-            },
-            "reversed" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "truncated" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Main",
-          "definition" : {
-            "id" : "bb63b710d208796b7ceaab7812bddef1",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
-          "elementId" : "label_value_7",
-          "elementLabel" : "Label value 7",
-          "propertyValues" : {
-            "label" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "message" : "単金：",
-                "comment" : ""
-              }
-            },
-            "value" : {
-              "type" : "DATA_OUTPUT_BINDING",
-              "binding" : {
-                "address" : [ "look_up_hourlywage", "results", "0", "hourly_wage", "value" ]
-              }
-            },
-            "reversed" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "truncated" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Main",
-          "definition" : {
-            "id" : "bb63b710d208796b7ceaab7812bddef1",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
-        }, {
           "elementId" : "stylized_text_3",
           "elementLabel" : "Stylized text 3",
           "propertyValues" : {
@@ -1550,8 +1355,10 @@
                       "value" : [ ]
                     },
                     "refreshRequested" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : ""
+                      "type" : "DATA_OUTPUT_BINDING",
+                      "binding" : {
+                        "address" : [ "look_up_assign", "results" ]
+                      }
                     },
                     "page" : {
                       "type" : "JSON_LITERAL",
@@ -1974,45 +1781,6 @@
       "slot" : "modal-title",
       "definition" : {
         "id" : "4335ba6dca80378f7ba7a67cd6667bec",
-        "type" : "MACROPONENT"
-      },
-      "overrides" : null,
-      "isHidden" : {
-        "type" : "JSON_LITERAL",
-        "value" : ""
-      },
-      "isNonDestructive" : false,
-      "styles" : { }
-    }, {
-      "elementId" : "label_value_8",
-      "elementLabel" : "Label value 8",
-      "propertyValues" : {
-        "label" : {
-          "type" : "TRANSLATION_LITERAL",
-          "value" : {
-            "message" : "単価：",
-            "comment" : ""
-          }
-        },
-        "value" : {
-          "type" : "STATE_BINDING",
-          "binding" : {
-            "address" : [ "HourlyWage" ]
-          }
-        },
-        "reversed" : {
-          "type" : "JSON_LITERAL",
-          "value" : false
-        },
-        "truncated" : {
-          "type" : "JSON_LITERAL",
-          "value" : false
-        }
-      },
-      "eventMappings" : [ ],
-      "slot" : "modal-title",
-      "definition" : {
-        "id" : "bb63b710d208796b7ceaab7812bddef1",
         "type" : "MACROPONENT"
       },
       "overrides" : null,
@@ -2585,45 +2353,6 @@
               "isNonDestructive" : false,
               "styles" : { }
             }, {
-              "elementId" : "label_value_4",
-              "elementLabel" : "Label value 4",
-              "propertyValues" : {
-                "label" : {
-                  "type" : "TRANSLATION_LITERAL",
-                  "value" : {
-                    "message" : "選択オーダー：",
-                    "comment" : ""
-                  }
-                },
-                "value" : {
-                  "type" : "STATE_BINDING",
-                  "binding" : {
-                    "address" : [ "selectOrder" ]
-                  }
-                },
-                "reversed" : {
-                  "type" : "JSON_LITERAL",
-                  "value" : false
-                },
-                "truncated" : {
-                  "type" : "JSON_LITERAL",
-                  "value" : false
-                }
-              },
-              "eventMappings" : [ ],
-              "slot" : "Column 1",
-              "definition" : {
-                "id" : "bb63b710d208796b7ceaab7812bddef1",
-                "type" : "MACROPONENT"
-              },
-              "overrides" : null,
-              "isHidden" : {
-                "type" : "JSON_LITERAL",
-                "value" : ""
-              },
-              "isNonDestructive" : false,
-              "styles" : { }
-            }, {
               "elementId" : "input_7",
               "elementLabel" : "Input 7",
               "propertyValues" : {
@@ -2738,45 +2467,6 @@
               "slot" : "Column 2",
               "definition" : {
                 "id" : "bb0f92e8d7eff1590624bfe69d316f23",
-                "type" : "MACROPONENT"
-              },
-              "overrides" : null,
-              "isHidden" : {
-                "type" : "JSON_LITERAL",
-                "value" : ""
-              },
-              "isNonDestructive" : false,
-              "styles" : { }
-            }, {
-              "elementId" : "label_value_5",
-              "elementLabel" : "Label value 5",
-              "propertyValues" : {
-                "label" : {
-                  "type" : "TRANSLATION_LITERAL",
-                  "value" : {
-                    "message" : "Label",
-                    "comment" : ""
-                  }
-                },
-                "value" : {
-                  "type" : "STATE_BINDING",
-                  "binding" : {
-                    "address" : [ "assignTime" ]
-                  }
-                },
-                "reversed" : {
-                  "type" : "JSON_LITERAL",
-                  "value" : false
-                },
-                "truncated" : {
-                  "type" : "JSON_LITERAL",
-                  "value" : false
-                }
-              },
-              "eventMappings" : [ ],
-              "slot" : "Column 2",
-              "definition" : {
-                "id" : "bb63b710d208796b7ceaab7812bddef1",
                 "type" : "MACROPONENT"
               },
               "overrides" : null,
@@ -3046,45 +2736,6 @@
           },
           "isNonDestructive" : false,
           "styles" : { }
-        }, {
-          "elementId" : "label_value_9",
-          "elementLabel" : "Label value 9",
-          "propertyValues" : {
-            "label" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "message" : "残予算：",
-                "comment" : ""
-              }
-            },
-            "value" : {
-              "type" : "DATA_OUTPUT_BINDING",
-              "binding" : {
-                "address" : [ "look_up_remainbudget", "results", "0", "remainbudget", "vale" ]
-              }
-            },
-            "reversed" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "truncated" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : "Column 2",
-          "definition" : {
-            "id" : "bb63b710d208796b7ceaab7812bddef1",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : ""
-          },
-          "isNonDestructive" : false,
-          "styles" : { }
         } ],
         "layout" : {
           "default" : {
@@ -3325,6 +2976,58 @@
                 }
               },
               "targetId" : "claaqiisuzvaaaaccbddphhxqzynyreu",
+              "type" : "DATABROKER_OP"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "declarativeAction" : null,
+              "event" : null,
+              "operation" : {
+                "dataBrokerId" : "9b4b978353211010cbc2ddeeff7b1245",
+                "operationName" : "EXECUTE",
+                "parentResourceId" : "update_record_1",
+                "payload" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : {
+                    "table" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "x_662584_orderma_0_ordermaster"
+                    },
+                    "recordId" : {
+                      "type" : "STATE_BINDING",
+                      "binding" : {
+                        "address" : [ "selectOrder" ]
+                      }
+                    },
+                    "templateFields" : {
+                      "type" : "CLIENT_TRANSFORM",
+                      "transform" : {
+                        "operands" : {
+                          "type" : "LIST_CONTAINER",
+                          "container" : [ {
+                            "type" : "JSON_LITERAL",
+                            "value" : "remainbudget="
+                          }, {
+                            "type" : "STATE_BINDING",
+                            "binding" : {
+                              "address" : [ "ResultBudget" ]
+                            }
+                          }, {
+                            "type" : "JSON_LITERAL",
+                            "value" : ""
+                          } ]
+                        },
+                        "operator" : "CONCAT"
+                      }
+                    },
+                    "useSetDisplayValue" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    }
+                  }
+                }
+              },
+              "targetId" : "claarnaavowaaaahhccddphhxffzyjjklaaa",
               "type" : "DATABROKER_OP"
             } ]
           } ],
@@ -3627,7 +3330,7 @@
         "payload" : {
           "type" : "JSON_LITERAL",
           "value" : {
-            "route" : "assign",
+            "route" : "allasign",
             "fields" : null,
             "params" : null,
             "redirect" : null,
@@ -3641,7 +3344,7 @@
         "sysId" : "a697dca407560110b81efa9e7c1ed0fe"
       },
       "operation" : null,
-      "targetId" : "claaqdaauowaaaakxddphhxaxuuffofr",
+      "targetId" : "claarsbbeeaaoaaaatdddphhxddhhzrojgl",
       "type" : "EVENT"
     } ]
   }, {
@@ -4483,6 +4186,45 @@
   },
   "elementId" : "update_isassign",
   "elementLabel" : "Update IsAssign",
+  "eventMappings" : [ {
+    "eventMappingId" : "claarsaamggaaaatbddphhxgeeydwpcff",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf.DATA_OP_SUCCEEDED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf.DATA_OP_SUCCEEDED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : {
+        "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+        "operationName" : "REFRESH",
+        "parentResourceId" : "look_up_assign",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : { }
+        }
+      },
+      "targetId" : "claarsaamggaaaatcddphhxubbuywhjjv",
+      "type" : "DATABROKER_OP"
+    } ]
+  } ],
+  "inputValues" : { },
+  "readEvaluationMode" : "EXPLICIT"
+}, {
+  "definition" : {
+    "id" : "9b4b978353211010cbc2ddeeff7b1245",
+    "type" : "GRAPHQL"
+  },
+  "elementId" : "update_record_1",
+  "elementLabel" : "Update Record 1",
   "eventMappings" : [ ],
   "inputValues" : { },
   "readEvaluationMode" : "EXPLICIT"
@@ -4517,9 +4259,6 @@
   "message" : "Enter a label",
   "comment" : ""
 }, {
-  "message" : "Label",
-  "comment" : ""
-}, {
   "message" : "OK",
   "comment" : ""
 }, {
@@ -4527,9 +4266,6 @@
   "comment" : ""
 }, {
   "message" : "オーダー選択",
-  "comment" : ""
-}, {
-  "message" : "グレード：",
   "comment" : ""
 }, {
   "message" : "ジャッジ：",
@@ -4568,12 +4304,6 @@
   "message" : "割り当て確定",
   "comment" : ""
 }, {
-  "message" : "単価：",
-  "comment" : ""
-}, {
-  "message" : "単金：",
-  "comment" : ""
-}, {
   "message" : "合計割り当て予算：",
   "comment" : ""
 }, {
@@ -4589,22 +4319,10 @@
   "message" : "対象年月：",
   "comment" : ""
 }, {
-  "message" : "対象者sysid：",
-  "comment" : ""
-}, {
-  "message" : "残予算：",
-  "comment" : ""
-}, {
   "message" : "申請時間(直接率88%)：",
   "comment" : ""
 }, {
   "message" : "申請者名：",
-  "comment" : ""
-}, {
-  "message" : "申請者：",
-  "comment" : ""
-}, {
-  "message" : "選択オーダー：",
   "comment" : ""
 } ]</required_translations>
         <root_component/>
@@ -4805,13 +4523,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-11 06:23:24</sys_created_on>
         <sys_id>2471f4af07060110b81efa9e7c1ed03a</sys_id>
-        <sys_mod_count>114</sys_mod_count>
+        <sys_mod_count>121</sys_mod_count>
         <sys_name>AssignForm</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_macroponent_2471f4af07060110b81efa9e7c1ed03a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-14 07:57:43</sys_updated_on>
+        <sys_updated_on>2022-03-15 06:56:30</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>

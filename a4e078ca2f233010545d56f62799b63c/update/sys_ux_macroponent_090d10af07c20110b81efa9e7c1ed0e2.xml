@@ -46,10 +46,16 @@
                 "type" : "JSON_LITERAL",
                 "value" : "name.name.sys_id="
               }, {
-                "type" : "CONTEXT_BINDING",
+                "type" : "STATE_BINDING",
                 "binding" : {
-                  "address" : [ "session", "user", "" ]
+                  "address" : [ "User_sysid" ]
                 }
+              }, {
+                "type" : "JSON_LITERAL",
+                "value" : "^state="
+              }, {
+                "type" : "JSON_LITERAL",
+                "value" : "requested"
               }, {
                 "type" : "JSON_LITERAL",
                 "value" : ""
@@ -231,8 +237,10 @@
           "value" : [ ]
         },
         "refreshRequested" : {
-          "type" : "JSON_LITERAL",
-          "value" : ""
+          "type" : "DATA_OUTPUT_BINDING",
+          "binding" : {
+            "address" : [ "look_up_records_1", "results" ]
+          }
         },
         "page" : {
           "type" : "JSON_LITERAL",
@@ -295,13 +303,78 @@
   }
 } ]</composition>
         <da_relay_models/>
-        <data>[ ]</data>
+        <data>[ {
+  "definition" : {
+    "id" : "b997a84053021010cbc2ddeeff7b1228",
+    "type" : "COMPOSITE"
+  },
+  "elementId" : "look_up_records_1",
+  "elementLabel" : "Look Up Records 1",
+  "eventMappings" : [ ],
+  "inputValues" : {
+    "table" : {
+      "type" : "JSON_LITERAL",
+      "value" : "x_662584_orderma_0_applicationinfo"
+    },
+    "encodedQuery" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "returnFields" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "orderBy" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "sortType" : {
+      "type" : "JSON_LITERAL",
+      "value" : "asc"
+    },
+    "limit" : {
+      "type" : "JSON_LITERAL",
+      "value" : "1000"
+    },
+    "offset" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "queryCategory" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "returnFieldMetadata" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    }
+  },
+  "readEvaluationMode" : "EAGER"
+} ]</data>
         <dispatched_events/>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
         <handled_events/>
         <interactions/>
         <interfaces/>
-        <internal_event_mappings>{ }</internal_event_mappings>
+        <internal_event_mappings>{
+  "MACROPONENT_READY" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "declarativeAction" : null,
+    "event" : null,
+    "operation" : {
+      "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+      "operationName" : "REFRESH",
+      "parentResourceId" : "look_up_records_1",
+      "payload" : {
+        "type" : "MAP_CONTAINER",
+        "container" : { }
+      }
+    },
+    "targetId" : "claarpweeffeaaaaqaaddphhxvaaffxpmujj",
+    "type" : "DATABROKER_OP"
+  } ]
+}</internal_event_mappings>
         <layout>{
   "default" : {
     "children" : null,
@@ -324,18 +397,32 @@
         <root_component_config>{ }</root_component_config>
         <root_component_definition/>
         <schema_version>1.0.0</schema_version>
-        <state_properties>[ ]</state_properties>
+        <state_properties>[ {
+  "name" : "User_sysid",
+  "label" : "User_sysid",
+  "fieldType" : "",
+  "valueType" : "",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "CONTEXT_BINDING",
+    "binding" : {
+      "address" : [ "user", "sys_id" ],
+      "category" : "session"
+    }
+  }
+} ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-11 04:54:09</sys_created_on>
         <sys_id>090d10af07c20110b81efa9e7c1ed0e2</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>Member</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_macroponent_090d10af07c20110b81efa9e7c1ed0e2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-11 04:59:00</sys_updated_on>
+        <sys_updated_on>2022-03-15 05:52:13</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>
