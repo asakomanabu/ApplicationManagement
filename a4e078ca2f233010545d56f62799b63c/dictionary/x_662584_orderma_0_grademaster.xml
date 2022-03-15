@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="GradeMaster" max_length="40" name="x_662584_orderma_0_grademaster" sizeclass="5" type="collection">
-        <element choice="3" label="Grade" max_length="40" name="grade" type="choice">
+    <element label="GradeMaster" max_length="40" name="x_662584_orderma_0_grademaster" sizeclass="3" type="collection">
+        <element choice="3" display="true" label="Grade" max_length="40" name="grade" type="choice">
             <choice>
                 <element inactive_on_update="false" label="05" sequence="10" value="05"/>
                 <element inactive_on_update="false" label="04" sequence="20" value="04"/>
@@ -9,6 +9,7 @@
                 <element inactive_on_update="false" label="01" sequence="50" value="01"/>
             </choice>
         </element>
+        <element label="hourly wage" max_length="20" name="hourly_wage" type="decimal"/>
         <element label="Price" max_length="40" name="price" type="integer"/>
     </element>
 </database>

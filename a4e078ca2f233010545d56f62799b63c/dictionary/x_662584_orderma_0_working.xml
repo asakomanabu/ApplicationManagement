@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Working" max_length="40" name="x_662584_orderma_0_working" sizeclass="4" type="collection">
+    <element label="Working" max_length="40" name="x_662584_orderma_0_working" sizeclass="3" type="collection">
         <element label="DirectUpTime" max_length="20" name="directuptime" type="decimal"/>
-        <element choice="3" label="isApproved" max_length="40" name="isapproved" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Requested" sequence="10" value="requested"/>
-                <element inactive_on_update="false" label="Approved" sequence="20" value="approved"/>
-                <element inactive_on_update="false" label="Rejected" sequence="30" value="rejected"/>
-            </choice>
-        </element>
-        <element label="Name" max_length="40" name="name" type="string"/>
-        <element label="TargetDate" max_length="40" name="targetdate" type="string"/>
+        <element label="IsAssigned" max_length="40" name="isassigned" type="boolean"/>
+        <element label="Name" max_length="32" name="name" reference="x_662584_orderma_0_membermaster" type="reference"/>
+        <element label="TargetDate" max_length="32" name="targetdate" reference="x_662584_orderma_0_workingdaymaster" type="reference"/>
         <element label="WorkingDate" max_length="40" name="workingdate" type="integer"/>
         <element label="WorkingTime" max_length="20" name="workingtime" type="decimal"/>
     </element>

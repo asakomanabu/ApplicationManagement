@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="ApplicationForm">0344f66a2fa33010545d56f62799b631</macroponent>
+        <name>SwitchAlertHide</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({api, event, helpers, imports}) {
+	api.setState('alert_hide', !api.state.alert_hide);
+
+	return;
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-26 07:37:36</sys_created_on>
+        <sys_id>a373d8392fc00110545d56f62799b684</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>SwitchAlertHide</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_client_script_a373d8392fc00110545d56f62799b684</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-16 15:16:04</sys_updated_on>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</application>
+        <file_path/>
+        <instance_id>3df77da9db17ff484d2bac44d496195a</instance_id>
+        <instance_name>dev91783</instance_name>
+        <name>sys_ux_client_script_a373d8392fc00110545d56f62799b684</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="ApplicationForm"&gt;0344f66a2fa33010545d56f62799b631&lt;/macroponent&gt;&lt;name&gt;SwitchAlertHide&lt;/name&gt;&lt;required_translations&gt;[ ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({api, event, helpers, imports}) {
+	api.setState('alert_hide', !api.state.alert_hide);
+
+	return;
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-11-26 07:37:36&lt;/sys_created_on&gt;&lt;sys_id&gt;a373d8392fc00110545d56f62799b684&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_name&gt;SwitchAlertHide&lt;/sys_name&gt;&lt;sys_package display_value="OrderManagement" source="x_662584_orderma_0"&gt;a4e078ca2f233010545d56f62799b63c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="OrderManagement"&gt;a4e078ca2f233010545d56f62799b63c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_a373d8392fc00110545d56f62799b684&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-16 15:16:04&lt;/sys_updated_on&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2046064453</payload_hash>
+        <record_name>SwitchAlertHide</record_name>
+        <reverted_from/>
+        <source>935c27f807820110b81efa9e7c1ed0b4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-08 06:39:04</sys_created_on>
+        <sys_id>b048192a07060110b81efa9e7c1ed063</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17f6840b2e70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-08 06:39:04</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>b848192a20060110ded1581ecb647a62</update_guid>
+        <update_guid_history>b848192a20060110ded1581ecb647a62:2046064453,397c14ea13420110b6b89619db47898d:0,a19e882229420110f0eaa51d6887cb33:2046064453,9dea6fb882c201100ff8d43d6a24524a:-1393379765</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-10 02:10:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>1bd057c132754ec086a564ef90c1ba84</sys_id>
+        <sys_metadata>a373d8392fc00110545d56f62799b684</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SwitchAlertHide</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_scope_delete display_value="">3204fa4ef40c4854a3d40a3cbe209890</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_a373d8392fc00110545d56f62799b684</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_a373d8392fc00110545d56f62799b684">b048192a07060110b81efa9e7c1ed063</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-10 02:10:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
