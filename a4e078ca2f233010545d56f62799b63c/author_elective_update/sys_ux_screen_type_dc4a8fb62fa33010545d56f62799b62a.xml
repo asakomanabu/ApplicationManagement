@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_screen_type">
+    <sys_ux_screen_type action="DELETE">
+        <description/>
+        <name>OrderForm</name>
+        <sys_class_name>sys_ux_screen_type</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-05 02:58:37</sys_created_on>
+        <sys_id>dc4a8fb62fa33010545d56f62799b62a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>OrderForm</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_screen_type_dc4a8fb62fa33010545d56f62799b62a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-11 04:45:26</sys_updated_on>
+    </sys_ux_screen_type>
+    <sys_translated_text action="DELETE" query="documentkey=dc4a8fb62fa33010545d56f62799b62a"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</application>
+        <file_path/>
+        <instance_id>3df77da9db17ff484d2bac44d496195a</instance_id>
+        <instance_name>dev91783</instance_name>
+        <name>sys_ux_screen_type_dc4a8fb62fa33010545d56f62799b62a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_screen_type"><sys_ux_screen_type action="INSERT_OR_UPDATE"><description/><name>OrderForm</name><sys_class_name>sys_ux_screen_type</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-11-05 02:58:37</sys_created_on><sys_id>dc4a8fb62fa33010545d56f62799b62a</sys_id><sys_mod_count>2</sys_mod_count><sys_name>OrderForm</sys_name><sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package><sys_policy/><sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope><sys_update_name>sys_ux_screen_type_dc4a8fb62fa33010545d56f62799b62a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-03-11 04:45:26</sys_updated_on></sys_ux_screen_type><sys_translated_text action="delete_multiple" query="documentkey=dc4a8fb62fa33010545d56f62799b62a"/></record_update>]]></payload>
+        <payload_hash>-1805241802</payload_hash>
+        <record_name>OrderForm</record_name>
+        <reverted_from/>
+        <source>935c27f807820110b81efa9e7c1ed0b4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-11 04:45:26</sys_created_on>
+        <sys_id>910b942f07c20110b81efa9e7c1ed0c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17f774bbca10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-11 04:45:26</sys_updated_on>
+        <type>UX Screen Collection</type>
+        <update_guid>590b942f22c20110b216593fad05b6c3</update_guid>
+        <update_guid_history>590b942f22c20110b216593fad05b6c3:-1805241802,d3ea542f92c20110dbfb7b1733c154dc:-1769203658,33fae3f8cfc20110faeac4ceb7efb27d:-1367655222</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-16 05:17:21</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_screen_type">sys_ux_screen_type</sys_db_object>
+        <sys_id>c0198b1fbc18498ca0f1e37854af02a4</sys_id>
+        <sys_metadata>dc4a8fb62fa33010545d56f62799b62a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OrderForm</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_scope_delete display_value="">3204fa4ef40c4854a3d40a3cbe209890</sys_scope_delete>
+        <sys_update_name>sys_ux_screen_type_dc4a8fb62fa33010545d56f62799b62a</sys_update_name>
+        <sys_update_version display_value="sys_ux_screen_type_dc4a8fb62fa33010545d56f62799b62a">910b942f07c20110b81efa9e7c1ed0c4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-16 05:17:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

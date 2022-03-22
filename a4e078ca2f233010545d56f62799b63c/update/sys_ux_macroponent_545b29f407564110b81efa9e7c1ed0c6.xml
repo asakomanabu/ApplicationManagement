@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types/>
+        <category>page</category>
+        <component_dependencies/>
+        <composition>[ {
+  "elementId" : "container_1",
+  "elementLabel" : "Container 1",
+  "propertyValues" : { },
+  "eventMappings" : [ ],
+  "slot" : "Main",
+  "definition" : {
+    "id" : "d356d14b6e293a3020a244b63d278d8f",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : {
+    "composition" : [ {
+      "elementId" : "container_2",
+      "elementLabel" : "Container 2",
+      "propertyValues" : { },
+      "eventMappings" : [ ],
+      "slot" : null,
+      "definition" : {
+        "id" : "d356d14b6e293a3020a244b63d278d8f",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : {
+        "composition" : [ ],
+        "layout" : {
+          "default" : {
+            "children" : null,
+            "items" : [{"slotName":"Main","rules":{"flex":"1"},"styles":{"display":"flex","flex-direction":"column"}}],
+            "root" : null,
+            "rules" : {"flex-flow":"row nowrap","align-items":"stretch","height":"100%"},
+            "styles" : null,
+            "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+            "type" : "flex"
+          },
+          "version" : "2.0.0"
+        }
+      },
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : {
+        "width" : "100%"
+      }
+    }, {
+      "elementId" : "rich_text_1",
+      "elementLabel" : "Rich text 1",
+      "propertyValues" : {
+        "html" : {
+          "type" : "JSON_LITERAL",
+          "value" : "&lt;p&gt;&lt;span style=\"font-size: 36pt;\"&gt;&lt;strong&gt;OrderManagement LoginPage&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;"
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : "default-slot",
+      "definition" : {
+        "id" : "2d56f06d55f46bbd4e79b5e624beb940",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : ""
+      },
+      "isNonDestructive" : false,
+      "styles" : {
+        "margin-top" : "16vh",
+        "margin-left" : "9vw"
+      }
+    } ],
+    "layout" : {
+      "default" : {
+        "children" : null,
+        "items" : [{"slotName":"default-slot","styles":{"margin-top":"16vh","margin-left":"9vw"}}],
+        "root" : null,
+        "rules" : {"flex-direction":"column"},
+        "styles" : null,
+        "templateId" : null,
+        "type" : "flex"
+      }
+    }
+  },
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : {
+    "margin-top" : "16vh",
+    "margin-left" : "9vw"
+  }
+}, {
+  "elementId" : "login_1",
+  "elementLabel" : "Login 1",
+  "propertyValues" : {
+    "logoUrl" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "heading" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "message" : "Login",
+        "comment" : ""
+      }
+    },
+    "ssoLabel" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "message" : "Use SSO",
+        "comment" : ""
+      }
+    },
+    "destinationUrl" : {
+      "type" : "DATA_OUTPUT_BINDING",
+      "binding" : {
+        "address" : [ "chrome_state_for_app_shell_ui_1", "loginRedirectUrl" ]
+      }
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : "Sidebar 1",
+  "definition" : {
+    "id" : "b149d22fc772967dcde6c861d5e67397",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null,
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isNonDestructive" : false,
+  "styles" : {
+    "margin-top" : "144px"
+  }
+} ]</composition>
+        <da_relay_models/>
+        <data>[ {
+  "definition" : {
+    "id" : "7fc30640532110105a20ddeeff7b1276",
+    "type" : "CLIENT_STATE"
+  },
+  "elementId" : "chrome_state_for_app_shell_ui_1",
+  "elementLabel" : "Chrome State For App Shell UI 1",
+  "eventMappings" : [ ],
+  "inputValues" : {
+    "toolbarButtonsConfig" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "preferenceNames" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "processedUserPrefs" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "notificationConfiguration" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    }
+  },
+  "readEvaluationMode" : "EAGER"
+} ]</data>
+        <dispatched_events/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <handled_events/>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings>{ }</internal_event_mappings>
+        <layout>{
+  "default" : {
+    "children" : null,
+    "items" : [{"slotName":"Main","rules":{"flex":"2","margin-right":"1rem"},"styles":{"background-color":"rgb(var(--now-color_grouped--blue-1))","background-position":"80% 80%","background-repeat":"no-repeat","background-size":"827px 465px","background-image":"url(x_662584_orderma_0.custom_portal_login.svg)"}},{"slotName":"Sidebar 1","rules":{"flex":"1"},"styles":{"display":"flex","flex-direction":"column"}}],
+    "root" : null,
+    "rules" : {"flex-flow":"row nowrap","align-items":"stretch","min-height":"400px","height":"100%"},
+    "styles" : null,
+    "templateId" : "d0ee654d53c31010e6bcddeeff7b1275",
+    "type" : "flex"
+  }
+}</layout>
+        <macroponent_dependencies/>
+        <name>LoginForm</name>
+        <props>[ ]</props>
+        <required_translations>[ {
+  "message" : "Login",
+  "comment" : ""
+}, {
+  "message" : "Use SSO",
+  "comment" : ""
+} ]</required_translations>
+        <root_component/>
+        <root_component_config>{ }</root_component_config>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_properties>[ ]</state_properties>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-15 07:48:40</sys_created_on>
+        <sys_id>545b29f407564110b81efa9e7c1ed0c6</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>LoginForm</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_macroponent_545b29f407564110b81efa9e7c1ed0c6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-17 01:46:16</sys_updated_on>
+    </sys_ux_macroponent>
+</record_update>

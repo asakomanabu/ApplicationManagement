@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
     <sys_db_object action="INSERT_OR_UPDATE">
-        <access/>
+        <access>public</access>
         <actions_access>true</actions_access>
         <alter_access>true</alter_access>
         <caller_access/>
@@ -24,15 +24,15 @@
         <sys_class_path/>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-11-04 05:17:38</sys_created_on>
-        <sys_id>aa70eee62f633010545d56f62799b61b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Orderma 0 Membermaster</sys_name>
+        <sys_id>6eaaaf7807c20110b81efa9e7c1ed0d0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>MemberMaster</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
-        <sys_update_name>sys_db_object_aa70eee62f633010545d56f62799b61b</sys_update_name>
+        <sys_update_name>sys_db_object_6eaaaf7807c20110b81efa9e7c1ed0d0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-11-04 05:17:38</sys_updated_on>
+        <sys_updated_on>2022-03-22 04:40:58</sys_updated_on>
         <update_access>true</update_access>
         <user_role/>
         <ws_access>true</ws_access>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="OrderManagementPortal Config">b321fcca2f233010545d56f62799b66c</app_config>
+        <description/>
+        <fields/>
+        <icon/>
+        <name>Settings</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="Portal App Shell">b66bf1075b31101016fd7c1bf481c7a7</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>settings</route_type>
+        <screen_type display_value="Settings">a9ab950107528110b81efa9e7c1ed06d</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-16 01:18:41</sys_created_on>
+        <sys_id>69abdd0107528110b81efa9e7c1ed01f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Settings</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_update_name>sys_ux_app_route_69abdd0107528110b81efa9e7c1ed01f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-16 01:18:41</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=69abdd0107528110b81efa9e7c1ed01f"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</application>
+        <file_path/>
+        <instance_id>3df77da9db17ff484d2bac44d496195a</instance_id>
+        <instance_name>dev91783</instance_name>
+        <name>sys_ux_app_route_69abdd0107528110b81efa9e7c1ed01f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config display_value="OrderManagementPortal Config">b321fcca2f233010545d56f62799b66c</app_config><description/><fields/><icon/><name>Settings</name><optional_parameters/><order>0</order><parent_macroponent display_value="Portal App Shell">b66bf1075b31101016fd7c1bf481c7a7</parent_macroponent><parent_macroponent_composition_element_id/><route_type>settings</route_type><screen_type display_value="Settings">a9ab950107528110b81efa9e7c1ed06d</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-03-16 01:18:41</sys_created_on><sys_id>69abdd0107528110b81efa9e7c1ed01f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Settings</sys_name><sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package><sys_policy/><sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope><sys_update_name>sys_ux_app_route_69abdd0107528110b81efa9e7c1ed01f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-03-16 01:18:41</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=69abdd0107528110b81efa9e7c1ed01f"/></record_update>]]></payload>
+        <payload_hash>78690090</payload_hash>
+        <record_name>Settings</record_name>
+        <reverted_from/>
+        <source>935c27f807820110b81efa9e7c1ed0b4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-16 01:18:41</sys_created_on>
+        <sys_id>e5abdd0107528110b81efa9e7c1ed021</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17f904e3fb00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-16 01:18:41</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>21abdd017452811018b19b122a0c9821</update_guid>
+        <update_guid_history>21abdd017452811018b19b122a0c9821:78690090</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-16 05:16:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>87a736992fee4d4cadefdf96408bc490</sys_id>
+        <sys_metadata>69abdd0107528110b81efa9e7c1ed01f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Settings</sys_name>
+        <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
+        <sys_scope_delete display_value="">3204fa4ef40c4854a3d40a3cbe209890</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_69abdd0107528110b81efa9e7c1ed01f</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_69abdd0107528110b81efa9e7c1ed01f">e5abdd0107528110b81efa9e7c1ed021</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-16 05:16:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
