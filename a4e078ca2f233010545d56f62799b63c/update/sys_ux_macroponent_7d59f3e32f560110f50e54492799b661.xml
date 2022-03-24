@@ -8,8 +8,12 @@
   "elementLabel" : "Stylized Container",
   "propertyValues" : {
     "label" : {
-      "type" : "JSON_LITERAL",
-      "value" : ""
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "code" : null,
+        "message" : "",
+        "comment" : ""
+      }
     },
     "bare" : {
       "type" : "JSON_LITERAL",
@@ -48,12 +52,36 @@
       "value" : false
     },
     "collapseButtonTooltipContent" : {
-      "type" : "JSON_LITERAL",
-      "value" : "Collapse container to hide contents"
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "code" : null,
+        "message" : "Collapse container to hide contents",
+        "comment" : ""
+      }
     },
     "expandButtonTooltipContent" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "code" : null,
+        "message" : "Expand container to show contents",
+        "comment" : ""
+      }
+    },
+    "ariaRegionName" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "code" : null,
+        "message" : "",
+        "comment" : ""
+      }
+    },
+    "includeAriaHeading" : {
       "type" : "JSON_LITERAL",
-      "value" : "Expand container to show contents"
+      "value" : false
+    },
+    "ariaRegionHeadingLevel" : {
+      "type" : "JSON_LITERAL",
+      "value" : "1"
     }
   },
   "eventMappings" : [ ],
@@ -68,31 +96,12 @@
       "elementLabel" : "Rich Header",
       "propertyValues" : {
         "html" : {
-          "type" : "JSON_LITERAL",
-          "value" : "&lt;p style=\"font-size: 18.6667px;\"&gt;&lt;span data-mce-style=\"font-size: 36pt;\" style=\"font-size: 36pt;\"&gt;&lt;strong&gt;Get help using &lt;/strong&gt;&lt;/span&gt;&lt;span data-mce-style=\"font-size: 36pt;\" style=\"font-size: 36pt;\"&gt;&lt;strong&gt;your portal&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;"
-        }
-      },
-      "eventMappings" : [ ],
-      "slot" : "default-slot",
-      "definition" : {
-        "id" : "2d56f06d55f46bbd4e79b5e624beb940",
-        "type" : "MACROPONENT"
-      },
-      "overrides" : null,
-      "isHidden" : {
-        "type" : "JSON_LITERAL",
-        "value" : ""
-      },
-      "isHero" : false,
-      "isNonDestructive" : false,
-      "styles" : { }
-    }, {
-      "elementId" : "rich_description",
-      "elementLabel" : "Rich Description",
-      "propertyValues" : {
-        "html" : {
-          "type" : "JSON_LITERAL",
-          "value" : "&lt;ul style=\"font-size: 18.6667px;\"&gt;&lt;li&gt;&lt;strong&gt;&lt;span data-mce-style=\"font-size: 18pt;\" style=\"font-size: 18pt;\"&gt;Search for answers&lt;/span&gt;&lt;/strong&gt;&lt;br data-mce-bogus=\"1\"&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;&lt;span data-mce-style=\"font-size: 18pt;\" style=\"font-size: 18pt;\"&gt;Request items and more&lt;/span&gt;&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;"
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "code" : null,
+            "message" : "&lt;p style=\"font-size: 18.6667px;\"&gt;&lt;span style=\"font-size: 48px;\"&gt;&lt;strong&gt;OrderManagment LoginPage&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;",
+            "comment" : ""
+          }
         }
       },
       "eventMappings" : [ ],
@@ -133,7 +142,32 @@
 }, {
   "elementId" : "login_wrapper",
   "elementLabel" : "Login Wrapper",
-  "propertyValues" : { },
+  "propertyValues" : {
+    "ariaRegionName" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "code" : null,
+        "message" : "",
+        "comment" : ""
+      }
+    },
+    "includeAriaHeading" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "ariaRegionHeadingLevel" : {
+      "type" : "JSON_LITERAL",
+      "value" : "1"
+    },
+    "type" : {
+      "type" : "JSON_LITERAL",
+      "value" : "section"
+    },
+    "ariaRole" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    }
+  },
   "eventMappings" : [ ],
   "slot" : "Column 2",
   "definition" : {
@@ -147,26 +181,20 @@
       "propertyValues" : {
         "logoUrl" : {
           "type" : "JSON_LITERAL",
-          "value" : ""
+          "value" : null
         },
         "heading" : {
-          "type" : "TRANSLATION_LITERAL",
-          "value" : {
-            "code" : null,
-            "message" : "Log in",
-            "comment" : ""
-          }
-        },
-        "destinationUrl" : {
           "type" : "JSON_LITERAL",
-          "value" : "https://dev91783.service-now.com/x/662584/OrderManagment/AppForm"
+          "value" : null
         },
         "ssoLabel" : {
-          "type" : "TRANSLATION_LITERAL",
-          "value" : {
-            "code" : null,
-            "message" : "Use SSO",
-            "comment" : ""
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "destinationUrl" : {
+          "type" : "DATA_OUTPUT_BINDING",
+          "binding" : {
+            "address" : [ "chrome_state_for_app_shell_ui_1", "loginRedirectUrl" ]
           }
         }
       },
@@ -179,13 +207,11 @@
       "overrides" : null,
       "isHidden" : {
         "type" : "JSON_LITERAL",
-        "value" : ""
+        "value" : null
       },
       "isHero" : false,
       "isNonDestructive" : false,
-      "styles" : {
-        "margin-top" : "144px"
-      }
+      "styles" : { }
     } ],
     "layout" : {
       "default" : {
@@ -233,7 +259,8 @@
     "notificationConfiguration" : {
       "type" : "JSON_LITERAL",
       "value" : null
-    }
+    },
+    "experienceId" : null
   },
   "readEvaluationMode" : "EAGER"
 } ]</data>
@@ -259,10 +286,13 @@
         <name>Login</name>
         <props>[ ]</props>
         <required_translations>[ {
-  "message" : "Log in",
+  "message" : "&lt;p style=\"font-size: 18.6667px;\"&gt;&lt;span style=\"font-size: 48px;\"&gt;&lt;strong&gt;OrderManagment LoginPage&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;",
   "comment" : ""
 }, {
-  "message" : "Use SSO",
+  "message" : "Collapse container to hide contents",
+  "comment" : ""
+}, {
+  "message" : "Expand container to show contents",
   "comment" : ""
 } ]</required_translations>
         <root_component/>
@@ -271,16 +301,16 @@
         <schema_version>1.0.0</schema_version>
         <state_properties>[ ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
-        <sys_created_by>system</sys_created_by>
-        <sys_created_on>2021-11-02 07:54:32</sys_created_on>
-        <sys_id>1031fcca6e233010a27dd131887350ac</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-24 07:12:28</sys_created_on>
+        <sys_id>7d59f3e32f560110f50e54492799b661</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Login</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
-        <sys_update_name>sys_ux_macroponent_1031fcca6e233010a27dd131887350ac</sys_update_name>
+        <sys_update_name>sys_ux_macroponent_7d59f3e32f560110f50e54492799b661</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-24 07:03:42</sys_updated_on>
+        <sys_updated_on>2022-03-24 07:35:25</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>
