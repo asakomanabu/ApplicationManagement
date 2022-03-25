@@ -69,29 +69,7 @@
       "propertyValues" : {
         "html" : {
           "type" : "JSON_LITERAL",
-          "value" : "&lt;p style=\"font-size: 18.6667px;\"&gt;&lt;span data-mce-style=\"font-size: 36pt;\" style=\"font-size: 36pt;\"&gt;&lt;strong&gt;Get help using &lt;/strong&gt;&lt;/span&gt;&lt;span data-mce-style=\"font-size: 36pt;\" style=\"font-size: 36pt;\"&gt;&lt;strong&gt;your portal&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;"
-        }
-      },
-      "eventMappings" : [ ],
-      "slot" : "default-slot",
-      "definition" : {
-        "id" : "2d56f06d55f46bbd4e79b5e624beb940",
-        "type" : "MACROPONENT"
-      },
-      "overrides" : null,
-      "isHidden" : {
-        "type" : "JSON_LITERAL",
-        "value" : ""
-      },
-      "isNonDestructive" : false,
-      "styles" : { }
-    }, {
-      "elementId" : "rich_description",
-      "elementLabel" : "Rich Description",
-      "propertyValues" : {
-        "html" : {
-          "type" : "JSON_LITERAL",
-          "value" : "&lt;ul style=\"font-size: 18.6667px;\"&gt;&lt;li&gt;&lt;strong&gt;&lt;span data-mce-style=\"font-size: 18pt;\" style=\"font-size: 18pt;\"&gt;Search for answers&lt;/span&gt;&lt;/strong&gt;&lt;br data-mce-bogus=\"1\"&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;&lt;span data-mce-style=\"font-size: 18pt;\" style=\"font-size: 18pt;\"&gt;Request items and more&lt;/span&gt;&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;"
+          "value" : "&lt;p style=\"font-size: 18.6667px;\"&gt;&lt;span style=\"font-size: 48px;\"&gt;&lt;strong&gt;OrderManagement SampleApp LoginPage&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;"
         }
       },
       "eventMappings" : [ ],
@@ -157,11 +135,8 @@
           "value" : "https://dev91783.service-now.com/x/662584/OrderManagment/AppForm"
         },
         "ssoLabel" : {
-          "type" : "TRANSLATION_LITERAL",
-          "value" : {
-            "message" : "Use SSO",
-            "comment" : ""
-          }
+          "type" : "JSON_LITERAL",
+          "value" : ""
         }
       },
       "eventMappings" : [ ],
@@ -251,9 +226,6 @@
         <required_translations>[ {
   "message" : "Log in",
   "comment" : ""
-}, {
-  "message" : "Use SSO",
-  "comment" : ""
 } ]</required_translations>
         <root_component/>
         <root_component_config>{ }</root_component_config>
@@ -264,13 +236,13 @@
         <sys_created_by>system</sys_created_by>
         <sys_created_on>2021-11-02 07:54:32</sys_created_on>
         <sys_id>1031fcca6e233010a27dd131887350ac</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Login</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_macroponent_1031fcca6e233010a27dd131887350ac</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-25 04:45:19</sys_updated_on>
+        <sys_updated_on>2022-03-25 06:41:59</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>

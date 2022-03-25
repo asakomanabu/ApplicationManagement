@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
     <sys_ux_screen action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <app_config display_value="OrderManagementPortal Config">b321fcca2f233010545d56f62799b66c</app_config>
         <description/>
         <event_mappings>[ {
@@ -92,8 +92,7 @@
   "scrollable" : "none",
   "headerLevel" : "1",
   "interceptNotifications" : false,
-  "propagateNotifications" : false,
-  "headingOnlyVisibleToScreenReaders" : false
+  "propagateNotifications" : false
 }</macroponent_config>
         <name>Login Default</name>
         <order>0</order>
@@ -107,7 +106,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9031fcca4a233010d503b82cc6b5edb2</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Login Default</sys_name>
         <sys_overrides/>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
@@ -115,7 +114,7 @@
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_screen_9031fcca4a233010d503b82cc6b5edb2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-25 04:45:19</sys_updated_on>
+        <sys_updated_on>2022-03-25 06:40:44</sys_updated_on>
     </sys_ux_screen>
     <sys_translated_text action="delete_multiple" query="documentkey=9031fcca4a233010d503b82cc6b5edb2"/>
 </record_update>
