@@ -83,7 +83,6 @@
         "type" : "JSON_LITERAL",
         "value" : ""
       },
-      "isHero" : false,
       "isNonDestructive" : false,
       "styles" : { }
     }, {
@@ -106,14 +105,12 @@
         "type" : "JSON_LITERAL",
         "value" : ""
       },
-      "isHero" : false,
       "isNonDestructive" : false,
       "styles" : { }
     } ],
     "layout" : {
       "default" : {
         "children" : null,
-        "isInline" : null,
         "items" : [{"slotName":"default-slot","styles":{"margin-top":"16vh","margin-left":"9vw"}}],
         "root" : null,
         "rules" : {"flex-direction":"column"},
@@ -127,7 +124,6 @@
     "type" : "JSON_LITERAL",
     "value" : ""
   },
-  "isHero" : false,
   "isNonDestructive" : false,
   "styles" : { }
 }, {
@@ -152,7 +148,6 @@
         "heading" : {
           "type" : "TRANSLATION_LITERAL",
           "value" : {
-            "code" : null,
             "message" : "Log in",
             "comment" : ""
           }
@@ -164,7 +159,6 @@
         "ssoLabel" : {
           "type" : "TRANSLATION_LITERAL",
           "value" : {
-            "code" : null,
             "message" : "Use SSO",
             "comment" : ""
           }
@@ -181,7 +175,6 @@
         "type" : "JSON_LITERAL",
         "value" : ""
       },
-      "isHero" : false,
       "isNonDestructive" : false,
       "styles" : {
         "margin-top" : "144px"
@@ -190,7 +183,6 @@
     "layout" : {
       "default" : {
         "children" : null,
-        "isInline" : null,
         "items" : [{"slotName":"Main","rules":{"grid-area":"main"},"styles":{"max-width":"390px","margin":"auto"}}],
         "root" : null,
         "rules" : {"grid-template-rows":"auto","grid-template-columns":"1fr","grid-template-areas":"\"main\"","grid-gap":"1rem","height":"100%"},
@@ -204,7 +196,6 @@
     "type" : "JSON_LITERAL",
     "value" : ""
   },
-  "isHero" : false,
   "isNonDestructive" : false,
   "styles" : { }
 } ]</composition>
@@ -246,7 +237,6 @@
         <layout>{
   "default" : {
     "children" : null,
-    "isInline" : null,
     "items" : [{"slotName":"Column 1","rules":{"grid-area":"column1"},"styles":{"background-color":"rgb(var(--now-color_grouped--blue-1))","background-position":"80% 80%","background-repeat":"no-repeat","background-size":"827px 465px","background-image":"url(x_662584_orderma_0.custom_portal_login.svg)"}},{"slotName":"Column 2","rules":{"grid-area":"column2"},"styles":{"padding-top":"9rem"}}],
     "root" : null,
     "rules" : {"grid-template-rows":"minmax(600px,auto)","grid-template-columns":"2fr 1fr","grid-template-areas":"\"column1 column2\"","grid-gap":"2rem","height":"100%"},
@@ -274,13 +264,13 @@
         <sys_created_by>system</sys_created_by>
         <sys_created_on>2021-11-02 07:54:32</sys_created_on>
         <sys_id>1031fcca6e233010a27dd131887350ac</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Login</sys_name>
         <sys_package display_value="OrderManagement" source="x_662584_orderma_0">a4e078ca2f233010545d56f62799b63c</sys_package>
         <sys_policy/>
         <sys_scope display_value="OrderManagement">a4e078ca2f233010545d56f62799b63c</sys_scope>
         <sys_update_name>sys_ux_macroponent_1031fcca6e233010a27dd131887350ac</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-24 07:03:42</sys_updated_on>
+        <sys_updated_on>2022-03-25 04:45:19</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>
